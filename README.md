@@ -10,7 +10,7 @@ To use this site, you must be registered. Accounts are completely free.
 
 ### 2. Contact Fear in IRC or on the forum to become part of the FAQ Org here on GitHub
 
-Find me wherever is most accessable to you. I'm online at least daily so I'll catch your message quickly enough. On here, my username is 'Novaras'.
+Find me wherever is most accessible to you. I'm online at least daily so I'll catch your message quickly enough. On here, my username is 'Novaras'.
 
 ### 3. Read up on GitHub workflow
 
