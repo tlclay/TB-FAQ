@@ -21,3 +21,7 @@ To work with GitHub, understanding the workflow is essential. It's actually pret
 4. When I get around to it, I'll review and then merge your changes into the master branch (the one that will be used for the live faq.php items) if I'm happy with them
 
 You can read a much clearer and in-depth tutorial [here](https://guides.github.com/activities/hello-world/#branch).
+
+### 4. Making items for the faq
+
+This is mostly covered in the stickied thread in HS HQ. You'll want to use **template.html** as your base when making a new item since it has the minimum required markup and styling.
