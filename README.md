@@ -1,2 +1,3 @@
 # TB-FAQ
 Toribash FAQ items
+IM GRIEFING UR  README xD
