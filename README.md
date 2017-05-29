@@ -24,4 +24,4 @@ You can read a much clearer and in-depth tutorial [here](https://guides.github.c
 
 ### 4. Making items for the faq
 
-This is mostly covered in the stickied thread in HS HQ. You'll want to use **template.html** as your base when making a new item since it has the minimum required markup and styling.
+This is mostly covered in the stickied thread in HS HQ. You'll want to use **item_template.html** as your base when making a new item since it has the minimum required markup and styling.
