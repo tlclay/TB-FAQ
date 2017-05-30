@@ -24,7 +24,7 @@ You can read a much clearer and more in-depth tutorial [here](https://guides.git
 
 ### 4. Making items for the faq
 
-This is mostly covered in the stickied thread in HS HQ. You'll want to use **[item_template.html](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/item_template.html)** as your base when making a new item since it has the minimum required markup and styling.
+This is mostly covered in the stickied thread in HS HQ. You'll want to use **[item_template.html](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/item_template.html)** as your base when making a new item since it has the minimum required markup and styling. Common/useful scripts can be found in the [js folder](https://github.com/TB-FAQ/TB-FAQ/tree/master/js).
 
 **Make sure not to edit anything outside of the area's I specify inside the file - these changes cannot and will not be implemented into the live site. Everything outside the marked areas is just there as a framework so you can work in an accurate environment.**
 
