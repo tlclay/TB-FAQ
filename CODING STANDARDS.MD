@@ -5,6 +5,7 @@
 * Use `<p></p>` tags to represent text
 * Use <span></span> tags to style certain text within paragraphs
 * Use JQuery over JS wherever appropriate
+* Name your files `like_this.html` (underscores and lower case)
 
 ## DO NOT
 
