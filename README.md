@@ -25,3 +25,5 @@ You can read a much clearer and more in-depth tutorial [here](https://guides.git
 ### 4. Making items for the faq
 
 This is mostly covered in the stickied thread in HS HQ. You'll want to use **item_template.html** as your base when making a new item since it has the minimum required markup and styling.
+
+**Make sure not to edit anything outside of the area's I specify inside the file - these changes cannot and will not be implemented into the live site. Everything outside the marked areas is just there as a framework so you can work in an accurate environment.**
