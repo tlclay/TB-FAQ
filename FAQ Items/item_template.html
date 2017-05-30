@@ -3,21 +3,21 @@
 	PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
 	EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
 	'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
-	-->
+-->
 <html>
 	<head>
 		<!-- Uncomment if you want to test jquery - delete or leave commented out when requesting pull -->
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 		<style>
 			body {
-    			background: transparent;
-    			color: #000000;
-    			font: 12pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
-    			padding: 0px;
-    			height: 100%;
+			background: transparent;
+			color: #000000;
+			font: 12pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+			padding: 0px;
+			height: 100%;
 			}
-            		td, th, p, li {
-   			font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+			td, th, p, li {
+			font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
 			}
 			a:link {
 			color: rgb(169, 0, 77);
@@ -54,7 +54,7 @@
 				<td class="alt1"> <!-- CONTENT BEGINS HERE -->
 					
 					<!-- CSS IN HERE -->
-					<style scoped>
+					<style>
 						p.faq_para {
 						margin: 0px;
 						}
@@ -82,20 +82,61 @@
 						.faq_admin {
 						color: red;
 						}
+						a.faq_admin {
+						color: red;
+						font-weight: bold;
+						}
 						.faq_smod {
 						color: blue;
+						}
+						a.faq_smod {
+						color: blue;
+						font-weight: bold;
+						}
+						.faq_manager {
+						color: black;
+						}
+						a.faq_manager {
+						color: black;
+						font-weight: bold;
 						}
 						.faq_marketSquad {
 						color: green;
 						}
+						a.faq_marketSquad {
+						color: green;
+						font-weight: bold;
+						}
 						.faq_eventSquad {
 						color: #690069;
+						}
+						a.faq_eventSquad {
+						color: #690069;
+						font-weight: bold;
 						}
 						.faq_clanSquad {
 						color: #eb6900;
 						}
+						a.faq_clanSquad {
+						color: #eb6900;
+						font-weight: bold;
+						}
 						.faq_helpSquad {
 						color: #767676;
+						}
+						a.faq_helpSquad {
+						color: #767676;
+						font-weight: bold;
+						}
+						table.faq_staff_table {
+						border-collapse: collapse;
+						font-weight: bold;
+						margin: 0.8em 0 0.8em 0;
+						}
+						table.faq_staff_table td {
+						border: 1px solid gray;
+						padding: 0.3em;
+						padding-right: 1em;
 						}
 					</style>
 					
@@ -104,7 +145,6 @@
 				</td> <!-- CONTENT ENDS HERE -->
 			</tr>
 		</table>
-		
 		<!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
 		<script type="text/javascript"></script>
 	</body>
