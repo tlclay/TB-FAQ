@@ -32,6 +32,6 @@ Refer to **[clan_staff.html](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20
 
 #### MAKE SURE TO READ THE [CODING STANDARDS](https://github.com/TB-FAQ/TB-FAQ/blob/master/CODING%20STANDARDS.MD)
 
-### 4.1. Making folders here
+### 4.1. Making folders here on GitHub
 
 If there isn't a folder for the section you want to write for (i.e, Market), simply make your file as normal. **When you name the file, name it as `FAQ Items/Market/<file_name>.html` and GitHub will create the folder for you.**
