@@ -1,6 +1,6 @@
 ## DO
 
-* Keep your css in the supplied `<style scoped></style>` tags
+* Keep your css in the supplied `<style></style>` tags
 * Keep your js in the supplied `<script type="text/javascript"></script>` tags
 * Use meaningful tags (`<p></p>` tags to represent text for example)
 * Use `<span></span>` tags to style certain text within paragraphs
