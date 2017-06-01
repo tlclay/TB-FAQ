@@ -1,8 +1,8 @@
-function staffLinkAll()
+function staffLinkAll(item)
 {
-	$('.faq_clanSquad').attr("href", "http://forum.toribash.com/faq.php?faq=clans_main#faq_clans_staff"));
+	item.find('a.faq_clanSquad').attr("href", "http://forum.toribash.com/faq.php?faq=clans_main#faq_clans_staff"));
 }
 
-function staffLinkThis(text)
+function staffLinkThis(item, text)
 {
 }
