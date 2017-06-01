@@ -5,7 +5,7 @@ function getItem(title)
 	$('.tcat').each(function() {
 		if($(this).text() == title)
 		{
-			itemItself = $(this).siblings('.alt1');
+			itemItself = $(this).parent().next('.alt1');
 		}
 	});
 	alert("i: " + itemItself.text());
