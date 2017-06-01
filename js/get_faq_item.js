@@ -4,10 +4,9 @@ function getItem(title)
 	alert("t: " + title);
 	$('.tcat').each(function() {
 		if($(this).text() == title)
-		{
-			itemItself = $(this).parent().next('.alt1');
+		{		
+			itemItself = $(this).parent().next();
 		}
 	});
-	alert("i: " + itemItself.text());
 	return itemItself;
 }
