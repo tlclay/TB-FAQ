@@ -1,5 +1,6 @@
 function getItem(title)
 {
+	alert("getItem");
 	var itemItself;
 	$(document).ready(function() {
 		$('.tcat').each(function() {
