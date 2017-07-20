@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- 
+	PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
+	EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
+	'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
+	-->
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/get_faq_item.js"></script>
+		<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+			<tr>
+				<!-- TITLE WITHIN THESE <td></td> TAGS -->
+				<td class="tcat">Duel Rules and Guide</td>
+			</tr>
+			<tr>
+				<td class="alt1">
+					<p class="faq_question"><span class="faq_q">Q:</span> What is a duel/wager?</p>
+          <p class="faq_answer"><span class="faq_a">A:</span> 
+            <ol type="1">
+              <li>A duel is a match between two players in which they both wager items, tc, or any other tradeable item and the winner gets what was wagered.</li>
+              <li>A wager is something risked or staked in an uncertain (i.e. a duel)</li>
+            </ol>            
+          <p class="bold">Things to Remember</p>
+          <ol>
+            <li>Original agreement includes, what items you are dueling for, and how many games you are going to play. Keep a record of this agreement (Ideally, take a screenshot of the rules and the agreement between parties).</li>
+            <li>After each fight, announce the score and take screens.</li>
+            <li>Standard ingame rules apply. Don't expect help if you flame, kick or mute your opponents.</li>
+            <li>Give your opponent a few minutes (or whatever time is reasonable in the circumstances) to send the payment. Payments should be sent immediately though and waiting a long time will probably get you banned on suspicion of scamming.</li>
+            <li>If you're using the /duel mode and there is a glitch that sinks the TC, you can only get a refund for the TC taken from your account by the glitch.</li>
+            <li>Dueling with items or TC you don't have in your account is considered a scam. Before you start the duel, have the prize in the account you are dueling with.</li>
+            <li>Check your opponent's inventory before you duel them. You won't be able to win items or TC which they don't have.</li>
+         </ol>
+         <p class="bold">Duel Rules</p>
+         <ol>
+          <li>Wagers must be verifiably owned quantities which can be legitimately transferred between the two players immediately after a duel. (Textures cannot be verifiably owned as of yet, nor can USD or other forms of "real" currency. One cannot use duelling as a basis to transfer qi, or bypass qi or other trade restrictions on items.)</li>
+          <li>The agreement to the duel should be accepted by both parties and screenshotted by both parties to that effect. Any changes made to the mod or game rules (e.g. realtimeghosts) must be stated and agreed to by both parties - screenshots of the agreement and any such statements will be required, else the duel may be considered invalid. Lack of evidence may be prevent us from providing appropriate punishments/compensation in the case of a grievance.</li>
+          <li>Duels should be of a competitive nature, based in skill and not luck. Duels such as "1 match of wtf.tbm" will not be supported. Any mod is allowed, but 3 games is recommended.</li>
+          <li>If a player disconnects during a duel, it is counted as a loss for the disconnecting player, unless they both agree to have a rematch. In the event of a player who either intentionally or accidentally cannot complete the match, they will be considered in violation of the duelling agreement, and forfeit the duel as a whole.</li>
+          <li>We cannot and will not support "soft" rules such as "no shovel" or "no running", due to the ambiguous nature of the terms. Change the mod to favor the tactics you would prefer to see in the duel, such as adding or removing the dojo. Any duel made on the basis of a soft rule will be discarded in the case of a report, unless it was done abusively, in which case the offending party will be banned.</li>
+          <li>In the event of an agreed upon duel with a provable winner that follows all of the above rules, the prize will be guaranteed (to a reasonable, best-effort extent) by the Toribash administration. The loser of the duel is obligated to send the prize, and in the event of their failure to do so, they will be punished and the prize will be sent for them.</li>
+          <li>The definition of the best-effort clause does not include the creation of new items or TC, and in the event that it would be unsightly or difficult to acquire the agreed upon items from the responsible party, other items or TC may be appropriated instead. This is done on a case-by-case basis, as necessary, based on market value of the agreed upon items or TC.</li>
+          <li>If non-standard settings are used, both parties must be aware of the changes before the duel starts. Should unconventional settings be used, such as advantageous gravity settings, the duel will be void, winnings returned and the responsible party for using unfair settings is liable for a ban.</li>
+         </ol>
+         
+         <p>For useful scam prevention information, see <a href="http://forum.toribash.com/announcement.php?f=518">here.</a>
+					<style>p.bold {font-weight: bold;}</style>				
+				</td>				
+			</tr>
+		</table>
+		<!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
+		<script type="text/javascript"></script>
+	</body>
+</html>
