@@ -2,7 +2,7 @@ function embedAllYouTube(item)
 {
 	item.find(".youtube").each(function() {
 			var url;
-			var exp = /=(\S+)/;
+			var exp = /www\.youtube\.com\/watch\?v=(\S+)/;
 			var linkText = $(this).text();
 			
 			var videoID = exp.exec(linkText);
