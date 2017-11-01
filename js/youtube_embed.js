@@ -1,5 +1,6 @@
 function embedAllYouTube(item)
 {
+	alert("item: " + item.text());
 	item.find(".youtube").each(function() {
 			alert("youtube detected: " + $(this).text());
 			var url;
