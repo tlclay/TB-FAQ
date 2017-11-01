@@ -114,3 +114,9 @@ body {
 			padding: 0.3em;
 			padding-right: 1em;
 			}
+			.faq_importantInfo {
+			background-color: rgba(140,184,255,0.5);
+    			border: 0.2em solid rgb(100,144,215);
+   			border-radius: 0.6em;
+   			padding: 0.7em;
+			}
