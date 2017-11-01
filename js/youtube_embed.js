@@ -1,6 +1,7 @@
 function embedAllYouTube(item)
 {
 	item.children(".youtube").each(function() {
+			alert("youtube detected: " + $(this).text());
 			var url;
 			var exp = /=(\S+)/;
 			var linkText = $(this).text();
