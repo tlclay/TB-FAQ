@@ -43,15 +43,20 @@ body {
 			font-style: normal;
 			font-weight: bold;
 			}
-			p.faq_question {
+			.faq_question {
 			font-style: italic;
 			font-weight: bold;
 			font-size: 1.2em;
 			}
-			div.faq_answer * {
+			.faq_question * {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 1.2em;
+			}
+			.faq_answer {
 			font-size: 1.1em;
 			}
-			p.faq_answer {
+			.faq_answer * {
 			font-size: 1.1em;
 			}
 			img.faq_img {
