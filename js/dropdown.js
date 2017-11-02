@@ -23,7 +23,7 @@ $(document).on("click", function() {
    var content = $(dropdown).children('ul.drop_content_bbc');
    var arrow = $(title).children('span.drop_arrow_bbc');
 
-   alert("t: " + title.html() + "\nc: " + content.html() + "\na: " + arrow.html());
+   //alert("t: " + title.html() + "\nc: " + content.html() + "\na: " + arrow.html());
    if (content.attr('hidden') !== undefined) {
       showDropContent(content, arrow);
    } else {
