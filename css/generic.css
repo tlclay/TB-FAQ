@@ -120,3 +120,7 @@ body {
    			border-radius: 0.6em;
    			padding: 0.7em;
 			}
+			.faq_hoverExplain {
+			border-bottom: 1px dashed black;
+			text-decoration: none;
+			}
