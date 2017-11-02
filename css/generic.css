@@ -46,18 +46,18 @@ body {
 			.faq_question {
 			font-style: italic;
 			font-weight: bold;
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			}
 			.faq_question * {
 			font-style: italic;
 			font-weight: bold;
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			}
 			.faq_answer {
-			font-size: 1.1rem;
+			font-size: 1rem;
 			}
 			.faq_answer * {
-			font-size: 1.1rem;
+			font-size: 1rem;
 			}
 			img.faq_img {
 			display: block;
