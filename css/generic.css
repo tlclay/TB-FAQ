@@ -48,7 +48,7 @@ body {
 			font-weight: bold;
 			font-size: 1.2em;
 			}
-			div.faq_answer {
+			div.faq_answer * {
 			font-size: 1.1em;
 			}
 			p.faq_answer {
