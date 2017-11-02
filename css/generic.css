@@ -48,9 +48,8 @@ body {
 			font-weight: bold;
 			font-size: 1.2em;
 			}
-			.faq_answer {
+			div.faq_answer {
 			font-size: 1.1em;
-				color:red;
 			}
 			p.faq_answer {
 			font-size: 1.1em;
