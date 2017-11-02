@@ -33,6 +33,7 @@ $(document).on("click", function() {
 
 $(document).ready(function() {
 	var content = $('div.dropdown_bbc').children('ul.drop_content_bbc');
+	var title = $('div.dropdown_bbc').children('strong.drop_title_bbc').css({'cursor': 'pointer', 'color': '#9f0000'});
 	var arrow = $('div.dropdown_bbc').children('strong.drop_title_bbc').children('span.drop_arrow_bbc');
 	hideDropContent(content, arrow);
 });
