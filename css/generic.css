@@ -132,3 +132,12 @@ body {
 			border-bottom: 1px dashed black;
 			text-decoration: none;
 			}
+			.faq_code_bbc {
+			margin: 1rem;
+			padding: 6px;
+			border: 1px inset;
+			height: 274px;
+			text-align: left;
+			overflow: auto
+			}
+
