@@ -28,7 +28,7 @@ This is mostly covered in the stickied thread in HS HQ. You'll want to use **[it
 
 **Make sure not to edit anything outside of the area's I specify inside the file - these changes cannot and will not be implemented into the live site. Everything outside the marked areas is just there as a framework so you can work in an accurate environment.**
 
-Refer to **[clan_staff.html](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Clans/clan_staff.html)** for an example of the template with content added in.
+Refer to **[boosters_and_subscriptions.html](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Account/boosters_and_subscriptions.html)** for an example of the template with content added in.
 
 #### MAKE SURE TO READ THE [CODING STANDARDS](https://github.com/TB-FAQ/TB-FAQ/blob/master/CODING%20STANDARDS.MD)
 
