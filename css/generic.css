@@ -138,6 +138,7 @@ body {
 			padding: 6px;
 			border: 1px inset;
 			height: 274px;
+			width: auto;
 			text-align: left;
 			overflow: scroll;
 			}
