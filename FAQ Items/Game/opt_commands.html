@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- 
+    PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
+    EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
+    'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
+    -->
+<html>
+<head>
+	<!-- Uncomment if you want to test jquery - delete or leave commented out when requesting pull -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.js">
+    </script> -->
+	<link href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css" rel="stylesheet" type="text/css">
+	<style>
+	</style>
+	<title></title>
+</head>
+<body>
+	<table align="center" border="0" cellpadding="6" cellspacing="1" class="tborder" width="100%">
+		<tr>
+			<!-- TITLE WITHIN THESE <td></td> TAGS -->
+			<td class="tcat">Opt Commands</td>
+		</tr>
+		<tr>
+			<td class="alt1">
+				<!-- CONTENT BEGINS HERE --><!-- CSS IN HERE -->
+				<p class="faq_question"><span class="faq_q">Q:</span> What are opt commands?</p>
+				<div class="faq_answer">
+					<p><span class="faq_a">A:</span> <strong>Opt is shorthand for 'option'</strong>. As such, the opt commands are simply a way of changing options through text commands rather than through a graphical interface (like a menu).</p>
+				</div><br>
+				<br>
+				<p class="faq_question"><span class="faq_q">Q:</span> What options can be changed this way?</p>
+				<div class="faq_answer">
+					<p><span class="faq_a">A:</span> There are a lot of options which can be changed through the use of opt commands. Almost anything which is controllable through the client on your computer can be changed via the use of these commands.</p>
+					<p><strong>Here's the complete list of opt commands available to you</strong> (default values are the numbers proceeding the commands):</p>
+					<pre class="faq_code_bbc"><strong>Options:</strong>
+                    
+    <strong>
+    COMMAND             RANGE             DEFAULT             DESC</strong>
+    
+   -altimeter           [0|1]             0                   Display the altimeter (current height + record height)
+   -speedometer         [0|1]             0                   Display the speedometer (current speed + max speed)
+   -hud                 [0|1]             1                   Additional <a href="https://en.wikipedia.org/wiki/HUD_(video_gaming)">HUD</a> elements (scores, names, chat etc.)
+   -<em style="color: darkgrey">gui                 [0|1]             1                   -</em>
+   -score               [0|1]             1                   Display scores
+   -timer               [0|1]             1                   Display timer
+   -chat                [0|1]             1                   Display chat
+   -spectator           [0|1]             1                   Display spectators in queue
+   -debug               [0|1]             0                   Debug information
+   -name                [0|1]             1                   Display names
+   -emote               [0|1]             1                   Show emotes (/em)
+   -shout               [0|1]             1                   Show shouts (/sh)
+   -<em style="color: darkgrey">button              [0|1]             0                   -</em>
+   -text                [0|1]             1                   Display full user text (name + belt + rank etc.)
+   -hint                [0|1]             1                   Show hints ('Press spacebar', etc.)
+   -feedback            [0|1]             1                   Show feedback ('Extending Left Hip' etc.)
+   -message             [0|1]             1                   Enable end-of-match message ('Tori won' etc.)
+   -<em style="color: darkgrey">info                [0|1]             1                   -</em>
+   -<em style="color: darkgrey">cursor              [0|1]             0                   -</em>
+   -uke                 [0|1]             1                   Draw uke (will be invisible if 0)
+   -tori                [0|1]             1                   Draw Tori (will be invisible if 0)
+   -blood               [0|1]             1                   Display Blood
+   -<em style="color: darkgrey">sound               [0|1]             1                   -</em>
+   -mousebuttons        [0-3]             3                   1 = click can scroll all joint modes | 2 = click can only scroll hold/lax modes | 3 = click can only scroll extend/contract modes
+   -backgroundclick     [0|1]             1                   Allows clicking empty space to un-focus from a specific player
+   -<em style="color: darkgrey">rumble              [0|1]             0                   -</em>
+   -<em style="color: darkgrey">smartcam            [0|1]             0                   -</em>
+   -width               [0-unbounded]     960                 Sets the width of the client (in pixels)
+   -height              [0-unbounded]     540                 Sets the height of the client (in pixels)
+   -antialiasing        [0|1]             1                   Enables <a href="https://en.wikipedia.org/wiki/Spatial_anti-aliasing">anti-aliasing</a>
+   -benchmark           [0|1]             0                   Enables <a href="https://en.wikipedia.org/wiki/Benchmark_(computing)">benchmarking</a>
+   -fullscreen          [0|1]             0                   Enables fullscreen mode
+   -autosave            [0|1]             1                   When on, all replays viewed will automatically be saved
+   -rememberrules       [0|1]             0                   When on, current game rules will be remembered for next time you load up the client
+   -autoupdate          [0|1]             1                   When on, player data will be updated on the fly
+   -bruise              [0|1]             1                   Display bruising on joints (redness when taking damage)
+   -<em style="color: darkgrey">motionblur          [0|1]             0                   Enables <a href="https://en.wikipedia.org/wiki/Motion_blur#Computer_graphics">motion blur</a></em>
+   -bloodstains         [0|1]             1                   Draw blood stains on the floor (requires shaders)
+   -<em style="color: darkgrey">exhibition          [0|1]             0                   Begins replay slideshow</em>
+   -reflection          [0|1]             1                   Draw reflections (requires shaders)
+   -<em style="color: darkgrey">smoothcam           [0|1]             1                   Enables smooth camera</em>
+   -framerate           [30|60]           30                  Changes framerate cap to either 30 or 60 (other values will be accepted, however only 30 and 60 can be set). <strong>You can uncap your framerate using the fixedframerate option.</strong>
+   -fixedframerate      [0|1]             1                   Allows for as many frames per second as your environment will allow for.   
+   -avatar              [0|1]             1                   Display head avatars beneath user info
+   -fluid               [0|1]             1                   Activate fluid blood
+   -softshadow          [0|1]             1                   Draw <a href="https://en.wikipedia.org/wiki/Shadow_mapping#Soft_Shadows">soft shadows</a>
+   -ambientocclusion    [0|1]             1                   Enable <a href="https://en.wikipedia.org/wiki/Ambient_occlusion">ambient occlusion</a>
+   -bumpmapping         [0|1]             1                   Enable <a href="https://en.wikipedia.org/wiki/Bump_mapping">bumpmapped textures</a>
+   -<em style="color: darkgrey">depthoffield        [0|1]             0                   Enables <a href="https://en.wikipedia.org/wiki/Depth_of_field">depth of field</a></em>
+   -<em style="color: darkgrey">anaglyphic          [0|1]             0                   Enables <a href="https://en.wikipedia.org/wiki/Anaglyph_3D">analgyphic</a> mode</em>
+   -shaders             [0|1]             0                   Enables <a href="https://en.wikipedia.org/wiki/Shader">shaders</a> (required for some other options to work)
+   -<em style="color: darkgrey">noreload            [0|1]             1                   -</em>
+   -<em style="color: darkgrey">equipment           [0|1]             1                   -</em>
+   -money               [0|1]             1                   Display current toricredits
+   -turnalert           [0|1]             1                   When on, will cause the client to issue an alert when it is the players turn
+   -<em style="color: darkgrey">beginner            [0|1]             1                   -</em>
+   -<em style="color: darkgrey">animatedhead        [0|1]             0                   -</em>
+   -floortexture        [0|1]             1                   Draw floor texture items        
+   -particles           [0|1]             1                   Draw flame particles
+   -trails              [0|1]             1                   Draw trail items
+   -keyframes           [0|1]             0                   Enables keyframed camera movement in replays
+   -ghostcache          [0|1]             0                   Enables caching of player ghosts
+   -playercache         [0|1]             0                   Enables caching of player data
+   -chatcache           [0|1]             1                   Enables caching of viewed chat
+   -raytracing          [0|1]             1                   Enables <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">raytracing</a> (requires shaders)
+   -dl                  [0|1]             1                   Enables on-the-fly downloading of other players data
+   -hair                [0|1]             0                   Draw hair items
+   -grip                [0|1]             0                   Draw grip spheres</pre>
+					<p><strong style="color: red">Some of these options may not work in certain versions of Toribash</strong></p>
+				</div>
+			</td><!-- CONTENT ENDS HERE -->
+		</tr>
+	</table><!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
