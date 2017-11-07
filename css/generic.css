@@ -132,12 +132,14 @@ body {
 			border-bottom: 1px dashed black;
 			text-decoration: none;
 			}
-			.faq_code_bbc {
+			.faq_code_bbca {
 			background: white;
 			margin: 1rem;
 			padding: 6px;
 			border: 1px inset;
-			height: 274px;
+			height: 16rem;
+			width: 42rem;
 			overflow: auto;
+			resize: both;
 			}
 
