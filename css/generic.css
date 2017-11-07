@@ -139,6 +139,6 @@ body {
 			border: 1px inset;
 			height: 274px;
 			text-align: left;
-			overflow: auto
+			overflow: scroll;
 			}
 
