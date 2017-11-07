@@ -142,4 +142,9 @@ body {
 			overflow: auto;
 			resize: both;
 			}
-
+			.faq_code_snippet {
+			background: white;
+			border: 1px solid lightgrey;
+			font-family: consolas;
+			padding: 0.1em;
+			} 
