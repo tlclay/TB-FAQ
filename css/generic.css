@@ -148,4 +148,24 @@ body {
 			font-family: consolas;
 			padding: 0.1em;
 			background-color: rgba(255, 255, 255, 0.5);
-			} 
+			}
+			.faq_table {
+			    border-collapse: collapse;
+			    width: 100%;
+			}
+
+			.faq_table td, th {
+			    border: 1px solid #bbb;
+			    text-align: left;
+			    padding: 8px;
+			}
+
+			.faq_table tr > th {
+				text-align: center;
+				font-weight: bold;
+				background-color: rgba(140,184,255,0.3);
+			}
+
+			.faq_table tr:nth-child(even) > td {
+			    background-color: #dddddd;
+			}
