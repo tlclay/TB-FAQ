@@ -1,7 +1,9 @@
 - **Game**
-  - [ ] rename `opt_commands.html` to `option_commands.html`
-  - [ ] create `operator_commands.html`
-  - [ ] rename live `Opt Commands` page to `Standard Commands` (and update item to match item on github)
-  - [ ] rename `opt_commands.html` to `option_commands.html`, upload to live
+  - [x] rename `opt_commands.html` to `option_commands.html`
+  - [x] rename `personal_commands.html` to `standard_commands.html`, fix title
+  - [x] create `operator_commands.html`
+  - [ ] rename live `Opt Commands` page to `Standard Commands` (and update item to match item on github) **needs suo**
+  - [ ] Add `option_commands.html` to live **needs suo**
+  - [ ] Add `operator_commands.html` to live **needs suo**
   - [ ] create `shaders.html`, explaining shaders ([starting material](http://forum.toribash.com/showthread.php?t=208366))
   - [ ] create `music.html`, explaining music

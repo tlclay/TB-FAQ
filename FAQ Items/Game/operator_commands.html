@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table align="center" border="0" cellpadding="6" cellspacing="1" class="tborder" width="100%">
+		<tr>
+			<!-- TITLE WITHIN THESE <td></td> TAGS -->
+			<td class="tcat">Operator Commands</td>
+		</tr>
+		<tr>
+			<td class="alt1">
+				<!-- CONTENT BEGINS HERE -->
+				<!-- CSS IN HERE -->
+				<p class="faq_question"><span class="faq_q">Q:</span> What are operator chat commands?</p>
+				<div class="faq_answer">
+					<p><span class="faq_a">A:</span> This category includes commands which can only be run as a server operator (<span style="color: #449944">@</span>). In multiplayer, <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">set commands</a> may also only be executed by operators.</p>
+					<p>Some operator commands may also be run in singleplayer.</p>
+					<p class="faq_importantInfo">Use chat commands like so: <span class="faq_code_snippet">/&lt;command&gt; &lt;argument(s)&gt;</span>. Some commands may not have arguments.<br>
+					Example no-argument command: <span class="faq_code_snippet">/specall</span><br>
+					Example command with arguments: <span class="faq_code_snippet">/fspec Fear</span></p>
+					<p>Other command types:</p>
+					<ul>
+						<li>
+							<a href="http://forum.toribash.com/faq.php?faq=game_main#faq_standard_commands">Standard commands.</a>
+						</li>
+						<li>
+							<a href="http://forum.toribash.com/faq.php?faq=game_main#faq_option_commands">Option commands</a>
+						</li>
+						<li>
+							<a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">Set commands</a>
+						</li>
+					</ul>
+				</div><br>
+				<br>
+				<p class="faq_question"><span class="faq_q">Q:</span> Where can I see all the commands?</p>
+				<div class="faq_answer">
+					<p><span class="faq_a">A:</span> Here's a full list of commands only usable by room operators, including descriptions of what they do:</p>
+					<p>Commands in <strong style="color: #449944">green</strong> may also be used in singleplayer.</p>
+					<p><strong style="color: red">Some of these commands may not work in certain versions of Toribash</strong></p><!--                            Room comms                       -->
+					<div class="dropdown_bbc">
+						<strong class="drop_title_bbc">Room control commands <span class="drop_arrow_bbc"></span></strong>
+						<ul class="drop_content_bbc" style="list-style-type: none;">
+							<li class="drop_item_bbc">
+								<table class="faq_table">
+									<tr>
+										<th>COMMAND</th>
+										<th>ARGS</th>
+										<th>SHORTHAND</th>
+										<th>DESC</th>
+									</tr>
+									<tr>
+										<td>passwd</td>
+										<td>[password|<em>none</em>]</td>
+										<td></td>
+										<td>Adds or removes a password for the room. Users must use <span class="faq_code_snippet">/password [password]</span> to enter and chat. <strong>Running this command with no argument will clear the password entirely.</strong></td>
+									</tr>
+									<tr>
+										<td>setowner</td>
+										<td>[password]</td>
+										<td></td>
+										<td>Sets the ownerpass for the room. Use in conjunction with <span class="faq_code_snippet">/owner [password]</span>.</td>
+									</tr>
+									<tr>
+										<td>owner</td>
+										<td>[password]</td>
+										<td></td>
+										<td>If the password is correct, you will be given operator status by the server.</td>
+									</tr>
+									<tr style="color: #449944">
+										<td>reset</td>
+										<td></td>
+										<td>rt</td>
+										<td>Resets the game.</td>
+									</tr>
+									<tr style="color: #449944">
+										<td>loadmod</td>
+										<td>[filename].tbm</td>
+										<td>lm</td>
+										<td>Loads the specified mod file (.tbm file). Automatically resets the game. Equivalent to calling <span class="faq_code_snippet">/set mod [modname].tbm</span> then <span class="faq_code_snippet">/reset</span></td>
+									</tr>
+									<tr>
+										<td>desc</td>
+										<td>[text]</td>
+										<td></td>
+										<td>Changes the description of the room as seen on the server list.</td>
+									</tr>
+									<tr>
+										<td>motd</td>
+										<td>[text]</td>
+										<td></td>
+										<td>Changes the 'message of the day' of the room. This message will be displayed to people joining your room.</td>
+									</tr>
+									<tr>
+										<td>maxclients</td>
+										<td>[number]</td>
+										<td></td>
+										<td>Sets the maximum number of users (clients) that can join your room.</td>
+									</tr>
+									<tr>
+										<td>minbelt</td>
+										<td>[qi]</td>
+										<td></td>
+										<td>Sets the minimum number of games played (qi) a user must have to join your room.</td>
+									</tr>
+									<tr>
+										<td>maxbelt</td>
+										<td>[qi]</td>
+										<td></td>
+										<td>Sets the maximum number of games played (qi) a user can have to join your room.</td>
+									</tr>
+									<tr>
+										<td>queuejump</td>
+										<td>[position]</td>
+										<td></td>
+										<td>
+											Users joining your room will be automatically nudged to the specified position in the queue.
+											<ol style="list-style-type: decimal;">
+												<li value="0">End of queue (default setting)</li>
+												<li>Uke's position</li>
+												<li>First position in queue</li>
+												<li value="3+">Place new users into specified place. If the number is higher than the queue size, they will be added to the end of the queue.</li>
+											</ol>
+										</td>
+									</tr>
+									<tr>
+										<td>duel</td>
+										<td>
+											<ul>
+												<li>[start][tc]</li>
+												<li>[stop|status|earnings]</li>
+											</ul>
+										</td>
+										<td></td>
+										<td>
+											See <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">dueling.</a>
+										</td>
+									</tr>
+									<tr>
+										<td>lockdown</td>
+										<td>[on|off]<br>
+										<br></td>
+										<td></td>
+										<td>Imposes lockdown mode on the room. Users in spectator mode won't be able to join the bout queue by themselved. If a user reconnects, they will automatically join the bout queue as normal, however.</td>
+									</tr>
+									<tr>
+										<td>knockout</td>
+										<td>[on|off]</td>
+										<td></td>
+										<td>Imposes knockout mode on the room. Users will be specced upon losing, and cannot re-enter until the tourney is over. Users joining the room will be automatically placed into spectator mode. The winner may automatically win a prize generated by the server in the case of autotourneys, or from another user's account in the case of <span class="faq_code_snippet">/knockoutprize [tc]</span></td>
+									</tr>
+									<tr>
+										<td>knockoutprize</td>
+										<td>[tc]</td>
+										<td></td>
+										<td>Winners of a knockout tourney hosted in the room will receive the specified amount of tc, <strong>from your own tc.</strong></td>
+									</tr>
+									<tr>
+										<td>hotseat</td>
+										<td>[on|off]<br>
+										<br></td>
+										<td></td>
+										<td>Imposes hotseat mode on the room. The player in Tori's position will always be in that position regardless of whether they win or lose their matches. As such, the player in Uke's position will be sent to the end of the queue regardless of whether they win or lose their match.</td>
+									</tr>
+									<tr>
+										<td>status</td>
+										<td><br>
+										<br></td>
+										<td></td>
+										<td>Display the ip addresses of all users in the room.</td>
+									</tr>
+									<tr style="color: #449944">
+										<td>centerprint</td>
+										<td>[message]</td>
+										<td>cp</td>
+										<td>Displays the specified message in the center of the screen for all users in the room.</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div><br>
+					<!--                            User control comms                       -->
+					<div class="dropdown_bbc">
+						<strong class="drop_title_bbc">User control commands <span class="drop_arrow_bbc"></span></strong>
+						<ul class="drop_content_bbc" style="list-style-type: none;">
+							<li class="drop_item_bbc">
+								<table class="faq_table">
+									<tr>
+										<th>COMMAND</th>
+										<th>ARGS</th>
+										<th>SHORTHAND</th>
+										<th>DESC</th>
+									</tr>
+									<tr>
+										<td>operator</td>
+										<td>[username]</td>
+										<td>op</td>
+										<td>Makes the specified user operator in the room.</td>
+									</tr>
+									<tr>
+										<td>deoperator</td>
+										<td>[username]</td>
+										<td>deop</td>
+										<td>Removes operator status from the specified user in the room.</td>
+									</tr>
+									<tr>
+										<td>fenter</td>
+										<td>[username]</td>
+										<td></td>
+										<td>Moves the specified user from spectator mode into the bout queue.</td>
+									</tr>
+									<tr>
+										<td>fspec</td>
+										<td>[username]</td>
+										<td></td>
+										<td>Moves the specified user from the bout queue into the spectator mode.</td>
+									</tr>
+									<tr>
+										<td>fknock</td>
+										<td>[username]</td>
+										<td></td>
+										<td>Moves the specified user to the bottom of the bout queue (must already be in the bout queue).</td>
+									</tr>
+									<tr>
+										<td>specall</td>
+										<td></td>
+										<td></td>
+										<td>Moves all players in the room to spectator mode.</td>
+									</tr>
+									<tr>
+										<td>scramble</td>
+										<td></td>
+										<td></td>
+										<td>Randomizes the positions of all players in the bout queue.</td>
+									</tr>
+									<tr>
+										<td>nudge</td>
+										<td>[username][position]</td>
+										<td></td>
+										<td>Nudges the specified user to the specified position in the queue. If the position is higher than the size of the queue, they will be nudged to the end of the queue. Cannot be used to nudge people into the position of Tori or Uke. Playes must be in the bout queue to be nudged.</td>
+									</tr>
+									<tr>
+										<td>mute</td>
+										<td>[username]</td>
+										<td></td>
+										<td>Causes the specified user to be unable to chat. If the user reconnects, this effect will be removed.</td>
+									</tr>
+									<tr>
+										<td>muteall</td>
+										<td></td>
+										<td></td>
+										<td>Causes all users in the room to be muted. If a user reconnects, this effect will be removed from that user.</td>
+									</tr>
+									<tr>
+										<td>unmuteall</td>
+										<td></td>
+										<td></td>
+										<td>Causes all users in the room to be unmuted.</td>
+									</tr>
+									<tr>
+										<td>kick</td>
+										<td>[username]</td>
+										<td></td>
+										<td>Causes the specified user to be disconnected from the room. Cannot kick ingame admins.</td>
+									</tr>
+									<tr>
+										<td>ban</td>
+										<td>
+											<ul>
+												<li>[list|clear]</li>
+												<li>[add|del][username|ip]</li>
+											</ul>
+										</td>
+										<td></td>
+										<td>
+											Banned users cannot rejoin a room after being kicked or otherwise disconnecting (does not affect ingame admins).
+											<ul style="margin-top: 1rem; margin-bottom: 1rem;">
+												<li>list: lists all users on the room's banlist</li>
+												<li>clear: clears the entire banlist</li>
+												<li>add|del: adds/removes the specified user to/from the banlist.</li>
+											</ul>Ban a user's IP to prevent them from rejoining on an alternate account (find IPs with <span class="faq_code_snippet">/status</span>).
+										</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</td><!-- CONTENT ENDS HERE -->
+		</tr>
+	</table>
+</body>
+</html>
