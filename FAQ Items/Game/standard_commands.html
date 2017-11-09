@@ -68,6 +68,12 @@
 						<td>enter</td><td>-</td><td>en</td><td>Moves you from the spectators into the bout queue (people in queue to play)</td>
 					</tr>
 					<tr>
+						<td>bet</td><td>[tc][username]</td><td></td><td>Places a bet on the specified user (user must be currently playing). The amount betted must be above the room's minbet value, and the bet must be placed within the betframes.</td>
+					</tr>
+					<tr>
+						<td>autobet</td><td>[tori|uke|off][tc]</td><td></td><td>Causes your client to automatically bet the specified tc amount on either Tori or Uke at the start of each match.</td>
+					</tr>
+					<tr>
 						<td>chatlines</td><td>[number]</td><td>chl</td><td>Sets the number of displayed chat lines to the specified number (max 18). You can also use the <strong>`</strong> (backtick) key to set this immediately to 18.</td>
 					</tr>
 					<tr>
@@ -119,6 +125,9 @@
                     <tr>
 						<th>COMMAND</th><th>ARGS</th><th>SHORTHAND</th><th>DESC</th>
                     </tr>
+					<tr>
+						<td>rules</td><td></td><td></td><td>Display the rules of the room:<ul><li>Tourney prize (for autotourneys)</li><li>Minimum bet</li><li>Maximum bet rake</li><li>Entry fee</li><li>Afk penalty (tc lost for afking)</li><li>Decap prize</li><li>Dismemberment prize</li><li>Whether matches affect your rank</li></ul></td>
+					</tr>
 					<tr>
 						<td>history</td><td></td><td>hi</td><td>Displays your entire chat log, including commands (inc. past sessions).</td>
 					</tr>
