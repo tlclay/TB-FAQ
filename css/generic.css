@@ -128,6 +128,14 @@ body {
    			border-radius: 0.6em;
    			padding: 0.7em;
 			}
+			.faq_importantInfo > p:first-child
+			{
+				margin-top: 0;
+			}
+			.faq_importantInfo > p:last-child
+			{
+				margin-bottom: 0;
+			}
 			.faq_hoverExplain {
 			border-bottom: 1px dashed black;
 			text-decoration: none;
