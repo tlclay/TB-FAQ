@@ -20,15 +20,17 @@
 	<table align="center" border="0" cellpadding="6" cellspacing="1" class="tborder" width="100%">
     <tr>
         <!-- TITLE WITHIN THESE <td></td> TAGS -->
-        <td class="tcat">Opt Commands</td>
+        <td class="tcat">Standard Commands</td>
     </tr>
     <tr>
         <td class="alt1">
             <!-- CONTENT BEGINS HERE -->
             <!-- CSS IN HERE -->
-            <p class="faq_question"><span class="faq_q">Q:</span> What are personal chat commands?</p>
+            <p class="faq_question"><span class="faq_q">Q:</span> What are standard chat commands?</p>
             <div class="faq_answer">
+              
                 <p><span class="faq_a">A:</span> This category includes commands which can generally be used in any scenario and will only affect you.</p>
+
                 <p class="faq_importantInfo">Use chat commands like so: <span class="faq_code_snippet">/&lt;command&gt; &lt;argument(s)&gt;</span>. Some commands may not have arguments.
                     <br>Example no-argument command: <span class="faq_code_snippet">/quit</span>
                     <br>Example command with arguments: <span class="faq_code_snippet">/join myroom</span></p>
@@ -68,6 +70,12 @@
 						<td>enter</td><td>-</td><td>en</td><td>Moves you from the spectators into the bout queue (people in queue to play)</td>
 					</tr>
 					<tr>
+						<td>bet</td><td>[tc][username]</td><td></td><td>Places a bet on the specified user (user must be currently playing). The amount betted must be above the room's minbet value, and the bet must be placed within the betframes.</td>
+					</tr>
+					<tr>
+						<td>autobet</td><td>[tori|uke|off][tc]</td><td></td><td>Causes your client to automatically bet the specified tc amount on either Tori or Uke at the start of each match.</td>
+					</tr>
+					<tr>
 						<td>chatlines</td><td>[number]</td><td>chl</td><td>Sets the number of displayed chat lines to the specified number (max 18). You can also use the <strong>`</strong> (backtick) key to set this immediately to 18.</td>
 					</tr>
 					<tr>
@@ -101,6 +109,9 @@
 						<td>refresh</td><td>-</td><td>rf</td><td>Syncs local cache of rooms and online players with those actually online.</td>
 					</tr>
 					<tr>
+						<td>stats</td><td>[username]</td><td></td><td>Displays the specified user's stats:<ul><li>Join Date</li><li>Belt</li><li>Games played + win ratio</li><li>Current wins/losses in room</li><li>Global rank</li></ul></td>
+					</tr>
+					<tr>
 						<td>quit</td><td>-</td><td>qu</td><td>Exits the client.</td>
 					</tr>
                 </table></li>
@@ -116,6 +127,9 @@
                     <tr>
 						<th>COMMAND</th><th>ARGS</th><th>SHORTHAND</th><th>DESC</th>
                     </tr>
+					<tr>
+						<td>rules</td><td></td><td></td><td>Display the rules of the room:<ul><li>Tourney prize (for autotourneys)</li><li>Minimum bet</li><li>Maximum bet rake</li><li>Entry fee</li><li>Afk penalty (tc lost for afking)</li><li>Decap prize</li><li>Dismemberment prize</li><li>Whether matches affect your rank</li></ul></td>
+					</tr>
 					<tr>
 						<td>history</td><td></td><td>hi</td><td>Displays your entire chat log, including commands (inc. past sessions).</td>
 					</tr>
@@ -175,6 +189,15 @@
 					</tr>
 					<tr>
 						<td>exportrules</td><td>[filename].tbm</td><td>ew</td><td>Exports the current mod's rules into a new mod file (.tbm file).</td>
+					</tr>
+                    <tr>
+						<td>resolution</td><td>[width][height]</td><td>re</td><td>Sets the game window's width and height (in pixels).</td>
+					</tr>
+                    <tr style="color: #aaaaaa">
+						<td>anaglyphic</td><td>[0|1]</td><td>an</td><td>No effect. Would enable <a href="https://en.wikipedia.org/wiki/Anaglyph_3D">anaglyphic</a> mode in versions such as <a href="http://www.toribash.com/Toribash-3.69-Setup.exe">3.69</a></td>
+					</tr>
+                    <tr style="color: #aaaaaa">
+						<td>depthoffield</td><td>[0|1]</td><td>dof</td><td>No effect. Would presumably enable <a href="https://en.wikipedia.org/wiki/Depth_of_field">depth of field</a>.</td>
 					</tr>
 					<tr>
 						<td>worldshader</td><td>[id][x][y][z][w]</td><td>ws</td><td>Changes the values of the field specified by [id] to the specified values. See <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_shaders">shaders</a>.</td>
