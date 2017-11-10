@@ -1,4 +1,13 @@
-# **Game::GitHub**
+# Index of other TODOs
+- ### Account
+- ### Clans
+- ### Community
+- ### [Game](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Game/TODO.md)
+- ### Market
+
+
+
+## **Game::GitHub**
 - To create:
   - [x] `operator_commands.html`
   - [x] `set_commands.html`
@@ -13,7 +22,7 @@
   - [x] rename `personal_commands.html` to `standard_commands.html`, fix title
   
   
-# **Game::Live**
+## **Game::Live**
 - To add:
   - [ ] add `option_commands.html` to live
   - [ ] add `operator_commands.html` to live
