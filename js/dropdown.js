@@ -17,7 +17,7 @@ function showDropContent(content, arrow) {
    arrow.text('▼');
 }
 
-$(document).on("click", function() {
+$('strong.drop_title_bbc').on("click", function() {
    var dropdown = $(event.target).closest('div.dropdown_bbc');
    var title = $(dropdown).children('strong.drop_title_bbc');
    var content = $(dropdown).children('ul.drop_content_bbc');
