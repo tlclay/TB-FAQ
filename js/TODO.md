@@ -1,2 +1,2 @@
 -**js**
-  - [ ] update live dropdown.js script to match github version
+  - [ ] update live dropdown.js script to match github version **needs suo**
