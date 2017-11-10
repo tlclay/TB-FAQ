@@ -6,8 +6,8 @@
   - [ ] `music.html`, explaining music
   - [ ] `gamerules.html`, explaining gamerules
   - [ ] `version_history.html`, essentially a migration of [this page](http://forum.toribash.com/showthread.php?t=567005)
-  - [ ] `making_a_room.html`, a migration of [this_page](http://forum.toribash.com/showthread.php?t=214202)
-  - [ ] `betting_server_rules.html`, a migration of [this_page](http://forum.toribash.com/showthread.php?t=491136)
+  - [ ] `making_a_room.html`, a migration of [this page](http://forum.toribash.com/showthread.php?t=214202)
+  - [ ] `betting_server_rules.html`, a migration of [this page](http://forum.toribash.com/showthread.php?t=491136)
 - To update:
   - [x] rename `opt_commands.html` to `option_commands.html`
   - [x] rename `personal_commands.html` to `standard_commands.html`, fix title
