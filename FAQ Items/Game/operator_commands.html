@@ -294,6 +294,65 @@
 								</table>
 							</li>
 						</ul>
+					</div><br>
+                    
+                    <!--                            Betting control comms                       -->
+					<div class="dropdown_bbc">
+						<strong class="drop_title_bbc">Betting control commands <span class="drop_arrow_bbc"></span></strong>
+						<ul class="drop_content_bbc" style="list-style-type: none;">
+							<li class="drop_item_bbc">
+								<table class="faq_table">
+									<tr>
+										<th>COMMAND</th>
+										<th>ARGS</th>
+										<th>SHORTHAND</th>
+										<th>DESC</th>
+									</tr>
+									<tr>
+										<td>house</td>
+										<td>[username]</td>
+										<td></td>
+										<td>Makes the specified user server admin. This doesn't actually grant any special privileges, rather, the user will earn tc from certain other commands such as <span class="faq_code_snippet">/maxrake</span>. If no argument is given, this command will instead display the current server admin's username.</td>
+									</tr>
+									<tr>
+										<td>house</td>
+										<td>[username|<em>none</em>]</td>
+										<td></td>
+										<td>Makes the specified user server admin. This doesn't actually grant any special privileges, rather, the user will earn tc from certain other commands such as <span class="faq_code_snippet">/maxrake</span></td>
+									</tr>
+                                    <tr>
+										<td>minbet</td>
+										<td>[tc]</td>
+										<td></td>
+										<td>Forces all bets to be at least the specified amount.</td>
+									</tr>
+                                    <tr>
+										<td>betframes</td>
+										<td>[frames]</td>
+										<td></td>
+										<td>All bets must occur before the specified amount of frames have elapsed.</td>
+									</tr>
+                                    <tr>
+										<td>maxrake</td>
+										<td>[tc]</td>
+										<td></td>
+										<td>Specifies the maximum amount of rake tc the server admin can earn from bets. Note that rake tc is calculated and you will not always earn this amount, it is just a maximum.</td>
+									</tr>
+                                    <tr>
+										<td>cancelbets</td>
+										<td></td>
+										<td></td>
+										<td>Cancels all active bets, returning all tc.</td>
+									</tr>
+                                    <tr>
+										<td>tourneystats</td>
+										<td></td>
+										<td></td>
+										<td>Displays info on house earnings and bet statistics.</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</td><!-- CONTENT ENDS HERE -->
