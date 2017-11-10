@@ -26,5 +26,6 @@
 - To add:
   - [x] add `option_commands.html` to live
   - [x] add `operator_commands.html` to live
+  - [x] add `set_commands.html` to live
 - To update:
   - [x] rename live `Opt Commands` page to `Standard Commands` (and update item to match item on github)
