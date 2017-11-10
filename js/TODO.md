@@ -1,0 +1,2 @@
+-**js**
+  - [ ] update live dropdown.js script to match github version
