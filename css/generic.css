@@ -177,3 +177,13 @@ body {
 			.faq_table tr:nth-child(even) > td {
 			    background-color: #dddddd;
 			}
+			ul.faq_spaced_list > li:not(:first-child):not(:last-child) {
+			    margin-top: 0.5rem;
+			    margin-bottom: 0.5rem;
+			}
+
+			ol.faq_spaced_list > li:not(:first-child):not(:last-child) {
+			    margin-top: 0.5rem;
+			    margin-bottom: 0.5rem;
+			}
+
