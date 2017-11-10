@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- 
+    PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
+    EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
+    'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
+    -->
+<html>
+<head>
+	<!-- Uncomment if you want to test jquery - delete or leave commented out when requesting pull -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.js">
+    </script>
+	<link href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css" rel="stylesheet" type="text/css">
+	<style>
+	</style>
+	<title></title>
+</head>
+<body>
+	<table align="center" border="0" cellpadding="6" cellspacing="1" class="tborder" width="100%">
+    <tr>
+        <!-- TITLE WITHIN THESE <td></td> TAGS -->
+        <td class="tcat">Set Commands</td>
+    </tr>
+    <tr>
+        <td class="alt1">
+            <!-- CONTENT BEGINS HERE -->
+            <!-- CSS IN HERE -->
+            <p class="faq_question"><span class="faq_q">Q:</span> What are set commands?</p>
+            <div class="faq_answer">
+                <p><span class="faq_a">A:</span> This category includes ones which will effect the game environment. In multiplayer, only operators (<span style="color: #449944">@</span>) may use set commands.</p>
+                <div class="faq_importantInfo"><p>Use set commands like so: <span class="faq_code_snippet">/set &lt;field&gt; &lt;argument(s)&gt;</span>.
+                    <br>Example command: <span class="faq_code_snippet">/set desc Hi!</span></p>
+					<p><strong>All set commands require a match reset to take effect.</strong></p></div>
+					<p>Other command types:</p>
+					<ul>
+						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_standard_commands">Standard commands.</a></li>
+						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_option_commands">Option commands</a></li>
+						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_operator_commands">Operator commands</a></li>
+					</ul>
+            </div>
+            <br>
+            <br>
+            <p class="faq_question"><span class="faq_q">Q:</span> Where can I see all the commands?</p>
+            <div class="faq_answer">
+                <p><span class="faq_a">A:</span> Here's a full list of commands only usable by room operators, including descriptions of what they do:</p>
+                
+                <p><strong style="color: red">Some of these commands may not work in certain versions of Toribash</strong></p>
+
+
+				<!--                            Set comms                       -->
+				<div class="dropdown_bbc"> 
+				<strong class="drop_title_bbc">Set commands <span class="drop_arrow_bbc"></span></strong>
+				<ul class="drop_content_bbc"  style="list-style-type: none;">
+					<li class="drop_item_bbc"><table class="faq_table">
+                    <tr>
+						<th>FIELD</th><th>SHORTHAND</th><th>ARGS</th><th>DESC</th>
+                    </tr>
+					<tr>
+						<td></td><td></td><td></td><td>Lists out the current mod and gamerules. Changes made by other set commands which are pending a match reset are displayed in <span style="color: red">red</span>, in the form <span class="faq_code_snippet" style="color: red">old_value -> new_value</span></td>
+					</tr>
+					<tr>
+						<td>mod</td><td>mo</td><td>[filename].tbm</td><td>Changes the current mod to the mod specified (.tbm file).</td>
+					</tr>
+					<tr>
+						<td>matchframes</td><td>mf</td><td>[frames]</td><td>Changes the current matchframes to the specified amount.</td>
+					</tr>
+					<tr>
+						<td>turnframes</td><td>tf</td><td>[frames]</td><td>Changes the current turnframes to the specified amount.</td>
+					</tr>
+					<tr>
+						<td>flags</td><td>fl</td><td>[flagID]</td><td>Sets the specified flag. Flags dictate basic game mechanics. <div class="dropdown_bbc"><strong class="drop_title_bbc">Flag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">Flag | Settings (1 - on; 0 - off)
+     |  DQ  |  DM  | Frac | Grip   
+ 1   |  1   |  0   |  0   |  1   |
+ 2   |  0   |  1   |  0   |  1   |
+ 3   |  1   |  1   |  0   |  1   |
+ 4   |  0   |  0   |  0   |  0   |
+ 5   |  1   |  0   |  0   |  0   |
+ 6   |  0   |  1   |  0   |  0   |
+ 7   |  1   |  1   |  0   |  0   |
+ 8   |  0   |  0   |  1   |  1   |
+ 9   |  1   |  0   |  1   |  1   |
+ 10  |  0   |  1   |  1   |  1   |
+ 11  |  1   |  1   |  1   |  1   |
+ 12  |  0   |  0   |  1   |  0   |
+ 13  |  1   |  0   |  1   |  0   |
+ 14  |  0   |  1   |  1   |  0   |
+ 15  |  1   |  1   |  1   |  0   |
+ 16  |  0   |  0   |  0   |  1   |</pre></li></ul></div></td>
+					</tr>
+					<tr>
+						<td>dismemberment</td><td>di</td><td>[0|1]</td><td>Enables/disables dismemberment.</td>
+					</tr>
+					<tr>
+						<td>fracture</td><td>fr</td><td>[0|1]</td><td>Enables/disables fracture.</td>
+					</tr>
+					<tr>
+						<td>disqualification</td><td>dq</td><td>[0|1]</td><td>Enables/disables disqualification. See <span class="faq_code_snippet">/set dqflag [flagID]</span>, <span class="faq_code_snippet">/set dqtimer [frames]</span> and <span class="faq_code_snippet">/set sumo [0|1]</span> for more details.</td>
+					</tr>
+					<tr>
+						<td>dqtimer</td><td></td><td>[frames]</td><td>Instead of disqualifying instantly, disqualification occurs only after the specified frames have elapsed. The player must have been under disqualifcation conditions for the entire duration. Example: player's elbow is touching the floor for more than the specified amount of frames -> player is disqualified.</td>
+					</tr>
+					<tr>
+						<td>dqflag</td><td>dqf</td><td>[flagID]</td><td><div class="dropdown_bbc"><strong class="drop_title_bbc">DQFlag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">Dq | Dqflag|                         Result                                                 
+ 1 |   0   | Dqtimeout works inside and outside dojo
+ 1 |   1   | Dqtimeout works inside the dojo; outside it the disqualification is instant
+ 0 |   0   | No dq inside the dojo; timed dq outside (dqtimeout works)
+ 0 |   1   | No dq inside the dojo; instant disqualification outside</pre></li></ul></div></td>
+					</tr>
+					<tr>
+						<td>dismemberthreshold</td><td>dt</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="(How much damage joints need to take before they are dismembered.">dismember threshold</span>.</td>
+					</tr>
+					<tr>
+						<td>fracturethreshold</td><td>ft</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="(How much damage joints need to take before they are fractured,">fracture threshold</span>.</td>
+					</tr>
+					<tr>
+						<td>pointthreshold</td><td>pt</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="Dealing damage increases your damage meter; the amount of damage required is set by this value. Once the meter is full you will gain a point.">point threshold</span>.</td>
+					</tr>
+					<tr>
+						<td>dojotype</td><td>dj</td><td>[0|1]</td><td><ol style="list-style-type: decimal"><li value="0">Square</li><li>Circular</li></ol></td>
+					</tr>
+					<tr>
+						<td>dojosize</td><td>ds</td><td>[value]</td><td>Sets the size of the dojo. For the circle dojo, this value is the radius of the circle. For the square dojo, it is the side-length of the square.</td>
+					</tr>
+					<tr>
+						<td>engagedistance</td><td>ed</td><td>[value]</td><td>Sets the starting distance between Tori and Uke.</td>
+					</tr>
+					<tr>
+						<td>engageheight</td><td>eh</td><td>[value]</td><td>Sets the starting altitude for Tori <em>and</em> Uke.</td>
+					</tr>
+					<tr>
+						<td>engagerotation</td><td>er</td><td>[value]</td><td>Sets the starting rotation (in degrees) for Tori <em>and</em> Uke.</td>
+					</tr>
+					<tr style="color: #aaaaaa">
+						<td>engagespace</td><td>es</td><td>[value]</td><td>No effect. Used to <a href="http://forum.toribash.com/showpost.php?p=244281&postcount=9">set the distance between players laterally in 3 and 4 player matches.</a></td>
+					</tr>
+					<tr style="color: #aaaaaa">
+						<td>engageplayerpos</td><td>pp</td><td>[x][y][z][x][y][z]</td><td>No effect. Presumably used to set the positions of Tori (first x,y,z coords) and Uke (second x,y,z coords).</td>
+					</tr>
+					<tr style="color: #aaaaaa">
+						<td>engageplayerrot</td><td>pp</td><td>[x][y][z][x][y][z]</td><td>No effect. Presumably used to set the rotations of Tori (first x,y,z coords) and Uke (second x,y,z coords).</td>
+					</tr>
+					<tr>
+						<td>damage</td><td>da</td><td>[flagID]</td><td><div class="dropdown_bbc"><strong class="drop_title_bbc">DamageFlag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">Flag |                            Result                                                               
+  0  | You achieve points for hitting your opponent.
+  1  | You achieve points for hitting your opponent; your opponent gets points when you hit yourself.
+  2  | Your opponent gets points when you hit yourself.</pre></li></ul></div></td>
+					</tr>
+					<tr>
+						<td>gravity</td><td>gr</td><td>[x][y][z]</td><td>Set the global gravity vector (strength of gravity in the x, y, and z directions).</td>
+					</tr>
+					<tr>
+						<td>sumo</td><td>su</td><td>[0|1]</td><td><p style="margin-top: 0">Sets the sumo <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">gamerule</a>.</p><ol style="list-style-type: decimal"><li value="0">Wrists and ankles can cause disqualification.</li><li>Wrists and ankles are exempt from disqualification</li></ol></td>
+					</tr>
+					<tr>
+						<td>reactiontime</td><td>rt</td><td>[seconds]</td><td>Changes the current reactiontime (time given for players to make their moves) to the specified amount.</td>
+					</tr>
+					<tr>
+						<td>drawwinner</td><td>dw</td><td>[0|1|2]</td><td><p style="margin-bottom: 0">Decides the winner if a <span class="faq_hoverExplain" title="Draws occur if the match ends with neither player triggering a win trigger and neither player having a point advantage over the other.">draw</span> occurs</p><ol style="list-style-type: decimal;"><li value="0">Draw is a draw - rematch occurs.</li><li>Drawing gives Tori a win</li><li>Drawing gives Uke a win</li></ol></td>
+					</tr>
+					<tr>
+						<td>maxcontacts</td><td>mac</td><td>[0-128]</td><td>The amount of contacts that the physics engine will handle at a time. Since such contacts include players contacting eachother as well as the floor, a low value can result in the physics engine not registering a player's contact with the floor which otherwise might have disqualified them.</td>
+					</tr>
+					</table>
+				</ul>
+				</div>
+				
+				
+            </div>
+        </td>
+        <!-- CONTENT ENDS HERE -->
+    </tr>
+</table><!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
