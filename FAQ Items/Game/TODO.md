@@ -8,6 +8,7 @@
 - To update:
   - [x] rename `opt_commands.html` to `option_commands.html`
   - [x] rename `personal_commands.html` to `standard_commands.html`, fix title
+  
 - **Game::Live**
 - To add:
   - [ ] add `option_commands.html` to live
