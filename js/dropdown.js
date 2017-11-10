@@ -1,6 +1,6 @@
 function hideDropContent(content, arrow) {
     content.attr('hidden', 'hidden');
-    arrow.text('►');
+    arrow.html('►');
 }
 
 function showDropContent(content, arrow) {
@@ -14,7 +14,7 @@ function showDropContent(content, arrow) {
     content.contents().filter(function() {
         return (this.nodeType == 3);
     }).remove();
-    arrow.text('▼');
+    arrow.html('▼');
 }
 
 $(document).ready(function() {
