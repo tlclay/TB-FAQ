@@ -24,7 +24,7 @@
   
 ## **Game::Live**
 - To add:
-  - [ ] add `option_commands.html` to live
-  - [ ] add `operator_commands.html` to live
+  - [x] add `option_commands.html` to live
+  - [x] add `operator_commands.html` to live
 - To update:
-  - [ ] rename live `Opt Commands` page to `Standard Commands` (and update item to match item on github)
+  - [x] rename live `Opt Commands` page to `Standard Commands` (and update item to match item on github)
