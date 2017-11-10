@@ -31,6 +31,10 @@ body {
 			background: #EEEEEE;
 			color: #000000;
 			}
+
+
+
+			
 			p.faq_para {
 			margin: 0px;
 			}
@@ -55,6 +59,7 @@ body {
 			}
 			.faq_answer {
 			font-size: 1rem;
+			margin-bottom: 1rem;
 			}
 			.faq_answer * {
 			font-size: 1rem;
