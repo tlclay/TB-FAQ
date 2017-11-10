@@ -1,6 +1,7 @@
 // a
 function hideDropContent(content, arrow) {
     content.attr('hidden', 'hidden');
+    // a
     arrow.text('►');
 }
 
