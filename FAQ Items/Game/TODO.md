@@ -9,8 +9,6 @@
 
 ## **Game::GitHub**
 - To create:
-  - [x] `operator_commands.html`
-  - [x] `set_commands.html`
   - [ ] `shaders.html`, explaining shaders ([starting material](http://forum.toribash.com/showthread.php?t=208366))
   - [ ] `music.html`, explaining music
   - [ ] `gamerules.html`, explaining gamerules
@@ -24,8 +22,10 @@
   
 ## **Game::Live**
 - To add:
-  - [x] add `option_commands.html` to live
-  - [x] add `operator_commands.html` to live
-  - [x] add `set_commands.html` to live
+
 - To update:
-  - [x] rename live `Opt Commands` page to `Standard Commands` (and update item to match item on github)
+  - [ ] live Standard Commands to match github version
+  - [ ] live Operator Commands ...
+  - [ ] live Option Commands   ...
+  - [ ] live Set Commands      ...
+  
