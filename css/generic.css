@@ -142,6 +142,7 @@ body {
 			.faq_hoverExplain {
 			border-bottom: 1px dashed black;
 			text-decoration: none;
+			cursor: help;
 			}
 			.code_bbc {
 			background: white;
