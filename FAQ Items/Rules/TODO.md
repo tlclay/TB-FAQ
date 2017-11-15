@@ -10,7 +10,6 @@
 
 ## **Rules::GitHub**
 - To create:
-  - [ ] `betting_server_rules.html`, a migration of [this page](http://forum.toribash.com/showthread.php?t=491136)
 - In progress:
   - [ ] rewrite of `duel_rules_and_guidelines.html`
 - To update:
@@ -18,8 +17,5 @@
   
 ## **Rules::Live**
 - To add:
-  - [x] `global_rules.html`
-  - [x] `forum_rules.html`
-  - [x] `ingame_rules.html`
 
 - To update:
