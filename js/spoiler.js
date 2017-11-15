@@ -18,7 +18,6 @@ function showSpoilerContent(spoiler) {
 $(document).ready(function() {
     $('body').on('click', '.spoiler_button_bbc', function(e) {
         var spoiler = $(e.target).closest('.spoiler_bbc');
-        alert($(spoiler).text());
         var spoilerContent = $(spoiler).find('.spoiler_content_bbc');
         if (spoilerContent.attr('hidden') !== undefined) {
             showSpoilerContent(spoiler);
