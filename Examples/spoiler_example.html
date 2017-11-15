@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Uncomment if you want to test jquery - delete or leave commented out when requesting pull -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	</script>
+	<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/spoiler.js">
+	</script>
+	<link href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css" rel="stylesheet" type="text/css">
+	<link href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/spoiler.css" rel="stylesheet" type="text/css">
+	<title></title>
+</head>
+<body>
+	<table align="center" border="0" cellpadding="6" cellspacing="1" class="tborder" width="100%">
+		<tr>
+			<td class="tcat">Spoiler example</td><!-- TITLE WITHIN THESE <td></td> TAGS -->
+		</tr>
+		<tr>
+			<td class="alt1">
+				<p>hi <a href="#">there</a></p>
+				<div class="spoiler_bbc">
+					<div class="spoiler_header_bbc">
+						<p class="spoiler_title_bbc">here's a spoiler</p>
+					</div>
+					<div class="spoiler_body_bbc">
+						<p class="spoiler_content_bbc">dumbledore dies</p>
+					</div>
+				</div><!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
+				<script type="text/javascript">
+				                    $(document).ready(function()
+				                    {
+				                    staffLinkAll(getItem("What is a clan"));
+				                    });
+				</script>
+			</td><!-- CONTENT ENDS HERE -->
+		</tr>
+	</table>
+</body>
+</html>
