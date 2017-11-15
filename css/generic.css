@@ -159,6 +159,8 @@ body {
 			font-family: consolas;
 			padding: 0.1em;
 			background-color: rgba(255, 255, 255, 0.5);
+			white-space: nowrap;
+                        overflow: hidden;
 			}
 			.faq_table {
 			    border-collapse: collapse;
