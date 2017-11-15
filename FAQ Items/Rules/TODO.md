@@ -16,7 +16,10 @@
 - To update:
   
   
-## **Game::Live**
+## **Rules::Live**
 - To add:
+  - [ ] `global_rules.html`
+  - [ ] `forum_rules.html`
+  - [ ] `ingame_rules.html`
 
 - To update:
