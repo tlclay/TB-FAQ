@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+    PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
+    EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
+    'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
+    -->
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css">
+</head>
+<body>
+    <table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <!-- TITLE WITHIN THESE <td></td> TAGS -->
+            <td class="tcat">Bet Server Rules and Guidelines</td>
+        </tr>
+        <tr>
+            <td class="alt1">
+                <!-- CONTENT BEGINS HERE -->
+                <!-- CSS IN HERE -->
+                <style>
+                    .faq_code_snippet {
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                </style>
+                <!-- YOUR CONTENT HERE -->
+                <p class="faq_question"><span class="faq_q">Q:</span> How do I create and manage my own bet server?</p>
+                <div class="faq_answer">
+                    <p>
+                        <span class="faq_a">A:</span> Creating a betting server is extremely easy, but the options involved can be subjective. It is up to the creator of the server to decide the various rules that may be included in the server. But just some basics...
+                    </p>
+
+                    <ul>
+                        <li>Typing in <span class="faq_code_snippet">/jo [server name]</span> will create a server instantly. Now before you go off globalling your server (which will be explained), be sure to set an owner password.</li>
+                        <li>The owner password can be set by typing in <span class="faq_code_snippet">/setowner [password]</span> and then if for any reason your de-op'd or ping, leave ect. you can re-op yourself by typing in <span class="faq_code_snippet">/ownerpass [password]</span>. It is not a bad idea to give this password to other OP's in the server. But please, <strong>only share it people you trust.</strong></li>
+                        <li>Setting a good room description via <span class="faq_code_snippet">/desc [text]</span> is extremely valuable for the longevity of your bet server. An eye-catching description in the server list will keep people trickling in to replace those who leave over time.</li>
+                        <li>Using a message of the day (MOTD) entry message is useful for letting new joiners know important information, such as the current price of nudges and who is running the room. Set a motd with <span class="faq_code_snippet">/motd [text]</span>.</li>
+                        <li>It's usually a good idea to set <span class="faq_code_snippet">/maxclients [number]</span>. A safe amount is generally around 20, although 25-30 is common. High values can cause the room to be unstable and it will often crash.</li>
+                        <li>Being "House" (server admin) allows you receive a portion of every bet made. To become "House" you simply type in <span class="faq_code_snippet">/house [username]</span> and be sure to set the Max Rake by typing in <span class="faq_code_snippet">/maxrake [amount]</span>. You can also make money by placing bets like everyone else and by selling nudges.</li>
+                        <li>Finally, it can be a good idea to add yourself to the VIP list via <span class="faq_code_snippet">/vip ADD [yourname]</span>. This will allow you to join the server even if its full.</li>
+                    </ul>
+
+                    <p class="faq_importantInfo">
+                        Make sure you're familiar with the <strong><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_operator_commands">operator commands!</a></strong> Without them, you won't be able to run your room smoothly, if at all.<br />
+                        <strong>When you're ready, you can send a <span class="faq_hoverExplain" title="A global is a message which will be displayed in all rooms at once. Using a global you can tell people to join your bet server.">global</span> <a href="http://forum.toribash.com/tori_broadcast.php">here</a>. Make sure you've read the rules below.</strong>
+                    </p>
+
+                </div>
+
+                <p class="faq_question"><span class="faq_q">Q:</span> How do I manage my room?</p>
+                <div class="faq_answer">
+                    <p><span class="faq_a">A:</span> Bet servers are a place for high stakes fun. The best experience is usually provided if the room is running as smoothly as possible. To achieve this, you should know at least <em>some</em> basics, such as:</p>
+                    <ul>
+                        <li><strong>HBRs:</strong> Highest Bet Rounds are matches where the user with the highest bet placed by the end of the betframes will be rewarded (usually with a free nudge).</li>
+                        <li><strong>Decapprize:</strong> Decapprizes are a public pool of tc which is kept by the server and awarded to any user who both decaps their opponent and wins their match. A large decapprize can attract people to your server.</li>
+                        <li><strong>Muting/Kicking/Banning:</strong> It's very important to keep the chat free of annoyances such as spam or flaming. Utilise the <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_operator_commands">powers</a> granted to Ops to keep your room a fun place for users to be.</li>
+                    </ul>
+
+                    <p><strong style="font-size: 1.07rem">Nudging:</strong><br /><br /> (<span class="faq_code_snippet">/nudge [username][position]</span>) is generally one of the most demanding but important aspects of bet server management. Nudging is not manditory, however they are expected of you and a host who refuses to give nudges will often find their server short-lived. Nudges are usually first come, first served, and many server Ops will give different prioritization to how the user purchased their nudge. For example, someone who was nudged for adding to the decapprize may be considered lower-priority to someone who paid for a nudge, and would be nudged beneath them instead.</p>
+                    <p>There are a few often-used approaches to trading nudges (MAKE SURE TO READ THE RULES REGARDING NUDGES BELOW):</p>
+                    <ul>
+                        <li>Selling: You can simply sell nudges to the users in your room.</li>
+                        <li>Decapprize: Users who add a specified amount of TC to the decapprize will receive a nudge.</li>
+                        <li>Selfbet: Users who promise to bet a specified amount on themselves at the start of their match can be nudged.</li>
+                        <li>HBR: Winners of a highest bet round can be rewarded with a free nudge.</li>
+                    </ul>
+                </div>
+
+                <p class="faq_question"><span class="faq_q">Q:</span> Are there rules for running a bet server?</p>
+                <div class="faq_answer">
+                    <p><span class="faq_a">A:</span> While a lot of the management is up to you as the host, bet servers <em>do</em> have their own set of rules which you can't ignore. Bet servers are a place where a lot of TC is up in the air; that means a lot of potentially upset people who feel like maybe they've been screwed over. Following the rules will spare you from upset users and potential punishment from staff:</p>
+                    <ul>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Kicking/Banning <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        Kicking and banning is done at your own discretion. However, if a user has purchased a nudge in a way advertised by your server (whether it be adding to the DP or paying you directly) do not kick/ban them unless there is a good reason for it(blatant racism, spamming ect). Always take screens, and even then it is a good idea to contact a Staff Member. Remember, we're here to help! If an OP kicks or bans you for no apparent reason while you have a pending nudge or TC currently being bet, please submit a Scam Report with evidence.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Operator Power Abuse <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        If you or your server is advertising nudges with any sort of payment whatsoever, OP's may not nudge themselves or others without them first paying what everyone else has to pay. (This rule also comes with common sense; if you are running a betting server your primary goal should be to make sure everyone is having a good time and maybe make some TC with the rake. Don't ruin it for everyone.) It will be up to the Staff Member making the decision, on what is classified as OP power abuse in such instances. I will say again, use common sense. Don't make the server miserable or do something fishy.
+                                        <br /><strong>You may not buy operator.</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Rigging a decap prize <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        See the <a href="http://forum.toribash.com/faq.php?faq=rules#faq_ingame_rules">general in-game rules</a> section on 'Decap Prize rigging'.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Game resets <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        If in a Betting server during a game, one of the players does minimal movement which results in decap in first 4 turns, the game is invalid. The server's OP has to pause the game, collect evidence and reset the game. If one of players is afk, he should be fknocked.<br /><br />
+
+                                        Satisfying evidence is <em>at least</em>: screenshot of /decapprize, screenshot showing active bets (it can be list of refunds after /cancelbets), screenshot of the chat & decap while paused and a replay saved during pause (that shows moves until the pause). <strong>Screenshots must include whole TB window, if they are cropped, they can be considered invalid.</strong><br /><br />
+
+                                        If a fighting player claims that OP's reset was an abuse of power and the decap was valid, OP will be required to provide all the evidence for his reset. Staff will then judge if the reset was legitimate - if it was not, OP will have to pay/refund TC equal to DP at that time or face being banned. If the suspected OP lacks proper reset evidence, and the player has screenshots proving that OP did reset that game, OP will be punished for not following the rules and will possibly also have to refund the DP.<br /><br />
+
+                                        Resets should not be used if it can cause harm to any player, (being fighter or better). In such instances, the OP should be reported to a Staff Member. Any harm done may be rectified with the OP's items/TC.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Quitting/Spectating With Active Bets <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        If you are playing a match with active bets, and you quit or spectate before the match has concluded, you could face a ban. Of course, every situation may be different, and it will be up to the staff member's discretion on how to handle each situation.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Fuke <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        Fuke (or Force uke) is in no way allowed. While the command is disabled, any combination of commands that has the same results as /fuke will be punished. This includes nudging then fknock commands. No command should interrupt the match.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Cancelling bets <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        If there is ANY amount of tc bet on BOTH people you may not cancelbets. Once the money has been bet you are accepting that you may lose this tc in it's entirety. Cancelbets is only to be used if there are no counters at all., but is at the hosters own discretion.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Soft Rules <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        Soft rules, such as "no shovelling" or "no decap openers" are not supported. They are also prohibited in betting servers. If a betting server you are in is trying to enforce Soft Rules, please contact a Staff Member or make a General Report with evidence.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">Mod gamerule changes <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        You can use whatever mod you want for the betting server, however if you are changing any gamerules in it (e.g. making the dismemberment threshold higher), you must inform about any changes in your room's motd. <strong style="color: red">If players (including you) are contributing to the decapprize, you are not allowed to change the gamerules or mod in any way until the decapprize is earned. </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown_bbc">
+                                <strong class="drop_title_bbc">HBR (Highest Bet Round) <span class="drop_arrow_bbc"></span></strong>
+                                <ul class="drop_content_bbc">
+                                    <li>
+                                        If an op calls HBR via chat or /cp then the HBR comes into effect. If a bet is placed that exceeds all those before and after then that bet counts as the HBR and must be given the rewrad that is associated with winning HBR (usually a nudge).<br />
+                                        If there are NO bets at all, then HBR does not have to continue to the next match.<br /><br />
+                                        <strong>If there is only ONE bet, then that bet still wins HBR. Even if bets are cancelled.</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+            <!-- CONTENT ENDS HERE -->
+        </tr>
+    </table>
+    <!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
+    <script type="text/javascript"></script>
+</body>
+</html>
