@@ -18,8 +18,8 @@
   
 ## **Rules::Live**
 - To add:
-  - [ ] `global_rules.html`
-  - [ ] `forum_rules.html`
-  - [ ] `ingame_rules.html`
+  - [x] `global_rules.html`
+  - [x] `forum_rules.html`
+  - [x] `ingame_rules.html`
 
 - To update:
