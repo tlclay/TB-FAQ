@@ -11,7 +11,6 @@
 
 ## Indefinite ideas:
   - Something like [this](http://forum.toribash.com/showthread.php?t=458899), maybe part of a standalone 'Steam' category?
-  - 'Rules' category?
 
 
 ## TODO (hi suo):
