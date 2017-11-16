@@ -11,11 +11,12 @@
 
 ## **Forum::GitHub**
 - To create:
+  - [ ] Pull `forum_vip.html` from live.
 - To update:
   
   
 ## **Forum::Live**
 - To add:
-  - [ ] `moderation_tools.html`
+  - [x] `moderation_tools.html`
 - To update:
   
