@@ -1,5 +1,5 @@
 ## Index of other TODOs
-- ### [x] Account
+### -[x] Account
 - ### [x] Clans
 - ### [x] Community
 - ### [ ] [Forum](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Forum/TODO.md)
