@@ -18,6 +18,8 @@
   
 ## **css::Live**
 - To add:
-  - [ ] `spoiler.css`
+  - [x] `spoiler.css`
 - To update:
-  - [ ] `generic.css`
+  - [x] `generic.css`
+
+These have both been added suboptimally, need a dev when they have been appropriately finalized so that they can be managed as independent stylesheets.
