@@ -17,5 +17,6 @@
   
 ## **Rules::Live**
 - To add:
-
+  - [ ] `bet_server_rules_and_guidelines.html`
 - To update:
+  - [ ] reorder items so that the first three items are global rules -> forum rules -> ingame rules -> alphabetical
