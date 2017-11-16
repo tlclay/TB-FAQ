@@ -2,6 +2,7 @@
 - ### Account
 - ### Clans
 - ### Community
+- ### [Forum](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Forum/TODO.md)
 - ### [Game](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Game/TODO.md)
 - ### Market
 - ### [Rules](https://github.com/TB-FAQ/TB-FAQ/blob/master/FAQ%20Items/Rules/TODO.md)
