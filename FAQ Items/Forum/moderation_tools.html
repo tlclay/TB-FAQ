@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--
+    PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
+    EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
+    'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
+    -->
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.js"></script>
+    <script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/spoiler.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css">
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/spoiler.css">
+</head>
+<body>
+    <table class="tborder" cellpadding="6" cellspacing="1" border="0" align="center">
+        <tr>
+            <!-- TITLE WITHIN THESE <td></td> TAGS -->
+            <td class="tcat">Moderation Tools</td>
+        </tr>
+        <tr>
+            <td class="alt1">
+                <!-- CONTENT BEGINS HERE -->
+                <!-- CSS IN HERE -->
+                <style>
+                </style>
+                <!-- YOUR CONTENT HERE -->
+                <p class="faq_question"><span class="faq_q">Q:</span> What are moderation tools? How do I use them?</p>
+                <div class="faq_answer">
+                    <p><span class="faq_a">A:</span> <strong>If you aren't a moderator of any boards, this QA isn't for you! This one's just for certain people:</strong></p>
+                    <ul>
+                        <li>LMods (and above)</li>
+                        <li>Local clan moderators</li>
+                    </ul>
+                    <p>If you belong to one of these two groups, hopefully this will shed some light onto how to effectively moderate your board.</p>
+                </div>
+
+                <p class="faq_question"><span class="faq_q">Q:</span> I want to do [X] with the threads in my board, how can I do it?</p>
+
+                <div class="faq_answer">
+                    <p><span class="faq_a">A:</span> Both thread and post moderation works on a SELECTION -> ACTION basis. That is, you select some items, and you then tell the forum the action you want it to take with those items. In the case of threads, you can select threads like this:</p>
+                    <div class="spoiler_bbc">
+                        <div class="spoiler_header_bbc">
+                            <p class="spoiler_title_bbc">Selecting Threads</p>
+                        </div>
+                        <div class="spoiler_body_bbc">
+                            <div class="spoiler_content_bbc">
+                                <div align="center">
+                                    <img class="faq_img" src="https://i.imgur.com/iFnClVE.png" />
+                                    <p>Just by ticking the boxes on the far right, you will have selected those threads. If you navigate to other pages, close the forum site, or even exit and reenter your browser, <strong>these threads will still be selected</strong>. If you want to deselect threads, you need to either untick them or choose 'Deselect All Threads' from the actions dropdown which we'll look at next.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <p>Great, but how do we actually do stuff? After you select the threads you want, you need to find the action dropdown and choose an action, like this:</p>
+                    <div class="spoiler_bbc">
+                        <div class="spoiler_header_bbc">
+                            <p class="spoiler_title_bbc">Performing Thread Actions</p>
+                        </div>
+                        <div class="spoiler_body_bbc">
+                            <div class="spoiler_content_bbc">
+                                <div align="center">
+                                    <img class="faq_img" src="https://i.imgur.com/UFDEiRv.png" />
+                                    <p>Click on the dropdown menu here (its at the bottom of the page), and select the action you want to take on your selection. Many of these are simple (Delete Threads will just, unsurprisingly, delete your selected threads), however a few are more complicated, such as Merge and Move. I'll talk about all of these options next.</p>
+                                    <p><em>(At the bottom you can also see the 'Deselect All Threads' option I mentioned in the previous section)</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <p>If you don't want to make mistakes, it's best to understand the effects of these options:</p>
+                    <div class="spoiler_bbc">
+                        <div class="spoiler_header_bbc">
+                            <p class="spoiler_title_bbc">Thread Action Options Explained</p>
+                        </div>
+                        <div class="spoiler_body_bbc">
+                            <div class="spoiler_content_bbc">
+                                <div align="center">
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Delete Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Unsurprisingly, this deletes your selected threads. But hang on - after you delete them, they're still there, just <a href="https://i.imgur.com/tH7qBvD.png">italicized and grayed out!</a> As it happens, normal moderators can't actually truly delete threads. A better word would have been 'Hide', since normal users cannot access or see these threads anymore.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Undelete Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Since 'deleted' threads are actually very much alive and kicking, we can bring them back to the realm of normal users by selecting and undeleting them. Nice.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Delete Threads as Spam <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This one's a little more involved - you generally won't ever need to use it. The main use of this action is to catch out spambots making threads. You'll be brought to a form with some extra options including whether or not to send this deletion action to the forum's anti-spam services (implementation of these is not for this QA). Once again, you probably won't ever need this one.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Open Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                A closed thread is grayed out and can't be posted in by non-moderators; it can still be seen and accessed by normal users however. Selecting a closed thread and performing this action will re-open that thread - now everybody can post there again.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Close Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Turns an open thread into a closed thread. Read above for what they both mean.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Approve Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Most people don't know about 'moderated' threads. These threads function very similarly to deleted threads (non-mods can't access or see them), however unlike deleted threads, new posts can still be made here by those with access. The actions are named confusingly - 'moderated' threads are considered 'unapproved'. So, 'approving' a moderated thread will make it visible to everyone again.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Unapprove Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Unapproving a thread turns it into a 'moderated' thread. See above.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Stick Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Sticky threads are 'stuck' at the <a href="https://i.imgur.com/WKSOgRD.png">top of a given board</a> - generally this is used for important threads or threads with very high traffic.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Unstick Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Does just the opposite - turns a stuck thread into a normal thread.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Move Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This one is a little more involved, but still pretty simple. When you move a thread, you will need moderator rights in both the source and the destination boards. For example, if I wanted to move a thread from the Art board into the Entertainment & Media board, I'd need to have moderator access in both of them. When you move a thread, you will be given to option to set a redirect - this is a link which will be left in the threads original position which will redirect people who click it to the thread, wherever it may now be (assuming they have access to the place you moved it to!). Redirects can be permanent or expiring.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Merge Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Merging must involve at least two threads (obviously). When you try to merge threads (by the way, you can merge threads from different boards), you will be asked for the Destination Thread, and the Destination Board. The Destination Thread will be the first thread in the new superthread: merging literally appends your threads together chronologically, with the Destination Thread ignoring this ordering and appearing at the top. The Destination Board will be where your new superthread will appear - you need to have moderator access here as well as the source board.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr />
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">View Selected Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This will bring up a new page with only your selected threads listed. Can be pretty useful when you're doing things across boards or pages.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Deselect All Threads <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This clears your selections from all boards. This is surprisingly useful - sometimes it's easy to forget that you selected a thread an hour ago and on your next merge, you might get pretty unexpected results.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end of answer div -->
+                <br />
+
+                <p class="faq_question"><span class="faq_q">Q:</span> I want to do [X] with posts in a thread, how can I do it?</p>
+                <div class="faq_answer">
+                    <p><span class="faq_a">A:</span> Just like thread moderation, post moderation works on a SELECTION -> ACTION basis. In fact, the GUI is pretty much exactly the same: selection boxes on the right and an action dropdown at the bottom right of the page.</p>
+                    <div class="spoiler_bbc">
+                        <div class="spoiler_header_bbc">
+                            <p class="spoiler_title_bbc">Selecting Posts</p>
+                        </div>
+                        <div class="spoiler_body_bbc">
+                            <div class="spoiler_content_bbc">
+                                <div align="center">
+                                    <img src="https://i.imgur.com/UX9wWbd.png" />
+                                    <p>Ticking these boxes on the right will select the posts. With selected posts, you can perform a variety of actions on them. If you navigate to other pages, close the forum site, or even exit and reenter your browser, <strong>these posts will still be selected</strong>. If you want to deselect posts, you need to either untick them or choose 'Deselect All Posts' from the actions dropdown which we'll look at next.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <p>But how do we do things with our selection? Like this:</p>
+                    <div class="spoiler_bbc">
+                        <div class="spoiler_header_bbc">
+                            <p class="spoiler_title_bbc">Performing Post Actions</p>
+                        </div>
+                        <div class="spoiler_body_bbc">
+                            <div class="spoiler_content_bbc">
+                                <div align="center">
+                                    <img src="https://i.imgur.com/OaS8ZZs.png" />
+                                    <p>Click on the dropdown menu here (its at the bottom of the page), and select the action you want to take on your selection. Many of these are simple (Delete Posts will just, unsurprisingly, delete your selected posts), however a few are more complicated, such as Merge and Move. I'll talk about all of these options next.</p>
+                                    <p><em>(At the bottom you can also see the 'Deselect All Posts' option I mentioned in the previous section).</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <p>If you don't want to make mistakes, it's best to understand the effects of these options:</p>
+                    <div class="spoiler_bbc">
+                        <div class="spoiler_header_bbc">
+                            <p class="spoiler_title_bbc">Post Action Options Explained</p>
+                        </div>
+                        <div class="spoiler_body_bbc">
+                            <div class="spoiler_content_bbc">
+                                <div align="center">
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Merge Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Merging must involve at least two posts (obviously). When you try to merge posts (by the way, you can merge posts from different boards), you will be asked for the Destination Post, the User, an optional Title and an optional Reason. All your selected posts will be merged (chronological order) to the bottom of the Destination Post.<br /><br />The new superpost can be attributed to any of the posters from the original set of posts: if user A and user B's posts are being merged, you can decide who will be be the poster of the new merged post (especially useful for swapping ownership of threads!). The Title and Reason options are fairly self explanitory. Before merging, the raw version of the new superpost will be available for you to edit however you like before you actually make the superpost. Useful stuff.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Move Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This one is a little more involved, but still pretty simple. When you move a post, you will need moderator rights in both the source and the destination threads. For example, if I wanted to move a post from thread A into thread B, I'd need to have moderator access in both of them. You're given two options here: moving the post to a board or to a thread. If you move the post to a new board, it will create a new thread with that post as the OP. If you instead move it to a thread, it will be inserted into its chronological position within that thread (not at the end).
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Copy Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Copying posts is very similar to moving them, however you will now have a <em>copy</em> of the original posts: the originals will be left where they are.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Delete Posts as Spam <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This one's a little more involved that regular deletion (below) - you generally won't ever need to use it. The main use of this action is to catch out spambots making posts. You'll be brought to a form with some extra options including whether or not to send this deletion action to the forum's anti-spam services (implementation of these is not for this QA). Once again, you probably won't ever need this one.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Delete Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Unsurprisingly, this deletes your selected posts. But hang on - after you delete them, they're still there, just <a href="https://i.imgur.com/CkIH8TW.png">minimized!</a> As it happens, normal moderators can't actually truly delete posts. A better word would have been 'Hide', since normal users cannot access or see these posts anymore.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Undelete Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Since 'deleted' posts are actually very much alive and kicking, we can bring them back to the realm of normal users by selecting and undeleting them. Nice.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Approve Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Most people don't know about 'moderated' posts. These posts function very similarly to deleted posts (non-mods can't access or see them). The actions are named confusingly - 'moderated' posts are considered 'unapproved'. So, 'approving' a moderated post will make it visible to everyone again.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Unapprove Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Unapproving a post turns it into a 'moderated' post. See above.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Approve Attachments <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                'Moderated attatchments' are pretty similar to other 'moderated' entities, however they can still be seen by regular users - just not opened, downloaded or viewed. Approving unapproved attatchments therefore makes them accessable to regular users again.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Unapprove Attachments <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                Does just the opposite of approving them - functional attachments will no longer be functional (but users can still see they exist).
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr />
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">View Selected Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This will bring up a new page with only your selected posts listed. Can be pretty useful when you're doing things across boards, threads or pages.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown_bbc">
+                                        <strong class="drop_title_bbc">Deselect All Posts <span class="drop_arrow_bbc"></span></strong>
+                                        <ul class="drop_content_bbc">
+                                            <li>
+                                                This clears your selections from all boards and threads. This is surprisingly useful - sometimes it's easy to forget that you selected a post an hour ago and on your next merge, you might get pretty unexpected results.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end of answer div -->
+            </td>
+            <!-- CONTENT ENDS HERE -->
+        </tr>
+    </table>
+    <!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
+    <script type="text/javascript"></script>
+</body>
+</html>
