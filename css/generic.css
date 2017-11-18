@@ -193,4 +193,12 @@ body {
 			    margin-top: 0.5rem;
 			    margin-bottom: 0.5rem;
 			}
+			.anchor_bbc:target {
+				animation-name: anchor_bbc;
+ 				   animation-duration: 0.8s;
+			}
 
+			@keyframes anchor_bbc {
+				from {background-color: rgba(102, 191, 255, 0.4);}
+ 				to {background-color: inherit;}
+			}
