@@ -150,13 +150,15 @@ body {
 			margin: 1rem;
 			padding: 6px;
 			border: 1px inset;
-			height: 16rem;
-			width: 42rem;
 			overflow: auto;
 			resize: both;
+			width: auto;
+			height: auto;
+                	display: inline-block;
+                        white-space: pre;
+                        font-family: consolas;
 			}
 			.faq_code_snippet {
-			background: white;
 			border: 1px solid lightgrey;
 			font-family: consolas;
 			padding: 0.1em;
