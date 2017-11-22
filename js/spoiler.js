@@ -1,37 +1,35 @@
-// Hide content
-function hideSpoilerContent(spoiler) {
-    $(spoiler).find('.spoiler_header_bbc').css('padding-bottom', '0.2rem');
-    $(spoiler).find('.spoiler_content_bbc').attr('hidden', 'hidden');
-    $(spoiler).find('.spoiler_button_bbc').text('Show');
-    $(spoiler).find('.spoiler_hr_bbc').remove();
-}
+function toggleSpoilerState(spoiler) {
+    var spoilerHeader = $(spoiler).find('.spoiler_header_bbc:first');
+    var spoilerContent = $(spoiler).find('.spoiler_content_bbc');
+    var spoilerButton = $(spoiler).find('.spoiler_button_bbc:first');
+    var spoilerHR = $(spoiler).find('.spoiler_hr_bbc:first');
 
-// Display content
-function showSpoilerContent(spoiler) {
-    $(spoiler).find('.spoiler_header_bbc').css('padding-bottom', '0');
-    $(spoiler).find('.spoiler_content_bbc').removeAttr('hidden');
-    $(spoiler).find('.spoiler_button_bbc').text('Hide');
-    $('<hr class="spoiler_hr_bbc"/>').insertAfter($(spoiler).find('.spoiler_button_bbc'));
+    if ($(spoiler).find('.spoiler_content_bbc').is(':hidden')) {
+        spoilerHeader.css('padding-bottom', '0');
+        spoilerContent.show();
+        spoilerButton.text('Hide');
+        spoilerHR.show();
+    } else {
+        spoilerHeader.css('padding-bottom', '0.2rem');
+        spoilerContent.hide();
+        spoilerButton.text('Show');
+        spoilerHR.hide();
+    }
 }
 
 // Click listener
 $(document).ready(function() {
     $('body').on('click', '.spoiler_button_bbc', function(e) {
         var spoiler = $(e.target).closest('.spoiler_bbc');
-        var spoilerContent = $(spoiler).find('.spoiler_content_bbc');
-        if (spoilerContent.attr('hidden') !== undefined) {
-            showSpoilerContent(spoiler);
-        } else {
-            hideSpoilerContent(spoiler);
-        }
+        toggleSpoilerState(spoiler);
     });
 });
 
-// DOM prep
+// DOM prep: locate spoiler, insert button after title.
 $(document).ready(function() {
     var spoiler = $('.spoiler_bbc');
-    var spoilerTitle = $(spoiler).find('.spoiler_title_bbc');
-    var button = $('<button class="spoiler_button_bbc">aa</button>');
-    $(button).insertAfter(spoilerTitle);
-    hideSpoilerContent(spoiler);
+    $('<button class="spoiler_button_bbc"></button>').insertAfter($(spoiler).find('.spoiler_title_bbc:first'));
+    $('<hr class="spoiler_hr_bbc"/>').insertAfter($(spoiler).find('.spoiler_button_bbc'));
+    toggleSpoilerState(spoiler);
 });
+
