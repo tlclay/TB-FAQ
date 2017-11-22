@@ -1,0 +1,22 @@
+.drop_title_bbc {
+    color: #9F0000;
+    cursor: pointer;
+}
+
+.drop_content_bbc {
+    display: none;
+	margin-top: 0.1rem;
+	padding-top: 0.7rem;
+	border-left: 1px dashed black;
+    animation-name: dropdown_bbc_transition;
+    animation-duration: 0.7s;
+}
+
+@keyframes dropdown_bbc_transition {
+    from {
+        background-color: rgba(102, 191, 255, 0.4);
+    }
+    to {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+}
