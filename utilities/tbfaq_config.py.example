@@ -1,0 +1,7 @@
+## This script is presently windows specific. See tbfaq_utilities.py for details.
+
+## This is where you've downloaded the TB-FAQ repository to.
+gitdir = "C:/MyGitDirectory/TB-FAQ/FAQ Items" ## Use / to separate directory names. Do not add a trailing /. This needs to point to the FAQ Items directory for best results.
+
+## This is where you want the cleaned HTML files to end up.
+tgtdir = "C:/MyCleanedFAQDirectory" ## Use / to separate directory names. Do not add a trailing /
