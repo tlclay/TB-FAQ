@@ -11,7 +11,7 @@
 
 ## **Forum::GitHub**
 - To create:
-  - [ ] Pull `forum_vip.html` from live.
+  - [x] Pull `forum_vip.html` from live.
 - To update:
   
   
