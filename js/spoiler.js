@@ -1,17 +1,22 @@
-function toggleSpoilerState(spoiler) {
+// Toggle contents display: .slideDown() / .slideUp() + some css changes.
+function toggleSpoilerState(spoiler, firstTime) {
     var spoilerHeader = $(spoiler).find('.spoiler_header_bbc:first');
     var spoilerContent = $(spoiler).find('.spoiler_content_bbc');
     var spoilerButton = $(spoiler).find('.spoiler_button_bbc:first');
     var spoilerHR = $(spoiler).find('.spoiler_hr_bbc:first');
 
-    if ($(spoiler).find('.spoiler_content_bbc').is(':hidden')) {
+    if (spoilerContent.is(':hidden')) {
         spoilerHeader.css('padding-bottom', '0');
-        spoilerContent.show();
+        spoilerContent.slideDown(75);
         spoilerButton.text('Hide');
         spoilerHR.show();
     } else {
         spoilerHeader.css('padding-bottom', '0.2rem');
-        spoilerContent.hide();
+        if (firstTime) {
+            spoilerContent.hide();
+        } else {
+            spoilerContent.slideUp(75);
+        }
         spoilerButton.text('Show');
         spoilerHR.hide();
     }
@@ -21,15 +26,16 @@ function toggleSpoilerState(spoiler) {
 $(document).ready(function() {
     $('body').on('click', '.spoiler_button_bbc', function(e) {
         var spoiler = $(e.target).closest('.spoiler_bbc');
-        toggleSpoilerState(spoiler);
+        toggleSpoilerState(spoiler, false);
     });
 });
 
-// DOM prep: locate spoiler, insert button after title.
+// DOM prep: locate spoiler, insert button after title. Hide contents.
 $(document).ready(function() {
     var spoiler = $('.spoiler_bbc');
-    $('<button class="spoiler_button_bbc"></button>').insertAfter($(spoiler).find('.spoiler_title_bbc:first'));
-    $('<hr class="spoiler_hr_bbc"/>').insertAfter($(spoiler).find('.spoiler_button_bbc'));
-    toggleSpoilerState(spoiler);
-});
 
+    $('<button class="spoiler_button_bbc">Show</button>').insertAfter($(spoiler).find('.spoiler_title_bbc:first'));
+    $('<hr class="spoiler_hr_bbc"/>').insertAfter($(spoiler).find('.spoiler_button_bbc'));
+
+    toggleSpoilerState(spoiler, true);
+});
