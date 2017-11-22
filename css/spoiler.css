@@ -1,56 +1,54 @@
 .spoiler_bbc {
-	
-	
-	border: 1px solid #bbbbbb;
+    border: 1px solid #bbbbbb;
 }
 
 .spoiler_bbc > * {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .spoiler_header_bbc {
-	background-color: #dddddd;
-	margin: 0;
-	width: 100%;
-	padding-top: 0.3rem;
-	padding-bottom: 0.2rem;
+    background-color: #dddddd;
+    margin: 0;
+    width: 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+    align-items: center;
 }
 
 .spoiler_title_bbc {
-	font-size: 1.1rem;
-	margin: 0;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 hr.spoiler_hr_bbc {
-	display: block;
+    display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #aaa;
     margin: 0;
-	margin-top: 0.2rem;
-	width: 90%;
-}
-
-.spoiler_body_bbc {
-	background-color: rgba(221, 221, 221, 0.4);
+    margin-top: 0.2rem;
+    width: 90%;
 }
 
 .spoiler_content_bbc {
-	animation-name: spoiler_bbc_transition;
-	animation-duration: 0.7s;
-	width: 100%;
-	padding-top: 1rem;
+    animation-name: spoiler_bbc_transition;
+    animation-duration: 0.7s;
+    width: 100%;
+    padding-top: 1rem;
+    background-color: rgba(221, 221, 221, 0.4);
 }
 
 .spoiler_content_bbc > * {
-	margin-left: 1rem;
-	margin-right:1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 @keyframes spoiler_bbc_transition {
-    from {background-color: rgba(102, 191, 255, 0.4);}
-    to {background-color: rgba(221, 221, 221, 0.4);}
+    from {
+        background-color: rgba(102, 191, 255, 0.4);
+    }
+    to {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
 }
