@@ -34,7 +34,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     var spoiler = $('.spoiler_bbc');
 
-    $('<button class="spoiler_button_bbc">Show</button>').insertAfter($(spoiler).find('.spoiler_title_bbc:first'));
+    $('<button type="button" class="spoiler_button_bbc">Show</button>').insertAfter($(spoiler).find('.spoiler_title_bbc:first'));
     $('<hr class="spoiler_hr_bbc"/>').insertAfter($(spoiler).find('.spoiler_button_bbc'));
 
     toggleSpoilerState(spoiler, true);
