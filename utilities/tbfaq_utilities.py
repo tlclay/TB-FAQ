@@ -29,15 +29,15 @@ class faqparser(HTMLParser):
     scount = 1
     
     lasttag = ""
+    lastattr = []
     datasince = False
+    droparrowsadded = 0
 
     def handle_starttag(self, tag, attrs):
         self.lasttag = tag
+        self.lastattr = attrs
         self.datasince = False
 
-        if tag == 'span':
-            if ('class', 'drop_arrow_bbc') in attrs:
-                self.datasince = True ## In this specific case, the span tag is the data.
         if tag == 'td':
             self.datasince = True ## Assume that empty columns are okay.
 
@@ -74,7 +74,12 @@ class faqparser(HTMLParser):
                 return
             newdat = '</' + tag + '>'
             if tag == self.lasttag and tag != 'img' and tag != 'hr':
-                if not self.datasince:
+                if tag == 'span':
+                    if ('class', 'drop_arrow_bbc') in self.lastattr:
+                        if not self.datasince:
+                            self.droparrowsadded += 1
+                            self.cf += "►"
+                elif not self.datasince:
                     print(" -?- faqparser: <" + tag + "> discarded")
                     i = len(self.cf)-1
                     while self.cf[i] != '<':
@@ -107,8 +112,10 @@ def clean_file(ifname):
         cleanstr = fp.cf
 
         if fp.sfound:
-            print(" -!- faqparser: sfound is still on!")
+            print(" -!- faqparser: sfound is still on -- this file DID NOT parse correctly.")
 
+        if fp.droparrowsadded > 0:
+            print(" -?- faqparser: " + str(fp.droparrowsadded) + " drop arrow(s) were added.")
 
         ## Delete blank lines.
         newstr = []
