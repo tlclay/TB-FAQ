@@ -1,7 +1,7 @@
 // Toggle contents display: .slideDown() / .slideUp() + some css changes.
 function toggleSpoilerState(spoiler, firstTime) {
     var spoilerHeader = $(spoiler).find('.spoiler_header_bbc:first');
-    var spoilerContent = $(spoiler).find('.spoiler_content_bbc');
+    var spoilerContent = $(spoiler).find('.spoiler_content_bbc:first');
     var spoilerButton = $(spoiler).find('.spoiler_button_bbc:first');
     var spoilerHR = $(spoiler).find('.spoiler_hr_bbc:first');
 
