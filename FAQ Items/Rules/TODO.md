@@ -11,6 +11,8 @@
 
 
 ## **Rules::GitHub**
+- To consider:
+  - [ ] put ingame prefixes and name colors somewhere.
 - To create:
 - In progress:
   - [ ] rewrite of `duel_rules_and_guidelines.html`

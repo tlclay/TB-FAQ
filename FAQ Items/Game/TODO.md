@@ -17,6 +17,7 @@
   - [ ] `ingame_login_issues.html`, for firewall errors or etc?
   - [ ] `game_mods.html`, to explain how to use .tbm's?
   - [ ] `ranking.html`, to explain the ranking system.
+  - [ ] `hotkeys.html`, to explain some basic hotkeys ingame (like B for both ghosts or F8 for screenshots).
 - To create:
   - [ ] `shaders.html`, explaining shaders ([starting material](http://forum.toribash.com/showthread.php?t=208366))
   - [ ] `music.html`, explaining music

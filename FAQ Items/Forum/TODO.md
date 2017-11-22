@@ -11,6 +11,8 @@
 
 
 ## **Forum::GitHub**
+- To consider:
+  - [ ] `reporting.html`, for using the report boards or features. Note especially that the report boards are active, but only you and staff members can see your posts in those boards.
 - To create:
   - [x] Pull `forum_vip.html` from live.
 - To update:

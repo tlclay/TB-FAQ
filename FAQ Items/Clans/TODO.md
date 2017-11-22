@@ -15,3 +15,4 @@
 - To consider:
   - [ ] `joining_clans.html`, regarding joining clans.
   - [ ] `official_clans.html`, regarding the different varieties of clans, both official and unofficial.
+  - [ ] `clan_wars.html`
