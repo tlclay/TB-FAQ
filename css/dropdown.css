@@ -3,6 +3,10 @@
     cursor: pointer;
 }
 
+.drop_title_bbc > .drop_arrow_bbc {
+	color: black;
+}
+
 .drop_content_bbc {
     display: none;
     margin-top: 0.1rem;
@@ -29,3 +33,4 @@
         background-color: rgba(221, 221, 221, 0.4);
     }
 }
+
