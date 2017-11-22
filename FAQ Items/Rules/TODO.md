@@ -12,6 +12,8 @@
 - To create:
 - In progress:
   - [ ] rewrite of `duel_rules_and_guidelines.html`
+    - [x] partial revisions completed by suomy
+	- [ ] revisions by Fear
 - To update:
   
   
