@@ -1,3 +1,3 @@
-import tbfaq_utilities
+from tbfaq_utilities import *
 
 clean_all()
