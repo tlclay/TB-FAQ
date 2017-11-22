@@ -1,5 +1,8 @@
 .spoiler_bbc {
     border: 1px solid #bbbbbb;
+    width: 95%;
+    max-width: 67vw;
+    margin-left: 0.5rem;
 }
 
 .spoiler_bbc > * {
@@ -36,7 +39,8 @@ hr.spoiler_hr_bbc {
     animation-name: spoiler_bbc_transition;
     animation-duration: 0.7s;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.3rem;
     background-color: rgba(221, 221, 221, 0.4);
 }
 
