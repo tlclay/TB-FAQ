@@ -1,206 +1,247 @@
 body {
-			background: transparent;
-			color: #000000;
-			font: 12pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
-			padding: 0px;
-			height: 100%;
-			}
-			td, th, p, li {
-			font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
-			}
-			a:link {
-			color: rgb(169, 0, 77);
-			text-decoration: none;
-			}
-			a:visited {
-			color: rgb(169, 0, 77);
-			text-decoration: none;
-			}
-			a:hover {
-			text-decoration: underline;
-			}
-			ul, ol {
-			list-style-type: square;
-			}
-			.tcat {
-			background: #000 url(http://cache.toribash.com/forum/header_buttons.png) repeat;
-			color: #FFFFFF;
-			font: bold 8pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
-			}
-			.alt1, .alt1Active {
-			background: #EEEEEE;
-			color: #000000;
-			}
+    background: transparent;
+    color: #000000;
+    font: 12pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+    padding: 0px;
+    height: 100%;
+}
+
+td, th, p, li {
+    font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+
+a:link {
+    color: rgb(169, 0, 77);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(169, 0, 77);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style-type: square;
+}
+
+.tcat {
+    background: #000 url(http://cache.toribash.com/forum/header_buttons.png) repeat;
+    color: #FFFFFF;
+    font: bold 8pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+
+.alt1, .alt1Active {
+    background: #EEEEEE;
+    color: #000000;
+}
 
 
 
-			
-			p.faq_para {
-			margin: 0px;
-			}
-			span.faq_q {
-			color: #5555FF;
-			font-style: normal;
-			}
-			span.faq_a {
-			color: #FF5555;
-			font-style: normal;
-			font-weight: bold;
-			font-size: 1.1rem;
-			}
-			.faq_question {
-			font-style: italic;
-			font-weight: bold;
-			font-size: 1.1rem;
-			margin-bottom: 1rem;
-			}
-			.faq_question * {
-			font-style: italic;
-			font-weight: bold;
-			font-size: 1.1rem;
-			}
-			.faq_answer {
-			font-size: 1rem;
-			margin-bottom: 1rem;
-			}
-			img.faq_img {
-			display: block;
-			margin: 0.8em;
-			}
-			.faq_admin {
-			color: red;
-			}
-			a.faq_admin {
-			color: red;
-			font-weight: bold;
-			}
-			.faq_smod {
-			color: blue;
-			}
-			a.faq_smod {
-			color: blue;
-			font-weight: bold;
-			}
-			.faq_clanManagement {
-			color: black;
-			}
-			a.faq_clanManagement {
-			color: black;
-			font-weight: bold;
-			}
-			.faq_marketSquad {
-			color: green;
-			}
-			a.faq_marketSquad {
-			color: green;
-			font-weight: bold;
-			}
-			.faq_eventSquad {
-			color: #690069;
-			}
-			a.faq_eventSquad {
-			color: #690069;
-			font-weight: bold;
-			}
-			.faq_clanSquad {
-			color: #eb6900;
-			}
-			a.faq_clanSquad {
-			color: #eb6900;
-			font-weight: bold;
-			}
-			.faq_helpSquad {
-			color: #767676;
-			}
-			a.faq_helpSquad {
-			color: #767676;
-			font-weight: bold;
-			}
-			table.faq_staff_table {
-			border-collapse: collapse;
-			font-weight: bold;
-			margin: 0.8em 0 0.8em 0;
-			}
-			table.faq_staff_table td {
-			border: 1px solid gray;
-			padding: 0.3em;
-			padding-right: 1em;
-			}
-			.faq_importantInfo {
-			background-color: rgba(140,184,255,0.3);
-    			border: 0.2em solid rgb(100,144,215);
-   			border-radius: 0.6em;
-   			padding: 0.7em;
-			}
-			.faq_importantInfo > p:first-child
-			{
-				margin-top: 0;
-			}
-			.faq_importantInfo > p:last-child
-			{
-				margin-bottom: 0;
-			}
-			.faq_hoverExplain {
-			border-bottom: 1px dashed black;
-			text-decoration: none;
-			cursor: help;
-			}
-			.code_bbc {
-			background: white;
-			margin: 1rem;
-			padding: 6px;
-			border: 1px inset;
-			overflow: auto;
-			resize: both;
-			width: auto;
-			height: auto;
-                	display: inline-block;
-                        white-space: pre;
-                        font-family: consolas;
-			}
-			.faq_code_snippet {
-			border: 1px solid lightgrey;
-			font-family: consolas;
-			padding: 0.1em;
-			background-color: rgba(255, 255, 255, 0.5);
-			white-space: nowrap;
-                        overflow: hidden;
-			}
-			.faq_table {
-			    border-collapse: collapse;
-			    width: 100%;
-			}
 
-			.faq_table td, th {
-			    border: 1px solid #bbb;
-			    text-align: left;
-			    padding: 8px;
-			}
+p.faq_para {
+    margin: 0px;
+}
 
-			.faq_table tr > th {
-				text-align: center;
-				font-weight: bold;
-				background-color: rgba(140,184,255,0.3);
-			}
+span.faq_q {
+    color: #5555FF;
+    font-style: normal;
+}
 
-			.faq_table tr:nth-child(even) > td {
-			    background-color: #dddddd;
-			}
-			ul.faq_spaced_list > li:not(:first-child):not(:last-child) {
-			    margin-top: 0.5rem;
-			    margin-bottom: 0.5rem;
-			}
+span.faq_a {
+    color: #FF5555;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 
-			ol.faq_spaced_list > li:not(:first-child):not(:last-child) {
-			    margin-top: 0.5rem;
-			    margin-bottom: 0.5rem;
-			}
-			.anchor_bbc:target {
-				animation-name: anchor_bbc;
- 				   animation-duration: 0.8s;
-			}
+.faq_question {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
 
-			@keyframes anchor_bbc {
-				from {background-color: rgba(102, 191, 255, 0.4);}
- 				to {background-color: inherit;}
-			}
+    .faq_question * {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+.faq_answer {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+img.faq_img {
+    display: block;
+    margin: 0.8em;
+}
+
+.faq_admin {
+    color: red;
+}
+
+a.faq_admin {
+    color: red;
+    font-weight: bold;
+}
+
+.faq_smod {
+    color: blue;
+}
+
+a.faq_smod {
+    color: blue;
+    font-weight: bold;
+}
+
+.faq_clanManagement {
+    color: black;
+}
+
+a.faq_clanManagement {
+    color: black;
+    font-weight: bold;
+}
+
+.faq_marketSquad {
+    color: green;
+}
+
+a.faq_marketSquad {
+    color: green;
+    font-weight: bold;
+}
+
+.faq_eventSquad {
+    color: #690069;
+}
+
+a.faq_eventSquad {
+    color: #690069;
+    font-weight: bold;
+}
+
+.faq_clanSquad {
+    color: #eb6900;
+}
+
+a.faq_clanSquad {
+    color: #eb6900;
+    font-weight: bold;
+}
+
+.faq_helpSquad {
+    color: #767676;
+}
+
+a.faq_helpSquad {
+    color: #767676;
+    font-weight: bold;
+}
+
+table.faq_staff_table {
+    border-collapse: collapse;
+    font-weight: bold;
+    margin: 0.8em 0 0.8em 0;
+}
+
+    table.faq_staff_table td {
+        border: 1px solid gray;
+        padding: 0.3em;
+        padding-right: 1em;
+    }
+
+.faq_importantInfo {
+    background-color: rgba(140,184,255,0.3);
+    border: 0.2em solid rgb(100,144,215);
+    border-radius: 0.6em;
+    padding: 0.7em;
+}
+
+    .faq_importantInfo > p:first-child {
+        margin-top: 0;
+    }
+
+    .faq_importantInfo > p:last-child {
+        margin-bottom: 0;
+    }
+
+.faq_hoverExplain {
+    border-bottom: 1px dashed black;
+    text-decoration: none;
+    cursor: help;
+}
+
+.code_bbc {
+    background: white;
+    margin: 1rem;
+    padding: 6px;
+    border: 1px inset;
+    overflow: auto;
+    resize: both;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    white-space: pre;
+    font-family: consolas;
+}
+
+.faq_code_snippet {
+    border: 1px solid lightgrey;
+    font-family: consolas;
+    padding: 0.1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.faq_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .faq_table td, th {
+        border: 1px solid #bbb;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .faq_table tr > th {
+        text-align: center;
+        font-weight: bold;
+        background-color: rgba(140,184,255,0.3);
+    }
+
+    .faq_table tr:nth-child(even) > td {
+        background-color: #dddddd;
+    }
+
+ul.faq_spaced_list > li:not(:first-child):not(:last-child) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ol.faq_spaced_list > li:not(:first-child):not(:last-child) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.anchor_bbc:target {
+    animation-name: anchor_bbc;
+    animation-duration: 0.8s;
+}
+
+@keyframes anchor_bbc {
+    from {
+        background-color: rgba(102, 191, 255, 0.4);
+    }
+
+    to {
+        background-color: inherit;
+    }
+}
