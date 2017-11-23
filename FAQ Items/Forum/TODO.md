@@ -16,10 +16,9 @@
 - To create:
   - [x] Pull `forum_vip.html` from live.
 - To update:
-  
-  
+
 ## **Forum::Live**
 - To add:
   - [x] `moderation_tools.html`
 - To update:
-  
+  - [ ] `forum_vip` is linked to in various places on the live site, such as when a non-VIP user attempts to view the Search page. The information in it is already present in `Account/boosters_and_subscriptions.html`. Let's make sure to change the rest of its references when we get the opportunity.
