@@ -41,7 +41,15 @@ class faqparser(HTMLParser):
         if tag == 'td':
             self.datasince = True ## Assume that empty columns are okay.
 
-        
+        duplicate_attr = False
+        attrset = set()
+        for k,v in attrs:
+            if not k in attrset:
+                attrset.add(k)
+            else:
+                print(" -!-: faqparser: duplicate HTML attribute found in <" + tag + ">.")
+        del attrset
+
         if self.sfound:
             newdat = '<'+tag
             if (len(attrs) > 0):
