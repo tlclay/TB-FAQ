@@ -10,16 +10,9 @@
 - ### [css](https://github.com/TB-FAQ/TB-FAQ/blob/master/css/TODO.md)
 
 
-## **css::GitHub**
-- To create:
-  
-- To update:
-  
-  
-## **css::Live**
-- To add:
-  - [x] `spoiler.css`
-- To update:
-  - [x] `generic.css`
 
-These have both been added suboptimally, need a dev when they have been appropriately finalized so that they can be managed as independent stylesheets.
+## **Clans::GitHub**
+- To consider:
+  - [ ] `joining_clans.html`, regarding joining clans.
+  - [ ] `official_clans.html`, regarding the different varieties of clans, both official and unofficial.
+  - [ ] `clan_wars.html`
