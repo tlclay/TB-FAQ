@@ -212,6 +212,8 @@ def clean_js():
     alljs = ""
     for root, dirs, files in os.walk(gitdir + "/../js"):
         for f in files:
+            if f == "include_all.js":
+                continue ## This one is unnecessary in the final version, since min.js won't require any additional includes.
             fname = f.split('.')
             if fname[len(fname)-1] == "js" and fname[len(fname)-2] != "min":
                 with open(root + "/" + f, "rb") as ijs:
