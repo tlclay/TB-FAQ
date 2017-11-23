@@ -92,6 +92,8 @@ class faqparser(HTMLParser):
         if isnotWS(data):
             self.datasince = True
         if self.sfound:
+            if self.lasttag == "style" and isnotWS(data):
+                print(" -?- faqparser: non-empty <style> found in main body.")
             newdat = data
             l = len(newdat)
             self.cf += newdat
