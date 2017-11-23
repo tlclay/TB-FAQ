@@ -22,4 +22,11 @@ $(document).ready(function () {
     }).appendTo('head');
 
     $.getScript('https://rawgit.com/TB-FAQ/TB-FAQ/master/js/youtube_embed.min.js');
+
+    $.getScript('https://rawgit.com/TB-FAQ/TB-FAQ/master/js/staff_profiles_linker.min.js');
+    $('<link/>', {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://rawgit.com/TB-FAQ/TB-FAQ/master/css/staff_colours.min.css'
+    }).appendTo('head');
 });

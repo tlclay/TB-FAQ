@@ -1,0 +1,34 @@
+﻿.faq_admin {
+    color: red;
+    font-weight: bold;
+}
+
+.faq_clanManagement {
+    color: black;
+    font-weight: bold;
+}
+
+.faq_clan_squad {
+    color: #eb6900;
+    font-weight: bold;
+}
+
+.faq_eventSquad {
+    color: #690069;
+    font-weight: bold;
+}
+
+.faq_helpSquad {
+    color: #767676;
+    font-weight: bold;
+}
+
+.faq_marketSquad {
+    color: green;
+    font-weight: bold;
+}
+
+.faq_smod {
+    color: blue;
+    font-weight: bold;
+}
