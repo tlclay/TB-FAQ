@@ -1,6 +1,7 @@
 from tbfaq_config import gitdir,tgtdir
 import os
 from html.parser import HTMLParser
+from css_html_js_minify import js_minify, css_minify
 
 ## This script is Windows specific.
 ## I don't have a Linux system set up for testing.
@@ -176,7 +177,7 @@ def clean_file(ifname):
         del fp
         return ret
 
-def clean_all():
+def clean_html():
     for root, dirs, files in os.walk(gitdir):
         path_parts = root.split("\\") ## This is Windows specific.
         gitpath = '/'.join(path_parts)
@@ -205,3 +206,39 @@ def clean_all():
                 of.write(cleaned[1].encode("utf-8"))
                 print(' --> "' + tgtpath + "/" + newtitle + '" saved.')
 
+def clean_js():
+    if not os.path.exists(gitdir + "/../js"):
+        print (" -!- clean_js: JavaScript directory not found.")
+    alljs = ""
+    for root, dirs, files in os.walk(gitdir + "/../js"):
+        for f in files:
+            if f == "include_all.js":
+                continue ## This one is unnecessary in the final version, since min.js won't require any additional includes.
+            fname = f.split('.')
+            if fname[len(fname)-1] == "js" and fname[len(fname)-2] != "min":
+                with open(root + "/" + f, "rb") as ijs:
+                    alljs += ijs.read().decode()
+                    alljs += "\n"
+    minjs = js_minify(alljs)
+    with open(tgtdir + "/min.js","wb") as ojs:
+        ojs.write(minjs.encode())
+
+def clean_css():
+    if not os.path.exists(gitdir + "/../css"):
+        print (" -!- clean_css: JavaScript directory not found.")
+    allcss = ""
+    for root, dirs, files in os.walk(gitdir + "/../css"):
+        for f in files:
+            fname = f.split('.')
+            if fname[len(fname)-1] == "css" and fname[len(fname)-2] != "min":
+                with open(root + "/" + f, "rb") as icss:
+                    allcss += icss.read().decode()
+                    allcss += "\n"
+    mincss = css_minify(allcss)
+    with open(tgtdir + "/min.css","wb") as ocss:
+        ocss.write(mincss.encode())
+
+def clean_all():
+    clean_js()
+    clean_css()
+    clean_html()
