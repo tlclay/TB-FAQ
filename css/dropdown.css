@@ -16,7 +16,7 @@
     animation-duration: 0.7s;
 }
 
-.drop_content_bbc :first-child {
+.drop_content_bbc > :first-child {
 	margin-top: 0.5rem;
 	padding-top: 0;
 }
