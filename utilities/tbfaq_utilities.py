@@ -11,6 +11,8 @@ from css_html_js_minify import js_minify, css_minify
 TAB_SPACE = "    "
 TAB_LENGTH = len(TAB_SPACE)
 
+faqitems = dict() ## A dictionary of faq item tags to cleaned faq item HTML files.
+
 def isnotWS(s):
     l = len(s)
     i = 0
@@ -205,6 +207,18 @@ def clean_html():
             with open(tgtpath + "/" + newtitle, "wb") as of:
                 of.write(cleaned[1].encode("utf-8"))
                 print(' --> "' + tgtpath + "/" + newtitle + '" saved.')
+
+            if fname[0] in faqitems:
+                faqitems[fname[0]].add(tgtpath+"/"+newtitle)
+            else:
+                faqitems[fname[0]] = {tgtpath+"/"+newtitle}
+
+    for k,v in faqitems.items():
+        if len(v) > 1:
+            print(" -!- clean_html: FAQ tag `" + k + "` is used multiple times:")
+            for f in v:
+                print("               : --> " + f)
+            print("               : This cannot be implemented on live!")
 
 def clean_js():
     if not os.path.exists(gitdir + "/../js"):
