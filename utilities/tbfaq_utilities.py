@@ -234,6 +234,8 @@ def clean_js():
             if fname[len(fname)-1] == "js" and fname[len(fname)-2] != "min":
                 with open(root + "/" + f, "rb") as ijs:
                     alljs += ijs.read().decode()
+                    if alljs[len(alljs)-1] != ";":
+                        alljs += ";"
                     alljs += "\n"
     minjs = js_minify(alljs)
     with open(tgtdir + "/min.js","wb") as ojs:
