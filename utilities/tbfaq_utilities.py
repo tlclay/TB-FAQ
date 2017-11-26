@@ -22,6 +22,8 @@ def isnotWS(s):
         i+=1
     return False
 
+singleton_tags = {"hr","img","input"} # tags which can exist on their own without internal data.
+
 class faqparser(HTMLParser):
     cf = ""
     titlenext = False
@@ -84,7 +86,7 @@ class faqparser(HTMLParser):
             if tag == 'br':
                 return
             newdat = '</' + tag + '>'
-            if tag == self.lasttag and tag != 'img' and tag != 'hr':
+            if tag == self.lasttag and not (tag in singleton_tags):
                 if tag == 'span':
                     if ('class', 'drop_arrow_bbc') in self.lastattr:
                         if not self.datasince:
