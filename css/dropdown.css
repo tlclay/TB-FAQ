@@ -30,7 +30,7 @@
         background-color: rgba(102, 191, 255, 0.4);
     }
     to {
-        background-color: rgba(221, 221, 221, 0.4);
+        background-color: rgba(221, 221, 221, 0.0);
     }
 }
 

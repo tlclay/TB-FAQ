@@ -11,6 +11,8 @@ from css_html_js_minify import js_minify, css_minify
 TAB_SPACE = "    "
 TAB_LENGTH = len(TAB_SPACE)
 
+faqitems = dict() ## A dictionary of faq item tags to cleaned faq item HTML files.
+
 def isnotWS(s):
     l = len(s)
     i = 0
@@ -19,6 +21,8 @@ def isnotWS(s):
             return True
         i+=1
     return False
+
+singleton_tags = {"hr","img","input"} # tags which can exist on their own without internal data.
 
 class faqparser(HTMLParser):
     cf = ""
@@ -82,7 +86,7 @@ class faqparser(HTMLParser):
             if tag == 'br':
                 return
             newdat = '</' + tag + '>'
-            if tag == self.lasttag and tag != 'img' and tag != 'hr':
+            if tag == self.lasttag and not (tag in singleton_tags):
                 if tag == 'span':
                     if ('class', 'drop_arrow_bbc') in self.lastattr:
                         if not self.datasince:
@@ -206,6 +210,18 @@ def clean_html():
                 of.write(cleaned[1].encode("utf-8"))
                 print(' --> "' + tgtpath + "/" + newtitle + '" saved.')
 
+            if fname[0] in faqitems:
+                faqitems[fname[0]].add(tgtpath+"/"+newtitle)
+            else:
+                faqitems[fname[0]] = {tgtpath+"/"+newtitle}
+
+    for k,v in faqitems.items():
+        if len(v) > 1:
+            print(" -!- clean_html: FAQ tag `" + k + "` is used multiple times:")
+            for f in v:
+                print("               : --> " + f)
+            print("               : This cannot be implemented on live!")
+
 def clean_js():
     if not os.path.exists(gitdir + "/../js"):
         print (" -!- clean_js: JavaScript directory not found.")
@@ -218,6 +234,8 @@ def clean_js():
             if fname[len(fname)-1] == "js" and fname[len(fname)-2] != "min":
                 with open(root + "/" + f, "rb") as ijs:
                     alljs += ijs.read().decode()
+                    if alljs[len(alljs)-1] != ";":
+                        alljs += ";"
                     alljs += "\n"
     minjs = js_minify(alljs)
     with open(tgtdir + "/min.js","wb") as ojs:
@@ -227,16 +245,23 @@ def clean_css():
     if not os.path.exists(gitdir + "/../css"):
         print (" -!- clean_css: JavaScript directory not found.")
     allcss = ""
+    livecss = ""
     for root, dirs, files in os.walk(gitdir + "/../css"):
         for f in files:
             fname = f.split('.')
             if fname[len(fname)-1] == "css" and fname[len(fname)-2] != "min":
                 with open(root + "/" + f, "rb") as icss:
-                    allcss += icss.read().decode()
-                    allcss += "\n"
+                    newcss = icss.read().decode() + "\n"
+                    allcss += newcss
+                    if f != "imitate_live.css":
+                        livecss += newcss
     mincss = css_minify(allcss)
     with open(tgtdir + "/min.css","wb") as ocss:
         ocss.write(mincss.encode())
+    minlivecss = css_minify(livecss)
+    with open(tgtdir + "/live.min.css","wb") as ocss:
+        ocss.write(minlivecss.encode())
+
 
 def clean_all():
     clean_js()

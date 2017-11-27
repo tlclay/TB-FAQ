@@ -7,10 +7,9 @@
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/get_faq_item.js"></script>
-		<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.js"></script>
+		<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/min.js"></script>
 		
-		<link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.css">
+		<link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/min.css">
 	</head>
 	<body>
 		<table align="center" border="0" cellpadding="6" cellspacing="1" class="tborder" width="100%">
@@ -26,13 +25,14 @@
 				<div class="faq_answer">
 					<p><span class="faq_a">A:</span> This category includes commands which can only be run as a server operator (<span style="color: #449944">@</span>). In multiplayer, <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">set commands</a> may also only be executed by operators.</p>
 					<p>Some operator commands may also be run in singleplayer.</p>
-					<p class="faq_importantInfo">Use chat commands like so: <span class="faq_code_snippet">/&lt;command&gt; &lt;argument(s)&gt;</span>. Some commands may not have arguments.<br>
+					<p class="faq_importantInfo">Use chat commands like so: <span class="faq_code_snippet">/&lt;command&gt; &lt;argument(s)&gt;</span><br>
+					<strong>Some commands may not have arguments:</strong><br>
 					Example no-argument command: <span class="faq_code_snippet">/specall</span><br>
 					Example command with arguments: <span class="faq_code_snippet">/fspec Fear</span></p>
 					<p>Other command types:</p>
 					<ul>
 						<li>
-							<a href="http://forum.toribash.com/faq.php?faq=game_main#faq_standard_commands">Standard commands.</a>
+							<a href="http://forum.toribash.com/faq.php?faq=game_main#faq_standard_commands">Standard commands</a>
 						</li>
 						<li>
 							<a href="http://forum.toribash.com/faq.php?faq=game_main#faq_option_commands">Option commands</a>
@@ -61,13 +61,13 @@
 										<td>passwd</td>
 										<td>[password|<em>none</em>]</td>
 										<td></td>
-										<td>Adds or removes a password for the room. Users must use <span class="faq_code_snippet">/password [password]</span> to enter and chat. <strong>Running this command with no argument will clear the password entirely.</strong></td>
+										<td>Adds or removes a password for the room: users must use <span class="faq_code_snippet">/password [password]</span> to enter and chat. <br><strong>Running this command with no argument will clear the password entirely.</strong></td>
 									</tr>
 									<tr>
 										<td>setowner</td>
 										<td>[password]</td>
 										<td></td>
-										<td>Sets the ownerpass for the room. Use in conjunction with <span class="faq_code_snippet">/owner [password]</span>.</td>
+										<td>Sets the ownerpass for the room.<br>Use in conjunction with <span class="faq_code_snippet">/owner [password]</span>.</td>
 									</tr>
 									<tr>
 										<td>owner</td>
@@ -79,13 +79,13 @@
 										<td>reset</td>
 										<td></td>
 										<td>rt</td>
-										<td>Resets the game.</td>
+										<td>Resets the game</td>
 									</tr>
 									<tr style="color: #449944">
 										<td>loadmod</td>
 										<td>[filename].tbm</td>
 										<td>lm</td>
-										<td>Loads the specified mod file (.tbm file). Automatically resets the game. Equivalent to calling <span class="faq_code_snippet">/set mod [modname].tbm</span> then <span class="faq_code_snippet">/reset</span></td>
+										<td>Loads the specified mod file (.tbm file) and automatically resets the game.<br>Equivalent to calling <span class="faq_code_snippet">/set mod [modname].tbm</span> then <span class="faq_code_snippet">/reset</span>.</td>
 									</tr>
 									<tr>
 										<td>desc</td>
@@ -97,7 +97,7 @@
 										<td>motd</td>
 										<td>[text]</td>
 										<td></td>
-										<td>Changes the 'message of the day' of the room. This message will be displayed to people joining your room.</td>
+										<td>Changes the 'message of the day' of the room: This message will be displayed to people joining your room.</td>
 									</tr>
 									<tr>
 										<td>maxclients</td>
@@ -122,12 +122,12 @@
 										<td>[position]</td>
 										<td></td>
 										<td>
-											Users joining your room will be automatically nudged to the specified position in the queue.
+											Users joining your room will be automatically nudged to the specified position in the queue:
 											<ol style="list-style-type: decimal;">
-												<li value="0">End of queue (default setting)</li>
-												<li>Uke's position</li>
-												<li>First position in queue</li>
-												<li value="3+">Place new users into specified place. If the number is higher than the queue size, they will be added to the end of the queue.</li>
+												<li value="0">End of queue (default setting).</li>
+												<li>Uke's position.</li>
+												<li>First position in queue.</li>
+												<li value="3+">Place new users into specified place.<br>If the number is higher than the queue size, they will be added to the end of the queue.</li>
 											</ol>
 										</td>
 									</tr>
@@ -135,13 +135,13 @@
 										<td>duel</td>
 										<td>
 											<ul>
-												<li>[start][tc]</li>
+												<li>[start][TC]</li>
 												<li>[stop|status|earnings]</li>
 											</ul>
 										</td>
 										<td></td>
 										<td>
-											See <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">dueling.</a>
+											See <a href="http://forum.toribash.com/faq.php?faq=game_main#faq_set_commands">dueling</a>.
 										</td>
 									</tr>
 									<tr>
@@ -149,33 +149,26 @@
 										<td>[on|off]<br>
 										<br></td>
 										<td></td>
-										<td>Imposes lockdown mode on the room. Users in spectator mode won't be able to join the bout queue by themselved. If a user reconnects, they will automatically join the bout queue as normal, however.</td>
+										<td>Imposes lockdown mode on the room: Users in spectator mode won't be able to join the bout queue by themselved.<br>If a user reconnects, they will automatically join the bout queue as normal, however.</td>
 									</tr>
 									<tr>
 										<td>knockout</td>
 										<td>[on|off]</td>
 										<td></td>
-										<td>Imposes knockout mode on the room. Users will be specced upon losing, and cannot re-enter until the tourney is over. Users joining the room will be automatically placed into spectator mode. The winner may automatically win a prize generated by the server in the case of autotourneys, or from another user's account in the case of <span class="faq_code_snippet">/knockoutprize [tc]</span></td>
+										<td>Imposes knockout mode on the room: Users will be specced upon losing, and cannot re-enter until the tourney is over.<br>Users joining the room will be automatically placed into spectator mode.<br>The winner may automatically win a prize generated by the server in the case of autotourneys, or from another user's account in the case of <span class="faq_code_snippet">/knockoutprize [TC]</span>.</td>
 									</tr>
 									<tr>
 										<td>knockoutprize</td>
-										<td>[tc]</td>
+										<td>[TC]</td>
 										<td></td>
-										<td>Winners of a knockout tourney hosted in the room will receive the specified amount of tc, <strong>from your own tc.</strong></td>
+										<td>Winners of a knockout tourney hosted in the room will receive the specified amount of TC, <strong>from your own TC</strong>.</td>
 									</tr>
 									<tr>
 										<td>hotseat</td>
 										<td>[on|off]<br>
 										<br></td>
 										<td></td>
-										<td>Imposes hotseat mode on the room. The player in Tori's position will always be in that position regardless of whether they win or lose their matches. As such, the player in Uke's position will be sent to the end of the queue regardless of whether they win or lose their match.</td>
-									</tr>
-									<tr>
-										<td>status</td>
-										<td><br>
-										<br></td>
-										<td></td>
-										<td>Display the ip addresses of all users in the room.</td>
+										<td>Imposes hotseat mode on the room: The player in Tori's position will always be in that position regardless of whether they win or lose their matches.<br>As such, the player in Uke's position will be sent to the end of the queue regardless of whether they win or lose their match.</td>
 									</tr>
 									<tr style="color: #449944">
 										<td>centerprint</td>
@@ -245,19 +238,19 @@
 										<td>nudge</td>
 										<td>[username][position]</td>
 										<td></td>
-										<td>Nudges the specified user to the specified position in the queue. If the position is higher than the size of the queue, they will be nudged to the end of the queue. Cannot be used to nudge people into the position of Tori or Uke. Playes must be in the bout queue to be nudged.</td>
+										<td>Nudges the specified user to the specified position in the queue: If the position is higher than the size of the queue, they will be nudged to the end of the queue.<br><strong>Cannot be used to nudge people into the position of Tori or Uke.</strong><br>Players must be in the bout queue to be nudged.</td>
 									</tr>
 									<tr>
 										<td>mute</td>
 										<td>[username]</td>
 										<td></td>
-										<td>Causes the specified user to be unable to chat. If the user reconnects, this effect will be removed.</td>
+										<td>Causes the specified user to be unable to chat.<br>If the user reconnects, this effect will be removed.</td>
 									</tr>
 									<tr>
 										<td>muteall</td>
 										<td></td>
 										<td></td>
-										<td>Causes all users in the room to be muted. If a user reconnects, this effect will be removed from that user.</td>
+										<td>Causes all users in the room to be muted.<br>If a user reconnects, this effect will be removed from that user.</td>
 									</tr>
 									<tr>
 										<td>unmuteall</td>
@@ -269,7 +262,7 @@
 										<td>kick</td>
 										<td>[username]</td>
 										<td></td>
-										<td>Causes the specified user to be disconnected from the room. Cannot kick ingame admins.</td>
+										<td>Causes the specified user to be disconnected from the room.<br><strong>You cannot kick ingame admins.</strong></td>
 									</tr>
 									<tr>
 										<td>ban</td>
@@ -281,10 +274,11 @@
 										</td>
 										<td></td>
 										<td>
-											Banned users cannot rejoin a room after being kicked or otherwise disconnecting (does not affect ingame admins).
+											Banned users cannot rejoin a room after being kicked or otherwise disconnecting (does not affect ingame admins).<br/>
+											Usage:
 											<ul style="margin-top: 1rem; margin-bottom: 1rem;">
-												<li>list: lists all users on the room's banlist</li>
-												<li>clear: clears the entire banlist</li>
+												<li>list: lists all users on the room's banlist.</li>
+												<li>clear: clears the entire banlist.</li>
 												<li>add|del: adds/removes the specified user to/from the banlist.</li>
 											</ul>Ban a user's IP to prevent them from rejoining on an alternate account (find IPs with <span class="faq_code_snippet">/status</span>).
 										</td>
@@ -310,11 +304,11 @@
 										<td>house</td>
 										<td>[username|<em>none</em>]</td>
 										<td></td>
-										<td>Makes the specified user server admin. This doesn't actually grant any special privileges, rather, the user will earn tc from certain other commands such as <span class="faq_code_snippet">/maxrake</span></td>
+										<td>Makes the specified user server admin: This doesn't actually grant any special privileges, rather, the user will earn tc from certain other commands such as <span class="faq_code_snippet">/maxrake</span>.</td>
 									</tr>
                                     <tr>
 										<td>minbet</td>
-										<td>[tc]</td>
+										<td>[TC]</td>
 										<td></td>
 										<td>Forces all bets to be at least the specified amount.</td>
 									</tr>
@@ -326,15 +320,15 @@
 									</tr>
                                     <tr>
 										<td>maxrake</td>
-										<td>[tc]</td>
+										<td>[TC]</td>
 										<td></td>
-										<td>Specifies the maximum amount of rake tc the server admin can earn from bets. Note that rake tc is calculated and you will not always earn this amount, it is just a maximum.</td>
+										<td>Specifies the maximum amount of rake TC the server admin can earn from bets.<br>Note that rake TC is calculated and you will not always earn this amount -- it is just a maximum.</td>
 									</tr>
                                     <tr>
 										<td>cancelbets</td>
 										<td></td>
 										<td></td>
-										<td>Cancels all active bets, returning all tc.</td>
+										<td>Cancels all active bets, returning all TC.</td>
 									</tr>
                                     <tr>
 										<td>tourneystats</td>
