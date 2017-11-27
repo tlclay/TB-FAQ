@@ -245,16 +245,23 @@ def clean_css():
     if not os.path.exists(gitdir + "/../css"):
         print (" -!- clean_css: JavaScript directory not found.")
     allcss = ""
+    livecss = ""
     for root, dirs, files in os.walk(gitdir + "/../css"):
         for f in files:
             fname = f.split('.')
             if fname[len(fname)-1] == "css" and fname[len(fname)-2] != "min":
                 with open(root + "/" + f, "rb") as icss:
-                    allcss += icss.read().decode()
-                    allcss += "\n"
+                    newcss = icss.read().decode() + "\n"
+                    allcss += newcss
+                    if f != "imitate_live.css":
+                        livecss += newcss
     mincss = css_minify(allcss)
     with open(tgtdir + "/min.css","wb") as ocss:
         ocss.write(mincss.encode())
+    minlivecss = css_minify(livecss)
+    with open(tgtdir + "/live.min.css","wb") as ocss:
+        ocss.write(minlivecss.encode())
+
 
 def clean_all():
     clean_js()
