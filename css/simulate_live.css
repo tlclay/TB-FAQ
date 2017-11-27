@@ -1,0 +1,40 @@
+body {
+    background: transparent;
+    color: #000000;
+    font: 12pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+    padding: 0px;
+    height: 100%;
+}
+
+td, th, p, li {
+    font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+
+a:link {
+    color: rgb(169, 0, 77);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(169, 0, 77);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style-type: square;
+}
+
+.tcat {
+    background: #000 url(http://cache.toribash.com/forum/header_buttons.png) repeat;
+    color: #FFFFFF;
+    font: bold 8pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+
+.alt1, .alt1Active {
+    background: #EEEEEE;
+    color: #000000;
+}
