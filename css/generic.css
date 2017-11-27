@@ -55,6 +55,8 @@ table.faq_staff_table {
 .faq_importantInfo {
     background-color: rgba(140,184,255,0.3);
     border: 0.2em solid rgb(100,144,215);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.6em;
     padding: 0.7em;
 }
@@ -89,6 +91,7 @@ table.faq_staff_table {
 
 .faq_code_snippet {
     border: 1px solid lightgrey;
+    line-height 1.5;
     font-family: consolas;
     padding: 0.1em;
     background-color: rgba(255, 255, 255, 0.5);
