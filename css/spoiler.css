@@ -5,11 +5,6 @@
     margin-left: 0.5rem;
 }
 
-.spoiler_bbc > * {
-    display: flex;
-    flex-direction: column;
-}
-
 .spoiler_header_bbc {
     background-color: #dddddd;
     margin: 0;
