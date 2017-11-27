@@ -224,7 +224,7 @@ def clean_html():
 
     for root, dirs, files in os.walk(tgtdir):
         for f in files:
-            if f == "min.js" or f == "min.css":
+            if f == "min.js" or f == "min.css" or f == "live.min.css":
                 continue
             fs = f.split(".")
             fid = fs[0]
