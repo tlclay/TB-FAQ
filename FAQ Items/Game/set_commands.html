@@ -31,7 +31,7 @@
 					<p><strong>All set commands require a match reset to take effect.</strong></p></div>
 					<p>Other command types:</p>
 					<ul>
-						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_standard_commands">Standard commands.</a></li>
+						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_standard_commands">Standard commands</a></li>
 						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_option_commands">Option commands</a></li>
 						<li><a href="http://forum.toribash.com/faq.php?faq=game_main#faq_operator_commands">Operator commands</a></li>
 					</ul>
@@ -91,23 +91,23 @@
 						<td>fracture</td><td>fr</td><td>[0|1]</td><td>Enables/disables fracture.</td>
 					</tr>
 					<tr>
-						<td>disqualification</td><td>dq</td><td>[0|1]</td><td>Enables/disables disqualification. See <span class="faq_code_snippet">/set dqflag [flagID]</span>, <span class="faq_code_snippet">/set dqtimer [frames]</span> and <span class="faq_code_snippet">/set sumo [0|1]</span> for more details.</td>
+						<td>disqualification</td><td>dq</td><td>[0|1]</td><td>Enables/disables disqualification.<br/>See <span class="faq_code_snippet">/set dqflag [flagID]</span>, <span class="faq_code_snippet">/set dqtimer [frames]</span> and <span class="faq_code_snippet">/set sumo [0|1]</span> for more details.</td>
 					</tr>
 					<tr>
-						<td>dqtimer</td><td></td><td>[frames]</td><td>Instead of disqualifying instantly, disqualification occurs only after the specified frames have elapsed. The player must have been under disqualifcation conditions for the entire duration. Example: player's elbow is touching the floor for more than the specified amount of frames -> player is disqualified.</td>
+						<td>dqtimer</td><td></td><td>[frames]</td><td>Instead of disqualifying instantly, disqualification occurs only after the specified frames have elapsed<br/>The player must have been under disqualifcation conditions for the entire duration: For example, a player's elbow is touching the floor for more than the specified amount of frames -> player is disqualified.</td>
 					</tr>
 					<tr>
-						<td>dqflag</td><td>dqf</td><td>[flagID]</td><td><div class="dropdown_bbc"><strong class="drop_title_bbc">DQFlag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">Dq | Dqflag|                         Result                                                 
- 1 |   0   | Dqtimeout works inside and outside dojo
- 1 |   1   | Dqtimeout works inside the dojo; outside it the disqualification is instant
- 0 |   0   | No dq inside the dojo; timed dq outside (dqtimeout works)
- 0 |   1   | No dq inside the dojo; instant disqualification outside</pre></li></ul></div></td>
+						<td>dqflag</td><td>dqf</td><td>[flagID]</td><td><div class="dropdown_bbc"><strong class="drop_title_bbc">DQflag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">DQ | DQflag|                         Result                                                 
+ 1 |   0   | DQtimeout works inside and outside dojo
+ 1 |   1   | DQtimeout works inside the dojo; outside it the DQ is instant
+ 0 |   0   | No DQ inside the dojo; timed DQ outside (DQtimeout works)
+ 0 |   1   | No DQ inside the dojo; instant DQ outside</pre></li></ul></div></td>
 					</tr>
 					<tr>
-						<td>dismemberthreshold</td><td>dt</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="(How much damage joints need to take before they are dismembered.">dismember threshold</span>.</td>
+						<td>dismemberthreshold</td><td>dt</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="How much damage joints need to take before they are dismembered">dismember threshold</span>.</td>
 					</tr>
 					<tr>
-						<td>fracturethreshold</td><td>ft</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="(How much damage joints need to take before they are fractured,">fracture threshold</span>.</td>
+						<td>fracturethreshold</td><td>ft</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="How much damage joints need to take before they are fractured">fracture threshold</span>.</td>
 					</tr>
 					<tr>
 						<td>pointthreshold</td><td>pt</td><td>[value]</td><td>Sets the <span class="faq_hoverExplain" title="Dealing damage increases your damage meter; the amount of damage required is set by this value. Once the meter is full you will gain a point.">point threshold</span>.</td>
@@ -116,7 +116,7 @@
 						<td>dojotype</td><td>dj</td><td>[0|1]</td><td><ol style="list-style-type: decimal"><li value="0">Square</li><li>Circular</li></ol></td>
 					</tr>
 					<tr>
-						<td>dojosize</td><td>ds</td><td>[value]</td><td>Sets the size of the dojo. For the circle dojo, this value is the radius of the circle. For the square dojo, it is the side-length of the square.</td>
+						<td>dojosize</td><td>ds</td><td>[value]</td><td>Sets the size of the dojo.<br/>For the circle dojo, this value is the radius of the circle. For the square dojo, it is the side-length of the square.</td>
 					</tr>
 					<tr>
 						<td>engagedistance</td><td>ed</td><td>[value]</td><td>Sets the starting distance between Tori and Uke.</td>
@@ -128,16 +128,16 @@
 						<td>engagerotation</td><td>er</td><td>[value]</td><td>Sets the starting rotation (in degrees) for Tori <em>and</em> Uke.</td>
 					</tr>
 					<tr style="color: #aaaaaa">
-						<td>engagespace</td><td>es</td><td>[value]</td><td>No effect. Used to <a href="http://forum.toribash.com/showpost.php?p=244281&postcount=9">set the distance between players laterally in 3 and 4 player matches.</a></td>
+						<td>engagespace</td><td>es</td><td>[value]</td><td>No effect.<br/>Used to <a href="http://forum.toribash.com/showpost.php?p=244281&postcount=9">set the distance between players laterally in 3 and 4 player matches.</a></td>
 					</tr>
 					<tr style="color: #aaaaaa">
-						<td>engageplayerpos</td><td>pp</td><td>[x][y][z][x][y][z]</td><td>No effect. Presumably used to set the positions of Tori (first x,y,z coords) and Uke (second x,y,z coords).</td>
+						<td>engageplayerpos</td><td>pp</td><td>[x][y][z][x][y][z]</td><td>No effect.<br/>Presumably used to set the positions of Tori (first x,y,z coords) and Uke (second x,y,z coords).</td>
 					</tr>
 					<tr style="color: #aaaaaa">
-						<td>engageplayerrot</td><td>pp</td><td>[x][y][z][x][y][z]</td><td>No effect. Presumably used to set the rotations of Tori (first x,y,z coords) and Uke (second x,y,z coords).</td>
+						<td>engageplayerrot</td><td>pp</td><td>[x][y][z][x][y][z]</td><td>No effect.<br/>Presumably used to set the rotations of Tori (first x,y,z coords) and Uke (second x,y,z coords).</td>
 					</tr>
 					<tr>
-						<td>damage</td><td>da</td><td>[flagID]</td><td><div class="dropdown_bbc"><strong class="drop_title_bbc">DamageFlag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">Flag |                            Result                                                               
+						<td>damage</td><td>da</td><td>[flagID]</td><td><div class="dropdown_bbc"><strong class="drop_title_bbc">Damage Flag attributes <span class="drop_arrow_bbc"></span></strong><ul class="drop_content_bbc" style="list-style-type: none;"><li class="drop_item_bbc"><pre class="code_bbc">Flag |                            Result                                                               
   0  | You achieve points for hitting your opponent.
   1  | You achieve points for hitting your opponent; your opponent gets points when you hit yourself.
   2  | Your opponent gets points when you hit yourself.</pre></li></ul></div></td>
