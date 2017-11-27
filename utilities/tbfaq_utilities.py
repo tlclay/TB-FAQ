@@ -222,6 +222,25 @@ def clean_html():
                 print("               : --> " + f)
             print("               : This cannot be implemented on live!")
 
+    for root, dirs, files in os.walk(tgtdir):
+        for f in files:
+            if f == "min.js" or f == "min.css":
+                continue
+            fs = f.split(".")
+            fid = fs[0]
+            fpath = root.replace("\\","/") + "/" + f
+            if fid in faqitems:
+                if not fpath in faqitems[fid]:
+                    print(" --- clean_html: Removing outdated FAQ item: " + fpath)
+                    print(" (-) could only find:")
+                    for i in faqitems[fid]:
+                        print("                    : " + i)
+                    os.remove(fpath)
+            else:
+                print(" --- clean_html: Removing unknown FAQ item: " + fpath)
+                os.remove(fpath)
+            
+
 def clean_js():
     if not os.path.exists(gitdir + "/../js"):
         print (" -!- clean_js: JavaScript directory not found.")
