@@ -1,0 +1,49 @@
+This document was automatically generated with the [hover="BBcode to FAQ"][snippet]bbc_to_faq[/snippet][/hover] toolset. Everything you see here can be done with the [snippet]bbc_to_faq[/snippet] toolset. You can find the source code of this document on the github as [snippet]bbc_to_faq.bbc[/snippet].
+
+Q: What is [snippet]bbc_to_faq[/snippet]?
+A: [snippet]bbc_to_faq[/snippet] is a toolset designed to replicate at least the functionality of BBcode on the forums. It is intended to allow you to write preliminary FAQ items in a more familiar language and with less repetitive overhead. It is also intended to allow the outlines of FAQ items to be quickly written out with less concern on the specifics of the formatting.
+
+To the best of its ability, the toolset will attempt to generate code which is at least technically correct for an FAQ item, and which should require significantly less work to clean up than writing it in full in the first place would be.
+
+Q: Is there any difference between forum BBcode and the BBcode used by [snippet]bbc_to_faq[/snippet]?
+A: [b="color:red"]Yes.[/b]
+[snippet]bbc_to_faq[/snippet] is intended to generate FAQ items, and is designed to automatically generate output which is compatible with that purpose. Though it is designed to look and function mostly like BBcode (for the sake of familiarity), it is designed to output complete FAQ items (as opposed to posts on forum). To this end, it has several tags which [i]will never be implemented[/i] on the forums, because they allow too much flexibility and/or present legitimate security risks. These risks are identical to the risks associated with allowing posting directly in HTML, which is fine for the TB-FAQ project, but would be [b="color:red"]a very bad idea[/b] on the forums.
+
+Thus, some codes may seem to behave similarly to the forum's BBcodes, but several of them also have additional features. For example, the bold and italics tags, [noparse][b][/b] and [i][/i][/noparse], in this toolset will accept an option parameter that will be passed to their [snippet]style[/snippet] attribute. For example:
+[noparse][b="color:red"]Example[/b][/noparse] becomes: [b="color:red"]Example[/b]
+
+[important]One other key difference is that "Q:" and "A:" are special dividers which represent question and answer segments. These will be automatically formatted before any BBcode is processed, and BBcode cannot be transferred across these segments.[/important]
+
+Q: What tags (BBcodes) does [snippet]bbc_to_faq[/snippet] support?
+A: Not many at the moment, though adding more is usually quite simple.
+[dropdown="Supported tags"][list]
+[*][noparse][b][/noparse]: [b]Bold text.[/b] Accepts a CSS styling parameter as its option.
+[*][noparse][i][/noparse]: [i]Italic text.[/i] Accepts a CSS styling parameter as its option.
+[*][noparse][list][/noparse]: Generates a list, separated by [noparse][*][/noparse].
+[list]
+[*]A
+[*]B
+[*]C
+[/list]
+[*][noparse][url][/noparse]: [url="https://github.com/TB-FAQ/TB-FAQ"]Links.[/url]
+[*][noparse][img][/noparse]: [img="Help Squad"]https://i.imgur.com/1iHqiGf.png[/img]
+Note that it accepts a hover-text as its option.
+[*][noparse][dropdown][/noparse]: [dropdown="Dropdowns"]They drop down.[/dropdown]
+[*][noparse][important][/noparse]: [important]Highlight important information.[/important]
+[*][noparse][snippet][/noparse]: [snippet]Code snippets.[/snippet]
+[*][noparse][table][/noparse]: [table="&"]Turn & Tori & Uke
+
+1 & 0 & 0
+2 & 999,999,999 & 0
+3 & 999,999,999 & -1
+[/table]
+[*][noparse][noparse][/noparse]: Text within a [noparse][noparse][/noparse] tag will not be parsed as BBcode.
+[*][noparse][p][/noparse]: Can be used to explicitly specify a paragraph block.
+[*][noparse][hover][/noparse]: [hover="...and have text pop up."]Hold mouse over this...[/hover] Requires the option parameter.
+[/list][/dropdown]
+
+Q: I need more tags!
+A: Contact suomy on IRC, make an issue, or add them yourself. See [snippet]bbcode_parser.py[/snippet] if you're interested on how to do that. In the case of standard tags, they will be added as they seem necessary, so if you want to prioritize a tag, use it in an FAQ item. Even if it doesn't work now, it will work by the time we go to merge it.
+
+Q: How do I use the [snippet]bbc_to_faq[/snippet] tool to generate the HTML?
+A: You will need Python (it was developed on Python 3.6.3, but lower versions of Python 3 may work). Then, open python in the same directory, [snippet]from bbc_to_faq import make_html_from_file[/snippet], and then [snippet]make_html_from_file(input_filename,output_filename)[/snippet].
