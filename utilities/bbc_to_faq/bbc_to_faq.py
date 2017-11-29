@@ -92,8 +92,8 @@ def generate_min_html(t):
 
 def generate_html(title,text):
     final = '<!DOCTYPE html>\n<html><head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'
-    final += '<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/min.js"></script>'
-    final += '<link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/min.css">'
+    final += '<script src="https://tb-faq.github.io/TB-FAQ/min.js"></script>'
+    final += '<link rel="stylesheet" type="text/css" href="https://tb-faq.github.io/TB-FAQ/min.css">'
     final += '</head><body><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">\n'
     final += '<tr>\n\t<td class="tcat">'+title+'</td>\n</tr>\n'
     final += '<tr>\n\t<td class="alt1">\n'
