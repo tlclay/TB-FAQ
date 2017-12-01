@@ -124,9 +124,9 @@ $(document).ready(function ()
 
     function parse(input, iterLevel = 0)
     {
-        var output = '';
-        var tagPair = getNextTagPair(text);
         var text = input.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
+        var tagPair = getNextTagPair(text);
+        
 
         if (tagPair)
         {
