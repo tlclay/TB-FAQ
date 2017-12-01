@@ -122,10 +122,11 @@ $(document).ready(function ()
     }
 
 
-    function parse(text, iterLevel = 0)
+    function parse(input, iterLevel = 0)
     {
         var output = '';
         var tagPair = getNextTagPair(text);
+        var text = input.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
 
         if (tagPair)
         {
@@ -148,11 +149,7 @@ $(document).ready(function ()
                     if ((/noparse/i).test(tagPair[1]))
                     {
                         return convertedText.substring(0, endOfThisTagPair - (tagPair[1].length + tagPair[4].length + 4)) + parse(convertedText.substring(endOfThisTagPair - (tagPair[1].length + tagPair[4].length + 4)), iterLevel + 1);
-                    } else if ((/ulist|olist/i).test(tagPair[1]))
-                    {
-                        return parse(convertedText.substring(tagPair.index).replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' }));
-                    }
-                    else
+                    } else
                     {
                         return parse(convertedText, iterLevel + 1);
                     }
