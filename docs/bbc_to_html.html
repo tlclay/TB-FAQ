@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #input_wrapper {
+            display: flex;
+            
+        }
+        textarea {
+            width: 30vw;
+            height: 10vw;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        #html_display_area {
+            margin-top: 3rem;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 2rem;
+            display: none;
+        }
+    </style>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bbctohtml.js"></script>
+</head>
+<body>
+
+    <div id="input_wrapper">
+        <div id="bbc_input_area">
+            <textarea id="bbc_input_text"></textarea>
+            <button id="bbc_input_submit" type="button">
+                Submit
+            </button>
+        </div>
+        <div id="html_output_area">
+            <textarea id="html_output_text" readonly></textarea>
+            <br />
+        </div>
+
+    </div>
+    <p>Preview:</p>
+    <div id="html_display_area">
+
+    </div>
+</body>
+</html>
