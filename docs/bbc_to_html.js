@@ -37,6 +37,11 @@ $(document).ready(function ()
         return '<div class="dropdown_bbc"><strong class="drop_title_bbc">{option} <span class="drop_arrow_bbc">►</span></strong><div class="drop_content_bbc">{param}</div></div>';
     }
 
+    function bbc_spoiler()
+    {
+        return '<div class="spoiler_bbc"><div class="spoiler_header_bbc"><p class="spoiler_title_bbc">{option}</p><button type="button" class="spoiler_button_bbc">Show</button><hr class="spoiler_hr_bbc" style="display:none" /></div><div class="spoiler_content_bbc" style="display:none">{param}</div></div>';
+    }
+
     function bbc_noparse()
     {
         return '{param}';
@@ -60,9 +65,11 @@ $(document).ready(function ()
         'b': bbc_b(),
         'i': bbc_i(),
         'dropdown': bbc_dropdown(),
+        'spoiler': bbc_spoiler(),
         'noparse': bbc_noparse(),
         'olist': bbc_olist(),
-        'ulist': bbc_ulist()
+        'ulist': bbc_ulist(),
+        
     };
 
     function getbbcTags()
