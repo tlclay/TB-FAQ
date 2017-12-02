@@ -69,7 +69,7 @@ $(document).ready(function ()
         'noparse': bbc_noparse(),
         'olist': bbc_olist(),
         'ulist': bbc_ulist(),
-        
+
     };
 
     function getbbcTags()
@@ -129,11 +129,12 @@ $(document).ready(function ()
     }
 
 
-    function parse(input, iterLevel = 0)
+    function parse(text, iterLevel = 0)
     {
-        var text = input.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
+
+
         var tagPair = getNextTagPair(text);
-        
+
 
         if (tagPair)
         {
@@ -170,10 +171,41 @@ $(document).ready(function ()
 
     }
 
+    function replaceNoParse(input)
+    {
+
+    }
+
+    function prepare(input)
+    {
+        var noParseInput = input.replace(/(\[noparse\][\s\S]*\[\/noparse\])/g, '{$NP}$1{$NP}').split(/{\$NP}/g);
+        var noParseExtracted = [];
+        var noParseReplaced = "";
+        for (var s of noParseInput)
+        {
+            if (s.match(/\[noparse\][\s\S]*\[\/noparse\]/))
+            {
+                noParseReplaced += '{NP}';
+                noParseExtracted.push(s);
+            } else
+            {
+                noParseReplaced += s;
+            }
+        }
+        var formatted = noParseReplaced.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
+        var parsed = parse(formatted);
+        var noParseReplaced = "";
+        for (var s of noParseExtracted)
+        {
+            noParseReplaced = parsed.replace(/{NP}/, parse(s));
+        }
+        return noParseReplaced;
+    }
+
     // listener for button click
     $('#input_wrapper').on('click', '#bbc_input_submit', function ()
     {
-        var out = parse($('#bbc_input_text').val());
+        var out = prepare($('#bbc_input_text').val());
         $('#html_output_text').val(out);
         $('#html_display_area').html(out).css('display', 'block');
     });
