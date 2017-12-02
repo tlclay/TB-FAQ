@@ -1,64 +1,7 @@
 $(document).ready(function ()
 {
-
-
-    function bbc_faq_question()
-    {
-        return '<p class="faq_question"><span class="faq_q">Q: </span>{param}</p>';
-    }
-
-    function bbc_faq_answer()
-    {
-        return '<div class="faq_answer"><span class="faq_a">A: </span>{param}</div>';
-    }
-
-    function bbc_url()
-    {
-        return '<a href="{option}">{param}</a>';
-    }
-
-    function bbc_color()
-    {
-        return '<span style="color: {option}">{param}</span>';
-    }
-
-    function bbc_b()
-    {
-        return '<strong>{param}</strong>';
-    }
-
-    function bbc_i()
-    {
-        return '<em>{param}</em>';
-    }
-
-    function bbc_dropdown()
-    {
-        return '<div class="dropdown_bbc"><strong class="drop_title_bbc">{option} <span class="drop_arrow_bbc">►</span></strong><div class="drop_content_bbc">{param}</div></div>';
-    }
-
-    function bbc_spoiler()
-    {
-        return '<div class="spoiler_bbc"><div class="spoiler_header_bbc"><p class="spoiler_title_bbc">{option}</p><button type="button" class="spoiler_button_bbc">Show</button><hr class="spoiler_hr_bbc" style="display:none" /></div><div class="spoiler_content_bbc" style="display:none">{param}</div></div>';
-    }
-
-    function bbc_noparse()
-    {
-        return '{param}';
-    }
-
-    function bbc_olist()
-    {
-        return '<ol type={option}>{param}</ol>';
-    }
-
-    function bbc_ulist()
-    {
-        return '<ul>{param}</ul>';
-    }
-
     var bbcAliases = {
-        'question': '<div class="faq_answer"><span class="faq_a">A: </span>{param}</div>',
+        'question': '<p class="faq_question"><span class="faq_a">Q: </span>{param}</p>',
         'answer': '<div class="faq_answer"><span class="faq_a">A: </span>{param}</div>',
         'url': '<a href="{option}">{param}</a>',
         'color': '<span style="color: {option}">{param}</span>',
