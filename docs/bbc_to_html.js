@@ -123,14 +123,14 @@
                 noParseReplaced += s;
             }
         }
-        var formatted = noParseReplaced.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
-        var parsed = parse(formatted);
+        var listsReplaced = noParseReplaced.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
+        var parsed = parse(listsReplaced);
         var noParseReplaced = parsed;
         for (var s of noParseExtracted)
         {
             noParseReplaced = parsed.replace(/{NP}/, parse(s));
         }
-        return noParseReplaced;
+        return noParseReplaced.replace(/(?:\r\n|\r|\n)/g, '<br />');
     }
 
     // listener for button click
