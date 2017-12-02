@@ -171,11 +171,6 @@ $(document).ready(function ()
 
     }
 
-    function replaceNoParse(input)
-    {
-
-    }
-
     function prepare(input)
     {
         var noParseInput = input.replace(/(\[noparse\][\s\S]*\[\/noparse\])/g, '{$NP}$1{$NP}').split(/{\$NP}/g);
@@ -194,7 +189,7 @@ $(document).ready(function ()
         }
         var formatted = noParseReplaced.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
         var parsed = parse(formatted);
-        var noParseReplaced = "";
+        var noParseReplaced = parsed;
         for (var s of noParseExtracted)
         {
             noParseReplaced = parsed.replace(/{NP}/, parse(s));
