@@ -58,18 +58,17 @@ $(document).ready(function ()
     }
 
     var bbcAliases = {
-        'question': bbc_faq_question(),
-        'answer': bbc_faq_answer(),
-        'url': bbc_url(),
-        'color': bbc_color(),
-        'b': bbc_b(),
-        'i': bbc_i(),
-        'dropdown': bbc_dropdown(),
-        'spoiler': bbc_spoiler(),
-        'noparse': bbc_noparse(),
-        'olist': bbc_olist(),
-        'ulist': bbc_ulist(),
-
+        'question': '<div class="faq_answer"><span class="faq_a">A: </span>{param}</div>',
+        'answer': '<div class="faq_answer"><span class="faq_a">A: </span>{param}</div>',
+        'url': '<a href="{option}">{param}</a>',
+        'color': '<span style="color: {option}">{param}</span>',
+        'b': '<strong>{param}</strong>',
+        'i': '<em>{param}</em>',
+        'dropdown': '<div class="dropdown_bbc"><strong class="drop_title_bbc">{option} <span class="drop_arrow_bbc">►</span></strong><div class="drop_content_bbc">{param}</div></div>',
+        'spoiler': '<div class="spoiler_bbc"><div class="spoiler_header_bbc"><p class="spoiler_title_bbc">{option}</p><button type="button" class="spoiler_button_bbc">Show</button><hr class="spoiler_hr_bbc" style="display:none" /></div><div class="spoiler_content_bbc" style="display:none">{param}</div></div>',
+        'noparse': '{param}',
+        'olist': '<ol type={option}>{param}</ol>',
+        'ulist': '<ul>{param}</ul>'
     };
 
     function getbbcTags()
