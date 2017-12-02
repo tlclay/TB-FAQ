@@ -1,4 +1,4 @@
-$(document).ready(function ()
+﻿$(document).ready(function ()
 {
     var bbcAliases = {
         'question': '<p class="faq_question"><span class="faq_a">Q: </span>{param}</p>',
@@ -9,11 +9,13 @@ $(document).ready(function ()
         'b': '<strong>{param}</strong>',
         'i': '<em>{param}</em>',
         'u': '<span style="text-decoration: underline">{param}</span>',
+        's': '<span style="text-decoration: line-through">{param}</span>',
         'dropdown': '<div class="dropdown_bbc"><strong class="drop_title_bbc">{option} <span class="drop_arrow_bbc">►</span></strong><div class="drop_content_bbc">{param}</div></div>',
         'spoiler': '<div class="spoiler_bbc"><div class="spoiler_header_bbc"><p class="spoiler_title_bbc">{option}</p><button type="button" class="spoiler_button_bbc">Show</button><hr class="spoiler_hr_bbc" style="display:none" /></div><div class="spoiler_content_bbc" style="display:none">{param}</div></div>',
         'noparse': '{param}',
         'olist': '<ol type={option}>{param}</ol>',
-        'ulist': '<ul>{param}</ul>'
+        'ulist': '<ul>{param}</ul>',
+        'code': '<pre class="code_bbc">{param}</pre>'
     };
 
     function getbbcTags()
@@ -31,7 +33,6 @@ $(document).ready(function ()
         var htmlTemplate = bbcAliases[tagName];
         if (htmlTemplate !== undefined)
         {
-
             return htmlTemplate.replace(/{option}/g, tagOption).replace(/{param}/g, tagParam);
         }
     }
@@ -40,7 +41,6 @@ $(document).ready(function ()
     {
         if (bbcAliases[tag.replace(/\/\s/g, '')]) // if this is a real bbcode
         {
-
             return (/^(?!\/).+/).test(tag); // anything goes unless the first character is a '/'
         }
         return false;
@@ -55,7 +55,6 @@ $(document).ready(function ()
         }
         return false;
     }
-
 
     // tag pair means the next two tags, not the next two matching tags, or even tags of the same type
     // expects ws to be cleared
@@ -75,14 +74,10 @@ $(document).ready(function ()
 
     function parse(text, iterLevel = 0)
     {
-
-
         var tagPair = getNextTagPair(text);
-
 
         if (tagPair)
         {
-
             // push us along if the right tag is an open tag OR if the left tag ISN'T an opening tag OR if we find a noparse tag
             if (isOpenTag(tagPair[4]) || !isOpenTag(tagPair[1]))
             {
@@ -107,12 +102,9 @@ $(document).ready(function ()
                     }
                 }
             }
-
         }
 
-
         return text;
-
     }
 
     function prepare(input)
@@ -148,5 +140,4 @@ $(document).ready(function ()
         $('#html_output_text').val(out);
         $('#html_display_area').html(out).css('display', 'block');
     });
-
 });
