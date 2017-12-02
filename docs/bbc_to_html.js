@@ -4,6 +4,7 @@ $(document).ready(function ()
         'question': '<p class="faq_question"><span class="faq_a">Q: </span>{param}</p>',
         'answer': '<div class="faq_answer"><span class="faq_a">A: </span>{param}</div>',
         'url': '<a href="{option}">{param}</a>',
+        'img': '<img class=faq_img" src="{param}" alt="{option}" />',
         'color': '<span style="color: {option}">{param}</span>',
         'b': '<strong>{param}</strong>',
         'i': '<em>{param}</em>',
