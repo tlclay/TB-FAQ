@@ -8,7 +8,7 @@ $(document).ready(function ()
         'color': '<span style="color: {option}">{param}</span>',
         'b': '<strong>{param}</strong>',
         'i': '<em>{param}</em>',
-        'u': '<span style="text-decoration: underline">{param}</span>'
+        'u': '<span style="text-decoration: underline">{param}</span>',
         'dropdown': '<div class="dropdown_bbc"><strong class="drop_title_bbc">{option} <span class="drop_arrow_bbc">►</span></strong><div class="drop_content_bbc">{param}</div></div>',
         'spoiler': '<div class="spoiler_bbc"><div class="spoiler_header_bbc"><p class="spoiler_title_bbc">{option}</p><button type="button" class="spoiler_button_bbc">Show</button><hr class="spoiler_hr_bbc" style="display:none" /></div><div class="spoiler_content_bbc" style="display:none">{param}</div></div>',
         'noparse': '{param}',
