@@ -122,64 +122,64 @@ class faqparser(HTMLParser):
 def clean_file(ifname):
     with open(ifname,"rb") as file:
         fcontents = file.read()
-        fp = faqparser()
-        fp.feed(fcontents.decode("utf-8"))
-        cleanstr = fp.cf
+    fp = faqparser()
+    fp.feed(fcontents.decode("utf-8"))
+    cleanstr = fp.cf
 
-        if fp.sfound:
-            print(" -!- faqparser: sfound is still on -- this file DID NOT parse correctly.")
+    if fp.sfound:
+        print(" -!- faqparser: sfound is still on -- this file DID NOT parse correctly.")
 
-        if fp.droparrowsadded > 0:
-            print(" -?- faqparser: " + str(fp.droparrowsadded) + " drop arrow(s) were added.")
+    if fp.droparrowsadded > 0:
+        print(" -?- faqparser: " + str(fp.droparrowsadded) + " drop arrow(s) were added.")
 
-        ## Delete blank lines.
-        newstr = []
-        for line in cleanstr.split('\n'):
-            if isnotWS(line):
-                newstr.append(line)
+    ## Delete blank lines.
+    newstr = []
+    for line in cleanstr.split('\n'):
+        if isnotWS(line):
+            newstr.append(line)
 
-        ## Determine common WS at front:
-        minws = len(cleanstr)
-        tmpstr = []
-        for line in newstr:
-            l = len(line)
-            i = 0
-            c = 0
-            while (i < l):
-                if line[i] == ' ':
-                    c += 1
-                elif line[i] == '\t':
-                    c += TAB_LENGTH
-                else:
-                    break
-                i+=1
+    ## Determine common WS at front:
+    minws = len(cleanstr)
+    tmpstr = []
+    for line in newstr:
+        l = len(line)
+        i = 0
+        c = 0
+        while (i < l):
+            if line[i] == ' ':
+                c += 1
+            elif line[i] == '\t':
+                c += TAB_LENGTH
+            else:
+                break
+            i+=1
 
-            if c < minws:
-                minws = c
-            s = ""
-            nt = int(c/TAB_LENGTH)
-            ns = c%TAB_LENGTH
+        if c < minws:
+            minws = c
+        s = ""
+        nt = int(c/TAB_LENGTH)
+        ns = c%TAB_LENGTH
 
-            for x in range(nt):
-                s += "\t"
-            for x in range(ns):
-                s += " "
-            tmpstr.append(s + line[i:])
+        for x in range(nt):
+            s += "\t"
+        for x in range(ns):
+            s += " "
+        tmpstr.append(s + line[i:])
 
-        
-        del newstr[:]
-        i = int(minws/TAB_LENGTH) + (minws%TAB_LENGTH)
-        for line in tmpstr:
-            newstr.append(line[i:])
-        
-        cleanstr = '\n'.join(newstr)
+    
+    del newstr[:]
+    i = int(minws/TAB_LENGTH) + (minws%TAB_LENGTH)
+    for line in tmpstr:
+        newstr.append(line[i:])
+    
+    cleanstr = '\n'.join(newstr)
 
-        if cleanstr[0] in ' \t':
-            print(" -!- clean_file: First line is not indent level 0.")
-        
-        ret = (fp.title,cleanstr)
-        del fp
-        return ret
+    if cleanstr[0] in ' \t':
+        print(" -!- clean_file: First line is not indent level 0.")
+    
+    ret = (fp.title,cleanstr)
+    del fp
+    return ret
 
 def clean_html():
     for root, dirs, files in os.walk(gitdir):
@@ -221,6 +221,25 @@ def clean_html():
             for f in v:
                 print("               : --> " + f)
             print("               : This cannot be implemented on live!")
+
+    for root, dirs, files in os.walk(tgtdir):
+        for f in files:
+            if f == "min.js" or f == "min.css" or f == "live.min.css":
+                continue
+            fs = f.split(".")
+            fid = fs[0]
+            fpath = root.replace("\\","/") + "/" + f
+            if fid in faqitems:
+                if not fpath in faqitems[fid]:
+                    print(" --- clean_html: Removing outdated FAQ item: " + fpath)
+                    print(" (-) could only find:")
+                    for i in faqitems[fid]:
+                        print("                    : " + i)
+                    os.remove(fpath)
+            else:
+                print(" --- clean_html: Removing unknown FAQ item: " + fpath)
+                os.remove(fpath)
+            
 
 def clean_js():
     if not os.path.exists(gitdir + "/../js"):

@@ -4,29 +4,29 @@ $(document).ready(function () {
     $('<link/>', {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://rawgit.com/TB-FAQ/TB-FAQ/master/css/generic.min.css'
+        href: 'https://tb-faq.github.io/TB-FAQ/generic.min.css'
     }).appendTo('head');
 
-    $.getScript('https://rawgit.com/TB-FAQ/TB-FAQ/master/js/dropdown.min.js');
+    $.getScript('https://tb-faq.github.io/TB-FAQ/dropdown.min.js');
     $('<link/>', {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://rawgit.com/TB-FAQ/TB-FAQ/master/css/dropdown.min.css'
+        href: 'https://tb-faq.github.io/TB-FAQ/dropdown.min.css'
     }).appendTo('head');
 
-    $.getScript('https://rawgit.com/TB-FAQ/TB-FAQ/master/js/spoiler.min.js');
+    $.getScript('https://tb-faq.github.io/TB-FAQ/spoiler.min.js');
     $('<link/>', {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://rawgit.com/TB-FAQ/TB-FAQ/master/css/spoiler.min.css'
+        href: 'https://tb-faq.github.io/TB-FAQ/spoiler.min.css'
     }).appendTo('head');
 
-    $.getScript('https://rawgit.com/TB-FAQ/TB-FAQ/master/js/youtube_embed.min.js');
+    $.getScript('https://tb-faq.github.io/TB-FAQ/youtube_embed.min.js');
 
-    $.getScript('https://rawgit.com/TB-FAQ/TB-FAQ/master/js/staff_profiles_linker.min.js');
+    $.getScript('https://tb-faq.github.io/TB-FAQ/staff_profiles_linker.min.js');
     $('<link/>', {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://rawgit.com/TB-FAQ/TB-FAQ/master/css/staff_colours.min.css'
+        href: 'https://tb-faq.github.io/TB-FAQ/staff_colours.min.css'
     }).appendTo('head');
 });

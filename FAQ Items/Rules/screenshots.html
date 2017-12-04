@@ -1,65 +1,83 @@
 <!DOCTYPE html>
-<!-- 
-	PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
-	EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
-	'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
-	-->
+<!--
+    PLEASE NOTE: ONLY THE 'CONTENT' SECTION OF YOUR MARKUP WILL GO INTO THE LIVE SITE.
+    EVERYTHING ELSE IS FOR YOUR CONVENIENCE AS EDITORS.
+    'TITLE' WILL BE ADDED TO LIVE AS PLAIN TEXT, PLEASE DON'T TRY TO ADD ANY MARKUP OR STYLING TO IT.
+    -->
 <html>
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://rawgit.com/TB-FAQ/TB-FAQ/master/js/min.js"></script>
-		
-		<link rel="stylesheet" type="text/css" href="https://rawgit.com/TB-FAQ/TB-FAQ/master/css/min.css">
-	</head>
-	<body>
-		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
-			<tr>
-				<!-- TITLE WITHIN THESE <td></td> TAGS -->
-				<td class="tcat">Taking Screenshots</td>
-			</tr>
-			<tr>
-				<td class="alt1">
-					<!-- CONTENT BEGINS HERE -->
-					<!-- CSS IN HERE -->
-                    <p class="faq_question"><span class="faq_q">Q:</span> What are screenshots?</p>
-				<div class="faq_answer">
-					<p><span class="faq_a">A:</span> A screenshot is an image captured of the game, such as via commands. </p>
-                    </div>
-					
-					 <p class="faq_question"><span class="faq_q">Q:</span> How do I take a screenshot in Toribash?</p>
-				<div class="faq_answer">
-					<p><span class="faq_a">A:</span> There are multiple commands to take a screenshot in Toribash:<br/>
-              <span class="faq_code_snippet">F8</span>, <span class="faq_code_snippet">0</span>, <span class="faq_code_snippet">/screenshot</span>, and <span class="faq_code_snippet">/ss</span></p>
-            
-                    <p class="faq_importantInfo"><strong>Note: Do NOT to crop your screenshots if you are making a report.</strong></p>
-                    
-					<p><strong>Using <span class="faq_hoverExplain" title="Print Screen">PrtScn</span> to make screenshots:</strong></p>
-                      <ul><li>Capture a screen shot by hitting PrtScn on your keyboard. Then open MS Paint. If you have a Mac, open MacPaint or Paintbrush. Go to the edit drop down menu and select paste. Click the file drop down menu and select save. A box will appear asking you to name the file. After typing the name, open the file type drop down menu. Then select .jpeg or .png from the list of file types.</li></ul>
-                      
-                      <p><strong>Finding your screenshot:</strong></p>
-                    <ul>
-						<li>It's very easy to find screenshots. They will most likely be in the following directories on Local Disk (usually C:):
-						<ul>
-							<li><em>Standalone version:</em> Local Disk  <span class="faq_code_snippet">(C:)/Games/Toribash-x.xx/screenshots</span>.</li>
-							<li><em>Steam version:</em> Local Disk  <span class="faq_code_snippet">(C:)/Program Files(x86)/Steam/steamapps/common/Toribash/screenshots</span>.</li>
-						</ul>
-						</li>
-					</ul>
-					<p><strong>Uploading screenshots:</strong></p>
-					<ul>
-                        <li> Once you have a screenshot of toribash if you wish to upload it you must visit a third party website. Such as <a href="https://imgur.com/">imgur</a>, <a href="https://gyazo.com/">Gyazo</a>, <a href="http://puush.me/">puush</a>, or <a href="http://tinypic.com/index.php">tinypic</a>. Please note if you are reporting something, <strong>do NOT</strong> use the toribash forum's built in image uploader. It will make it difficult to read and you will most likely be asked to upload it to an image hosting site.
-						</li>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://tb-faq.github.io/TB-FAQ/min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://tb-faq.github.io/TB-FAQ/min.css">
+</head>
+<body>
+    <table class="tborder" cellpadding="6" cellspacing="1" border="0" align="center">
+        <tr>
+            <!-- TITLE WITHIN THESE <td></td> TAGS -->
+            <td class="tcat">Taking Screenshots</td>
+        </tr>
+        <tr>
+            <td class="alt1">
+                <!-- CONTENT BEGINS HERE -->
+                <!-- CSS IN HERE -->
+                <p class="faq_question"><span class="faq_q">Q:</span> What are screenshots?</p>
+                <div class="faq_answer">
+                    <p><span class="faq_a">A:</span> A screenshot is an image snapshot of your screen at the time it was taken. Often a screenshot will capture your entire screen, however Toribash come with built-in ways of exclusively capturing an image of the game itself.</p>
+                </div>
+
+                <p class="faq_question"><span class="faq_q">Q:</span> How do I take a screenshot in Toribash?</p>
+                <div class="faq_answer">
+                    <p>
+                        <span class="faq_a">A:</span> There are multiple commands to take a screenshot in Toribash:<br />
+                        <span class="faq_code_snippet">F8</span>, <span class="faq_code_snippet">0</span>, <span class="faq_code_snippet">/screenshot</span>, and <span class="faq_code_snippet">/ss</span><br />
+                        These commands will capture an image of the game at the time they are used. Nothing outside of the Toribash window will be captured.
+                    </p>
+
+                    <p><strong>Using <span class="faq_hoverExplain" title="Print Screen">PrtScn</span> to make screenshots:</strong></p>
+                    <ul><li>Capture a screen shot by hitting PrtScn on your keyboard. This will capture your <em>entire screen</em> and save it to your clipboard.</li>
+                    <li>(Optional) Open an image editor (such as MS Paint). Paste your image (<span class="faq_code_snippet">Ctrl+V</span> on Windows, <span class="faq_code_snippet">Command+V</span> on Mac) into the editor and make any changes you need (make sure not to crop the Toribash window if you're using the screenshot as evidence in a report). When saving your image, make sure its saved as a <span class="faq_code_snippet">.jpeg</span> or <span class="faq_code_snippet">.png</span>, as other file extensions may interfere with the quality of the image.</li>
                     </ul>
-				</div>
-                   
-                    
-				<p><strong>Posting the screenshot on the forums:</strong></p>
-				<ul><li>After you have uploaded your screenshot to an image hosting website, you can copy the image's link (right click and copy image address works best) and paste the link in between [img][/img] tags.</li></ul>
-                </td>
-			</tr>
-		</table>
-		<!-- YOUR SCRIPTS IN HERE, UNCOMMENT LINE AT TOP FOR JQuery SUPPORT -->
-		<script type="text/javascript"></script>
-                   
-	</body>
+
+                </div>
+
+                <p class="faq_question"><span class="faq_q">Q:</span> How do I share my screenshot?</p>
+                <div class="faq_answer"><span class="faq_a">A:</span>
+
+                    <p><strong>Finding your screenshot:</strong></p>
+                    <ul>
+                        <li>
+                            It's very easy to find screenshots. They will most likely be in the following directories on Local Disk (usually C:):
+                            <ul>
+                                <li><em>Standalone version:</em> Local Disk  <span class="faq_code_snippet">(C:)/Games/Toribash-x.xx/screenshots</span>.</li>
+                                <li><em>Steam version:</em> Local Disk  <span class="faq_code_snippet">(C:)/Program Files(x86)/Steam/steamapps/common/Toribash/screenshots</span>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Uploading screenshots:</strong></p>
+                    <ul>
+                        <li>
+                            Please note if you are reporting something, <strong>do NOT use the toribash forum's built in image uploader</strong>. It will make it difficult to read and you will most likely be asked to upload it to an image hosting site.<br />
+                            Instead, upload your screenshots to an image hosting site such as:
+                            <ul>
+                                <li><a href="https://imgur.com/">imgur</a> (much recommended!)</li>
+                                <li><a href="https://gyazo.com/">Gyazo</a></li>
+                                <li><a href="http://puush.me/">puush</a></li>
+                                <li><a href="http://tinypic.com/index.php">tinypic</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <p>
+                    <strong>Posting the screenshot on the forums:</strong>
+                    After you have uploaded your screenshot to an image hosting website, you can copy the image's link (right click and copy image address works best) and paste the link in between <span class="faq_code_snippet">[img][/img]</span> tags.<br />
+                    Example: <span class="faq_code_snippet">[img]https://i.imgur.com/ufAokpx.png[/img]</span>.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+</body>
 </html>
