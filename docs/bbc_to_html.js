@@ -164,7 +164,7 @@
             requireOption: true,
             replace: function (param, option)
             {
-                return '<span id="'  + option + '">' + param + '</span>';
+                return '<span id="'  + option + '" class="anchor_bbc">' + param + '</span>';
             }
         },
         gotoanchor: {
