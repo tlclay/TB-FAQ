@@ -24,6 +24,9 @@ def isnotWS(s):
 
 singleton_tags = {"hr","img","input"} # tags which can exist on their own without internal data.
 
+expected_css = {"https://tb-faq.github.io/TB-FAQ/min.css"} # set of expected css includes
+expected_js = {"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js","https://tb-faq.github.io/TB-FAQ/min.js"} # set of expected js includes
+
 class faqparser(HTMLParser):
     cf = ""
     titlenext = False
@@ -45,6 +48,15 @@ class faqparser(HTMLParser):
 
         if tag == 'td':
             self.datasince = True ## Assume that empty columns are okay.
+
+        if tag == 'link':
+            for k,v in attrs:
+                if k == "href" and not v in expected_css:
+                    print(" -!-: faqparser: unexpected <link> to: " + v)
+        elif tag == 'script':
+            for k,v in attrs:
+                if k == "src" and not v in expected_js:
+                    print(" -!-: faqparser: unexpected <script> to: " + v)
 
         duplicate_attr = False
         attrset = set()
