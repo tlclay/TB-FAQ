@@ -1,4 +1,4 @@
----
+﻿---
 layout: shell_test
 title: bbc_to_html
 ---
@@ -10,15 +10,42 @@ title: bbc_to_html
     <meta charset="utf-8" />
     <title></title>
     <style>
+        .area_wrapper {
+            border: 1px solid rgb(180, 180, 180);
+            border-collapse: collapse;
+        }
         #input_wrapper {
             display: flex;
-            
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-        textarea {
-            width: 30vw;
-            height: 10vw;
+
+            #input_wrapper > div {
+                margin-top: 2rem;
+            }
+
+        #bbc_input_area {
+            width: 100%;
+            flex-basis: 100%;
+        }
+
+        textarea, .output_text {
+            width: 100%;
+            height: 15vh;
             display: block;
             box-sizing: border-box;
+            resize: none;
+        }
+
+        .output_text {
+            border: 1px solid rgb(180, 180, 180);
+            text-wrap: normal;
+            overflow-y: scroll;
+        }
+
+        #bbc_input_text {
+            resize: vertical;
+            height: 30vh;
         }
 
         #html_display_area {
@@ -28,28 +55,80 @@ title: bbc_to_html
             padding: 2rem;
             display: none;
         }
+
+        .gutter.gutter-horizontal {
+            cursor: col-resize;
+        }
+        
+        .area_header {
+            padding: 0.2rem;
+            background-color: rgb(200, 220, 200);
+        }
+
+        [class^=syntax_] {
+            padding: 0.2rem;
+            border-top: 1px solid grey;
+            font-family: consolas, monospace;
+            margin: 0;
+        }
+
+        .syntax_warning_low {
+            color: black;
+            background-color: lightskyblue;
+        }
+
+        .syntax_warning_high {
+            color: brown;
+            background-color: rgb(244, 191, 66);
+        }
+
+        .syntax_option_error {
+            color: black;
+            background-color: rgb(255, 114, 114);
+        }
+
+        .syntax_crossed_error {
+            color: black;
+            background-color: orange;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="bbc_to_html.js"></script>
+    <script src="split.min.js"></script>
 </head>
 <body>
 
     <div id="input_wrapper">
         <div id="bbc_input_area">
+            <div class="area_header">
+                <label class="area_label">BBCode Input</label>
+                <button id="bbc_input_submit" type="button">
+                    Submit
+                </button>
+            </div>
             <textarea id="bbc_input_text"></textarea>
-            <button id="bbc_input_submit" type="button">
-                Submit
-            </button>
+
         </div>
         <div id="html_output_area">
-            <textarea id="html_output_text" readonly></textarea>
+            <label class="area_label">HTML</label>
+            <textarea id="html_output_text" class="output_text"></textarea>
             <br />
         </div>
-
+        <div id="syntax_warning_area">
+            <label class="area_label">Warnings</label>
+            <div id="syntax_warning_text" class="output_text"></div>
+        </div>
     </div>
     <p>Preview:</p>
     <div id="html_display_area">
 
     </div>
+
+    <script>
+        Split(['#html_output_area', '#syntax_warning_area'], {
+            cursor: 'col-resize',
+            gutterSize: 10
+        });
+    </script>
 </body>
 </html>
