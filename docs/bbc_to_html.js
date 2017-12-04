@@ -279,6 +279,7 @@
             tagOption = tagOption.replace(/^(\"?)(.*?)\1$/, '$2');
             console.log('top`:' + tagOption);
         }
+        //var tagParamSansLonelyTags = tagParam.replace(/\[(.+?)\]/g, '[{?}$1]');
         var tagParamSansLonelyTags = tagParam;
         if (tagName.toLowerCase() === 'noparse')
         {
@@ -328,7 +329,7 @@
             tagList += (first ? '' : '|') + tag;
             first = false;
         }
-        var reg = new RegExp("\\[(" + tagList + ")(?:=(.+?))?\\]([\\s\\S]*?)\\[(\\/?(?:" + tagList + "))\\]", 'i'); // group 1: tag name, group 2: tag option, group 3: tag param, group 4: end tag name (m)
+        var reg = new RegExp("\\[(" + tagList + ")(?:=(.+?))?\\]([\\s\\S]*?)\\[(\\/?(?:\\1))\\]", 'i'); // group 1: tag name, group 2: tag option, group 3: tag param, group 4: end tag name (m)
         console.warn(reg.test(text));
         return reg.exec(text);
     }
@@ -396,7 +397,18 @@
         {
             catchErrors(tag[1]);
         }
-        parsed = parsed.replace(/\[{\?}(.*?)\]/g, '<span style="background-color: orange; display: inline-block;">[$1]</span>');
+
+        var tagList = '';
+        var first = true;
+        for (var tag of getbbcTags())
+        {
+            tagList += (first ? '' : '|') + tag;
+            first = false;
+        }
+        r = new RegExp("(\\[\/?(" + tagList + ")(?:=(.+?))?\\])", 'gi');
+        parsed = parsed.replace(r, '<span style="background-color: orange">$1</span>');
+
+        //parsed = parsed.replace(/\[{\?}(.*?)\]/g, '<span style="background-color: orange; display: inline-block;">[$1]</span>');
 
         parsed = parsed.replace(/{(\?|!)}/g, '');
 
