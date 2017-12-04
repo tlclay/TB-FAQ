@@ -32,11 +32,12 @@ hr.spoiler_hr_bbc {
 
 .spoiler_content_bbc {
     animation-name: spoiler_bbc_transition;
-    animation-duration: 0.7s;
-    width: 100%;
+    animation-duration: .7s;
     padding-top: 0.4rem;
     padding-bottom: 0.3rem;
-    background-color: rgba(221, 221, 221, 0.4);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: rgba(221,221,221,.4);
 }
 
 .spoiler_content_bbc > * {
