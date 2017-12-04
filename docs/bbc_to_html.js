@@ -233,7 +233,7 @@
         var syntaxErrorOutput = $('#syntax_warning_text');
         // -1 = fine, 0 = crossed tag, 1 = option err
         var output = [-1, ''];
-        if (!(/{\?}/).test(tagName))
+        if (tagParam)
         {
             var tagInfo = bbcAliases[tagName];
             if (!tagOption)
@@ -259,11 +259,11 @@
         {
             console.warn('crossed tag: ' + tagName);
             output[0] = 0;
-            output[1] = 'Crossed tag (' + tagName.replace(/{\?}/, '') + ')';
+            output[1] = 'Unmatched tag (' + tagName + ')';
         }
         if (output[0] > -1)
         {
-            var styles = ['crossed_error', 'option_error'];
+            var styles = ['warning', 'option_error'];
             syntaxErrorOutput.append('<div class="syntax_' + styles[output[0]] + '"><strong>Error:</strong> ' + output[1] + '</div>');
             return true;
         }
@@ -387,9 +387,7 @@
         var listsReplaced = input.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
         var parsed = parse(listsReplaced).replace(/(?:\r\n|\r|\n)/g, '<br />');
         var rawOutput = parsed;
-        parsed = parsed.replace(/{!}(.*?)\](.*?)\[\/(.*?)\]/g, '<span style="background-color: rgb(255, 114, 114); display: inline-block;">[$1]$2[/$3]</span>');
-        parsed = parsed.replace(/{!}/g, '');
-        rawOutput = rawOutput.replace(/{!}/g, '');
+        
 
         var r = new RegExp(/(\[{\?}.*?\])/g)
         var tag;
@@ -406,9 +404,16 @@
             first = false;
         }
         r = new RegExp("(\\[\/?(" + tagList + ")(?:=(.+?))?\\])", 'gi');
+        var unmatched;
+        while ((unmatched = r.exec(parsed)) !== null)
+        {
+            console.warn(unmatched[2]);
+            catchErrors(unmatched[2], unmatched[3]);
+        }
         parsed = parsed.replace(r, '<span style="background-color: orange">$1</span>');
 
-        //parsed = parsed.replace(/\[{\?}(.*?)\]/g, '<span style="background-color: orange; display: inline-block;">[$1]</span>');
+        parsed = parsed.replace(/{!}(.*?)\](.*?){!}\/(.*?)\]/g, '<span style="background-color: rgb(255, 114, 114); display: inline-block;">[$1]$2[/$3]</span>');
+        parsed = parsed.replace(/{!}/g, '');
 
         parsed = parsed.replace(/{(\?|!)}/g, '');
 
