@@ -29,6 +29,10 @@ title: bbc_to_html
             flex-basis: 100%;
         }
 
+        #bbc_input_submit {
+            margin-bottom: 0.5rem;
+        }
+
         textarea, .output_text {
             width: 100%;
             height: 15vh;
@@ -95,6 +99,8 @@ title: bbc_to_html
                 <button id="bbc_input_submit" type="button">
                     Submit
                 </button>
+                <br />
+                <label>Title: </label><input id="bbc_input_title" type="text" />
             </div>
             <textarea id="bbc_input_text"></textarea>
 
@@ -109,10 +115,18 @@ title: bbc_to_html
             <div id="syntax_warning_text" class="output_text"></div>
         </div>
     </div>
-    <p>Preview:</p>
+    
     <div id="html_display_area">
-
+        <table class="tborder" cellpadding="6" cellspacing="1" border="0" align="center">
+            <tr>
+                <td class="tcat"></td>
+            </tr>
+            <tr>
+                <td class="alt1"></td>
+            </tr>
+        </table>
     </div>
+    
 
     <script>
         Split(['#html_output_area', '#syntax_warning_area'], {
