@@ -70,6 +70,13 @@
                 return '<span style="font-size:' + parsedOption + '">' + param + '</span>';
             }
         },
+        font: {
+            requireOption: true,
+            replace: function (param, option)
+            {
+                return '<span style="font-family:' + option + '">' + param + '</span>';
+            }
+        },
         b: {
             requireOption: false,
             replace: function (param, option)
@@ -88,11 +95,11 @@
             requireOption: false,
             validOption: function (option)
             {
-                return colorReg.test(option) ? '' : 'Invalid option for {$t}. Must be either a hex value (#ddd | #dddddd), an rgb value, a rgba value, or a colour name'
+                return colorReg.test(option) ? '' : 'Invalid option for {$t}. Must be either a hex value (#hhh | #hhhhhh), an rgb value, a rgba value, or a colour name'
             },
             replace: function (param, option)
             {
-                return '<em style="text-decoration:' + option + ' underline">' + param + '</em>';
+                return '<span style="text-decoration:' + option + ' underline">' + param + '</span>';
             }
         },
         s: {
@@ -160,6 +167,13 @@
                 return '<pre class="code_bbc"><code>' + param + '</code></pre>';
             }
         },
+        snippet: {
+            requireOption: false,
+            replace: function (param, option)
+            {
+                return '<span class="faq_code_snippet"><code>' + param + '</code></span>';
+            }
+        },
         anchor: {
             requireOption: true,
             replace: function (param, option)
@@ -216,6 +230,35 @@
                 return bbcAliases.align.replace(param, 'left');
             }
         },
+        table: {
+            requireOption: false,
+            replace: function (param, option)
+            {
+                return '<table class="faq_table">' + param + '</table>';
+            }
+        },
+        tr: {
+            requireOption: false,
+            replace: function (param, option)
+            {
+                return '<tr>' + param + '</tr>';
+            }
+        },
+        td: {
+            requireOption: false,
+            replace: function (param, option)
+            {
+                return '<td>' + param + '</td>';
+            }
+        },
+        important:
+        {
+            requireOption: false,
+            replace: function (param, option)
+            {
+                return '<div class="faq_importantInfo">' + param + '</div>'
+            }
+        }
     };
 
     function getbbcTags()
@@ -255,11 +298,14 @@
                     output[1] += optionMessage;
                 }
             }
-        } else
+        } else if (tagName != 'list')
         {
-            console.warn('crossed tag: ' + tagName);
             output[0] = 0;
             output[1] = 'Unmatched tag (' + tagName + ')';
+        } else
+        {
+            output[0] = 0;
+            output[1] = '[list] tags are depricated. Use [olist] or [ulist]';
         }
         if (output[0] > -1)
         {
@@ -279,8 +325,8 @@
             tagOption = tagOption.replace(/^(\"?)(.*?)\1$/, '$2');
             console.log('top`:' + tagOption);
         }
-        //var tagParamSansLonelyTags = tagParam.replace(/\[(.+?)\]/g, '[{?}$1]');
-        var tagParamSansLonelyTags = tagParam;
+        var tagParamSansLonelyTags = tagParam.replace(/\[(\/.+?)\]/g, '{?}$1]');
+        //var tagParamSansLonelyTags = tagParam;
         if (tagName.toLowerCase() === 'noparse')
         {
             return '{NP}' + tagName + (tagOption ? '=' + tagOption : '') + ']' + tagParamSansLonelyTags + '[/' + tagName + ']';
@@ -329,7 +375,8 @@
             tagList += (first ? '' : '|') + tag;
             first = false;
         }
-        var reg = new RegExp("\\[(" + tagList + ")(?:=(.+?))?\\]([\\s\\S]*?)\\[(\\/?(?:\\1))\\]", 'i'); // group 1: tag name, group 2: tag option, group 3: tag param, group 4: end tag name (m)
+        var reg = new RegExp("\\[(" + tagList + ")(?:=(.+?))?\\]([\\s\\S]*?)(?:\\[(\\/?(" + tagList + "))\\])", 'i'); // group 1: tag name, group 2: tag option, group 3: tag param, group 4: end tag name (m)
+        console.log(reg);
         console.warn(reg.test(text));
         return reg.exec(text);
     }
@@ -344,6 +391,7 @@
         
         if (tagPair)
         {
+            console.log('>>' + tagPair[4]);
             if (matchingTags(tagPair[1], tagPair[4]) && !isOpenTag(tagPair[4]))
             {
                 // push us along if the right tag is an open tag OR if the left tag ISN'T an opening tag OR if we find a noparse tag
@@ -374,20 +422,30 @@
                 console.log('pushed');
                 return parse(text.replace(text.substring(tagPair.index + tagPair[1].length + 2 + ((tagPair[2]) ? tagPair[2].length + 1 : 0)), parse(text.substring(tagPair.index + tagPair[1].length + 2 + ((tagPair[2]) ? tagPair[2].length + 1 : 0)), iterLevel + 1)), iterLevel + 1);
             }
-            
-            
-        }
 
+            
+            if (!tagPair[4])
+            {
+                return text.replace(/\[(\/?.+?)\]/g, '{?}$1]')
+            }
+        }
+        //alert('.');
         return text;
     }
 
     function prepare(input)
     {
         
-        var listsReplaced = input.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
-        var parsed = parse(listsReplaced).replace(/(?:\r\n|\r|\n)/g, '<br />');
+        var output = input.replace(/\[(?:\*|(\d+))\]/g, function (match, number) { return number ? '<li value="' + number + '">' : '<li>' });
+        output = output.replace(/(?:\r\n|\r|\n)/g, '<br />');
+
+        return output;
+    }
+
+    function cleanup(parsed)
+    {
         var rawOutput = parsed;
-        
+
 
         var r = new RegExp(/(\[{\?}.*?\])/g)
         var tag;
@@ -412,15 +470,25 @@
         }
         parsed = parsed.replace(r, '<span style="background-color: orange">$1</span>');
 
+        var oldLists;
+        r = new RegExp(/(\[(list)\])/gi);
+        while ((oldLists = r.exec(parsed)) !== null)
+        {
+            console.warn('[list] is deprecated; use [ulist] or [olist]');
+            catchErrors(oldLists[2]);
+        }
+        parsed = parsed.replace(r, '<span style="background-color: orange">$1</span>');
+
         parsed = parsed.replace(/{!}(.*?)\](.*?){!}\/(.*?)\]/g, '<span style="background-color: rgb(255, 114, 114); display: inline-block;">[$1]$2[/$3]</span>');
         parsed = parsed.replace(/{!}/g, '');
 
-        parsed = parsed.replace(/{(\?|!)}/g, '');
+        //parsed = parsed.replace(/{(\?|!)}/g, '');
 
 
-        rawOutput = rawOutput.replace(/{!}/g, '');
-        rawOutput = rawOutput.replace(/{\?}/g, '');
+        rawOutput = rawOutput.replace(/{!}/g, '[');
+        rawOutput = rawOutput.replace(/{\?}/g, '[');
         $('#html_output_text').html(rawOutput);
+
 
         return parsed;
     }
@@ -430,9 +498,11 @@
     {
         var start = performance.now();
         $('#syntax_warning_text').html('');
-        var out = prepare($('#bbc_input_text').val());
-        //$('#html_output_text').html(out);
-        $('#html_display_area').html(out).css('display', 'block');
+        var out = cleanup(parse(prepare($('#bbc_input_text').val())));
+        var displayArea = $('#html_display_area');
+        displayArea.css('display', 'block');
+        displayArea.find('.tcat').html($('#bbc_input_title').val());
+        displayArea.find('.alt1').html(out);
         console.warn('Took ' + (performance.now() - start) + 'ms');
     });
 });
