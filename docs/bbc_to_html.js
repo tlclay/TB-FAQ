@@ -58,7 +58,7 @@
             {
                 var parsedOption;
                 var r = new RegExp(/^ *(?:([1-7])|(xx-small|x-small|small|medium|large|x-large|xx-large)|(\d+ *(?:px|em|rem|vw|vh))|(\d{0,3} *%)|(smaller|larger)|(default|inherit|unset)) *$/).exec(option);
-                console.warn(r + ', ' + option);
+                //console.warn(r + ', ' + option);
                 if (r[1]) // single digit, kept for legacy purposes (forum uses this style with <font> tags which are long depricated, need to keep syntax but update HTML produced)
                 {
                     var names = ['xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'];
@@ -283,7 +283,7 @@
             {
                 if (tagInfo.requireOption === true)
                 {
-                    console.warn('missing option: ' + tagName);
+                    //console.warn('missing option: ' + tagName);
                     output[0] = 1;
                     output[1] += 'Tag [' + tagName + '] requires an option';
 
@@ -293,7 +293,7 @@
                 var optionMessage = tagInfo.validOption(tagOption).replace(/{\$t}/g, '[' + tagName + ']' + '<br /><strong>Option supplied:</strong> ' + tagOption + '<br />');
                 if (optionMessage !== '')
                 {
-                    console.warn('invalid option');
+                    //console.warn('invalid option');
                     output[0] = 1;
                     output[1] += optionMessage;
                 }
@@ -301,7 +301,7 @@
         } else if (tagName != 'list')
         {
             output[0] = 0;
-            output[1] = 'Unmatched tag (' + tagName + ')';
+            output[1] = 'Unmatched tag [' + tagName + ']';
         } else
         {
             output[0] = 0;
@@ -321,9 +321,9 @@
         //alert(tagName + ' | ' + tagOption + ' | ' + tagParam);
         if (tagOption)
         {
-            console.log('top: ' + tagOption);
+            //console.log('top: ' + tagOption);
             tagOption = tagOption.replace(/^(\"?)(.*?)\1$/, '$2');
-            console.log('top`:' + tagOption);
+            //console.log('top`:' + tagOption);
         }
         var tagParamSansLonelyTags = tagParam.replace(/\[(\/.+?)\]/g, '{?}$1]');
         //var tagParamSansLonelyTags = tagParam;
@@ -342,11 +342,11 @@
 
     function isOpenTag(tag)
     {
-        console.log('isopen(' + tag + ')?');
+        //console.log('isopen(' + tag + ')?');
         if (bbcAliases[tag.replace(/\/|\s|(=.*)/g, '').toLowerCase()]) // if this is a real bbcode
         {
             //alert('>> ' + tag.replace(/\/|\s|(=.*)/g, ''));
-            console.warn('is ' + tag + ' open?: ' + (/^(?!\/).+/i).test(tag));
+            //console.warn('is ' + tag + ' open?: ' + (/^(?!\/).+/i).test(tag));
             return (/^(?!\/).+/i).test(tag); // anything goes unless the first character is a '/'
         }
         return false;
@@ -354,11 +354,11 @@
 
     function matchingTags(leftTag, rightTag)
     {
-        console.log('matching(' + leftTag + ', ' + rightTag + ')?');
+        //console.log('matching(' + leftTag + ', ' + rightTag + ')?');
         var reg = new RegExp("^\\/?(" + escapeRegExp(leftTag) + "(?![\\s\\S]))", 'i'); // capture everything excluding a potential leading '/', fail if any extra characters aside from the tag itself
         if (reg.test(leftTag) === reg.test(rightTag))
         {
-            console.log('\tyes');
+            //console.log('\tyes');
             return true;
         }
         return false;
@@ -376,8 +376,8 @@
             first = false;
         }
         var reg = new RegExp("\\[(" + tagList + ")(?:=(.+?))?\\]([\\s\\S]*?)(?:\\[(\\/?(" + tagList + "))\\])", 'i'); // group 1: tag name, group 2: tag option, group 3: tag param, group 4: end tag name (m)
-        console.log(reg);
-        console.warn(reg.test(text));
+        //console.log(reg);
+        //console.warn('reg ' + reg.test(text));
         return reg.exec(text);
     }
 
@@ -386,12 +386,12 @@
     {
         var tagPair = getNextTagPair(text);
         //alert('parse[' + iterLevel + ']');
-        console.warn(text);
+        //console.warn(text);
         //console.log('tp: ' + tagPair[1] + ', ' + tagPair[2] + ', ' + tagPair[3] + ', ' +  tagPair[4]);
         
         if (tagPair)
         {
-            console.log('>>' + tagPair[4]);
+            //console.log('>>' + tagPair[4]);
             if (matchingTags(tagPair[1], tagPair[4]) && !isOpenTag(tagPair[4]))
             {
                 // push us along if the right tag is an open tag OR if the left tag ISN'T an opening tag OR if we find a noparse tag
@@ -404,7 +404,7 @@
                 {
                     var r = new RegExp("\\[" + escapeRegExp(tagPair[4]) + "\\]", 'i');
                     var endOfThisTagPair = (text.substring(tagPair.index).search(r) + tagPair.index + tagPair[4].length + 2);
-                    console.log(tagPair[1] + ' | ' + ' | ' + tagPair[3]);
+                    //console.log(tagPair[1] + ' | ' + ' | ' + tagPair[3]);
                     var convertedText = text.replace(text.substring(tagPair.index, endOfThisTagPair), replaceTag(tagPair[1], (tagPair[2]) ? tagPair[2] : '', tagPair[3]));
 
                     // handle exceptional tags
@@ -413,13 +413,13 @@
                         return convertedText.substring(0, endOfThisTagPair - (tagPair[1].length + tagPair[4].length + 4)) + parse(convertedText.substring(endOfThisTagPair - (tagPair[1].length + tagPair[4].length + 4)), iterLevel + 1);
                     } else
                     {
-                        console.log('nopushed');
+                        //console.log('nopushed');
                         return parse(convertedText, iterLevel + 1);
                     }
                 }
             } else 
             {
-                console.log('pushed');
+                //console.log('pushed');
                 return parse(text.replace(text.substring(tagPair.index + tagPair[1].length + 2 + ((tagPair[2]) ? tagPair[2].length + 1 : 0)), parse(text.substring(tagPair.index + tagPair[1].length + 2 + ((tagPair[2]) ? tagPair[2].length + 1 : 0)), iterLevel + 1)), iterLevel + 1);
             }
 
@@ -430,7 +430,9 @@
             }
         }
         //alert('.');
-        return text;
+
+        return text.replace(/\[(.*?\])/gi, '{?}$1');
+        
     }
 
     function prepare(input)
@@ -461,20 +463,20 @@
             tagList += (first ? '' : '|') + tag;
             first = false;
         }
-        r = new RegExp("(\\[\/?(" + tagList + ")(?:=(.+?))?\\])", 'gi');
+        r = new RegExp("{\\?}((\\/?(?:" + tagList + ")(?:=(.+?))?)\\])", 'gi');
         var unmatched;
         while ((unmatched = r.exec(parsed)) !== null)
         {
-            console.warn(unmatched[2]);
+            //console.warn(unmatched[2]);
             catchErrors(unmatched[2], unmatched[3]);
         }
-        parsed = parsed.replace(r, '<span style="background-color: orange">$1</span>');
+        parsed = parsed.replace(r, '<span style="background-color: orange">[$1</span>');
 
         var oldLists;
         r = new RegExp(/(\[(list)\])/gi);
         while ((oldLists = r.exec(parsed)) !== null)
         {
-            console.warn('[list] is deprecated; use [ulist] or [olist]');
+            //console.warn('[list] is deprecated; use [ulist] or [olist]');
             catchErrors(oldLists[2]);
         }
         parsed = parsed.replace(r, '<span style="background-color: orange">$1</span>');
@@ -484,6 +486,7 @@
 
         //parsed = parsed.replace(/{(\?|!)}/g, '');
 
+        parsed = parsed.replace(/{\?}/gi, '[');
 
         rawOutput = rawOutput.replace(/{!}/g, '[');
         rawOutput = rawOutput.replace(/{\?}/g, '[');
