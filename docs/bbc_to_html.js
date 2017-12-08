@@ -386,7 +386,7 @@
     {
         var tagPair = getNextTagPair(text);
         //alert('parse[' + iterLevel + ']');
-        //console.warn(text);
+        console.warn(text);
         //console.log('tp: ' + tagPair[1] + ', ' + tagPair[2] + ', ' + tagPair[3] + ', ' +  tagPair[4]);
         
         if (tagPair)
@@ -431,7 +431,7 @@
         }
         //alert('.');
 
-        return text.replace(/\[(.*?\])/gi, '{?}$1');
+        return text;
         
     }
 
@@ -446,6 +446,7 @@
 
     function cleanup(parsed)
     {
+        parsed = parsed.replace(/\[(.*?\])/gi, '{?}$1');
         var rawOutput = parsed;
 
 
