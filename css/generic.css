@@ -103,7 +103,7 @@ table.faq_staff_table {
     width: 100%;
 }
 
-    .faq_table td, th {
+    .faq_table td, .faq_table th {
         border: 1px solid #bbb;
         text-align: left;
         padding: 8px;
